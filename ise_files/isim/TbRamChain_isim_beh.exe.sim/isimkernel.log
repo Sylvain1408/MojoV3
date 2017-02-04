@@ -1,0 +1,29 @@
+Command line:
+   TbRamChain_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61164
+
+Fri Oct 07 13:48:04 2016
+
+
+ Elaboration Time: 0.156001 sec
+
+ Current Memory Usage: 676.159 Meg
+
+ Total Signals          : 251
+ Total Nets             : 17532
+ Total Signal Drivers   : 79
+ Total Blocks           : 19
+ Total Primitive Blocks : 10
+ Total Processes        : 45
+ Total Traceable Variables  : 237
+ Total Scalar Nets and Variables : 19021
+Total Line Count : 396
+
+ Total Simulation Time: 0.561604 sec
+
+ Current Memory Usage: 676.159 Meg
+
+Fri Oct 07 13:50:14 2016
+

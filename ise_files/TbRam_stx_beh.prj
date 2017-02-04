@@ -1,0 +1,2 @@
+vhdl isim_temp "ipcore_dir/ram.vhd"
+vhdl isim_temp "TbRam.vhd"

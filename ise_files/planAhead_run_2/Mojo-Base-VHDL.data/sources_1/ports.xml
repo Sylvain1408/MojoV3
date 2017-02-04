@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="i2c">
+		<Port Id="i2c_sda" Dir="INOUT"/>
+		<Port Id="i2c_scl" Dir="INOUT"/>
+	</Ifc>
+	<Ifc Id="ROOT" Top="1">
+		<ChildIfc Id="i2c"/>
+		<Bus Id="led">
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="spi_channel">
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="clk" Dir="IN"/>
+		<Port Id="rst_n" Dir="IN"/>
+		<Port Id="cclk" Dir="IN"/>
+		<Port Id="spi_sck" Dir="IN"/>
+		<Port Id="spi_ss" Dir="IN"/>
+		<Port Id="spi_mosi" Dir="IN"/>
+		<Port Id="spi_miso" Dir="OUT"/>
+		<Port Id="avr_tx" Dir="IN"/>
+		<Port Id="avr_rx" Dir="OUT"/>
+		<Port Id="avr_rx_busy" Dir="IN"/>
+	</Ifc>
+</Interface>
+

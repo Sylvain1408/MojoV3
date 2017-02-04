@@ -1,0 +1,116 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun May 08 11:57:32 2016
+# Process ID: 2580
+# Log file: C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from F:/Programfile/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [F:/Programfile/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [F:/Programfile/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/pa.fromHdl.tcl
+# create_project -name Mojo-Base-VHDL -dir "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/planAhead_run_2" -part xc6slx9tqg144-2
+create_project: Time (s): elapsed = 00:00:15 . Memory (MB): peak = 432.324 ; gain = 67.254
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/mojo.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/mojo.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {ipcore_dir/microblaze_mcs.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ipcore_dir/ram.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../src/spi_slave.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../src/serial_tx.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../src/serial_rx.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../src/cclk_detector.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {i2c_ram_interface.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../../i2c_master.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../src/avr_interface.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ram_interface.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {i2c.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../src/mojo_top.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top mojo_top $srcset
+# add_files [list {C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/mojo.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/microblaze_mcs.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/ram.ncf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx9tqg144-2
+Using Verific elaboration
+Parsing VHDL file "F:/Programfile/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "F:/Programfile/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/spi_slave.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/serial_tx.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/serial_rx.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/cclk_detector.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/i2c_ram_interface.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/i2c_master.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/avr_interface.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/ram_interface.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/ipcore_dir/ram.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/i2c.vhd" into library work
+Parsing VHDL file "C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" into library work
+CRITICAL WARNING: [EDIF 20-96] Could not resolve non-primitive black box cell 'microblaze_mcs' instantiated as 'mcs_0' [C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd:192]
+Resolution: File names need to match cell names: an EDIF definition will be found in microblaze_mcs.edf; an HDL definition may be placed in any Verilog/VHDL file.
+CRITICAL WARNING: [EDIF 20-96] Could not resolve non-primitive black box cell 'ram' instantiated as 'dual_bram_0' [C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd:208]
+Resolution: File names need to match cell names: an EDIF definition will be found in ram.edf; an HDL definition may be placed in any Verilog/VHDL file.
+Loading clock regions from F:/Programfile/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from F:/Programfile/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from F:/Programfile/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from F:/Programfile/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/tqg144/Package.xml
+Loading io standards from F:/Programfile/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from F:/Programfile/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : F:/Programfile/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/mojo.ucf]
+Finished Parsing UCF File [C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/src/mojo.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 9e4109d0
+open_rtl_design: Time (s): elapsed = 00:01:21 . Memory (MB): peak = 607.414 ; gain = 175.090
+update_compile_order -fileset sim_1
+create_interface i2c
+startgroup
+set_property package_pin P123 [get_ports {led[7]}]
+endgroup
+create_interface i2c_sda
+delete_interface i2c_sda
+set_property interface i2c [get_ports [list  i2c_sda]]
+set_property interface i2c [get_ports [list  i2c_scl]]
+set_property iostandard LVCMOS33 [get_ports [list i2c_scl]]
+set_property iostandard LVCMOS33 [get_ports [list i2c_sda]]
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files\planAhead_pid2580.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sun May 08 12:13:56 2016...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,2 @@
+vhdtdtfi -prj Mojo-Base-VHDL -o C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/Module_register_signals.vhi -module Module_register_signals -template F:/Programfile/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Module_register_signals.vhd 
+vhdtdtfi -prj Mojo-Base-VHDL -o C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/Module_register_signals.vhi -module Module_register_signals -template F:/Programfile/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Module_register_signals.vhd 

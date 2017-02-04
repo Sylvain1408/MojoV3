@@ -1,0 +1,2 @@
+vhdl isim_temp "i2c_ram_interface.vhd"
+vhdl isim_temp "TbI2cRamInterface.vhd"

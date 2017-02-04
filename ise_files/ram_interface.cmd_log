@@ -1,0 +1,2 @@
+vhdtdtfi -prj Mojo-Base-VHDL -o C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/ram_interface.vhi -module ram_interface -template F:/Programfile/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ram_interface.vhd 
+vhdtdtfi -prj Mojo-Base-VHDL -o C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/ram_interface.vhi -module ram_interface -template F:/Programfile/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ram_interface.vhd 

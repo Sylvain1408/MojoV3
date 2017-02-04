@@ -1,0 +1,1 @@
+vhdtdtfi -prj Mojo-Base-VHDL -o C:/Users/Sylvain/Desktop/Mojo-Base-VHDL/ise_files/i2c_master.vhi -module i2c_master -template F:/Programfile/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../i2c_master.vhd 
