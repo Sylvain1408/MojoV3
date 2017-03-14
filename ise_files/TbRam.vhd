@@ -153,7 +153,7 @@ BEGIN
 		wait for 10 ns;
 		
 		wea <= "0000";
-		addra <= X"00000004";
+		addra <= X"00000006";
 		dina <= X"00000000";
 
 		wait for 10 ns;

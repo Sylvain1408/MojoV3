@@ -1,0 +1,2 @@
+vhdl isim_temp "Module_register_signals.vhd"
+vhdl isim_temp "TbEnabler.vhd"

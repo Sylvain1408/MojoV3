@@ -8,6 +8,9 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Module_UART_interface - Behavioral C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|ise_files|Module_UART_interface.vhd</ClosedNode>
+         <ClosedNode>/RamChain - Behavioral C:|Users|CAO-PCB|Documents|MojoV3|ise_files|RamChain.vhd</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|CAO-PCB|Documents|MojoV3|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|CAO-PCB|Documents|MojoV3|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Module_UART_interface_ - Module_UART_interface - Behavioral</ClosedNode>
@@ -16,25 +19,23 @@
          <ClosedNode>/mojo_top - RTL E:|workspace|Mojo-Base-VHDL|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>xc6slx9-2tqg144</SelectedItem>
+         <SelectedItem>SubModule_i2c_ram_interface - i2c_ram_interface - Behavioral (C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c_ram_interface.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025c0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000363000000020000000000000000000000000200000064ffffffff000000810000000300000002000003630000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>xc6slx9-2tqg144</CurrentItem>
+      <CurrentItem>SubModule_i2c_ram_interface - i2c_ram_interface - Behavioral (C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c_ram_interface.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
-         <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
-         <ClosedNode>Implement Design</ClosedNode>
-         <ClosedNode>Implement Design/Map</ClosedNode>
-         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
-         <ClosedNode>Implement Design/Translate</ClosedNode>
-         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Back-annotate Pin Locations</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate IBIS Model</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -42,7 +43,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -53,9 +54,9 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002f2000000040101000100000000000000000000000064ffffffff0000008100000000000000040000007300000001000000000000009d00000001000000000000006600000001000000000000017c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff0000008100000000000000040000007300000001000000000000009d00000001000000000000006600000001000000000000021c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>avr_interface.vhd</CurrentItem>
+      <CurrentItem>C:\Users\CAO-PCB\Documents\MojoV3\ise_files\i2c.vhd</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -73,33 +74,33 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
-         <ClosedNode>Design Utilities</ClosedNode>
-         <ClosedNode>Implement Design/Map</ClosedNode>
-         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
-         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Back-annotate Pin Locations</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate IBIS Model</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Check Syntax</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Check Syntax</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>
@@ -110,24 +111,31 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d7000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff000000000000000200000144000000ff01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/TbEnabler - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbEnabler.vhd</ClosedNode>
          <ClosedNode>/TbEnabler - behavior C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|ise_files|TbEnabler.vhd</ClosedNode>
          <ClosedNode>/TbI2C - behavior C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|ise_files|TbI2C.vhd/uut - i2c - Behavioral</ClosedNode>
+         <ClosedNode>/TbI2c - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbI2c.vhd/uut - i2c - Behavioral</ClosedNode>
+         <ClosedNode>/TbI2cRamInterface - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbI2cRamInterface.vhd</ClosedNode>
          <ClosedNode>/TbI2cRamInterface - behavior C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|ise_files|TbI2cRamInterface.vhd</ClosedNode>
          <ClosedNode>/TbI2cRamInterface - behavior E:|workspace|Mojo-Base-VHDL|ise_files|TbI2cRamInterface.vhd</ClosedNode>
+         <ClosedNode>/TbRam - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbRam.vhd</ClosedNode>
          <ClosedNode>/TbRam - behavior C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|ise_files|TbRam.vhd</ClosedNode>
          <ClosedNode>/TbRam - behavior E:|workspace|Mojo-Base-VHDL|ise_files|TbRam.vhd</ClosedNode>
+         <ClosedNode>/TbRamChain - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbRamChain.vhd</ClosedNode>
          <ClosedNode>/TbRamChain - behavior E:|workspace|Mojo-Base-VHDL|ise_files|TbRamChain.vhd/uut - RamChain - Behavioral</ClosedNode>
+         <ClosedNode>/TbRamInterface - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbRamInterface.vhd</ClosedNode>
          <ClosedNode>/TbRamInterface - behavior C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|ise_files|TbRamInterface.vhd</ClosedNode>
          <ClosedNode>/TbRamInterface - behavior E:|workspace|Mojo-Base-VHDL|ise_files|TbRamInterface.vhd</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|CAO-PCB|Documents|MojoV3|src|mojo_top.vhd</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Module_I2C - i2c - Behavioral</ClosedNode>
@@ -137,41 +145,40 @@
          <ClosedNode>/mojo_top - RTL E:|workspace|Mojo-Base-VHDL|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>TbI2c - behavior (E:/workspace/Mojo-Base-VHDL/ise_files/TbI2c.vhd)</SelectedItem>
+         <SelectedItem>I_I2CMASTER_0 - I2CMASTER - rtl (C:/Users/CAO-PCB/Documents/MojoV3/i2C/i2cmaster.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025c0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000026c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000026c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>TbI2c - behavior (E:/workspace/Mojo-Base-VHDL/ise_files/TbI2c.vhd)</CurrentItem>
+      <CurrentItem>I_I2CMASTER_0 - I2CMASTER - rtl (C:/Users/CAO-PCB/Documents/MojoV3/i2C/i2cmaster.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
-         <ClosedNode>ISim Simulator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>
@@ -182,7 +189,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000ef000000010000000100000000000000000000000064ffffffff000000810000000000000001000000ef0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001af000000010000000100000000000000000000000064ffffffff000000810000000000000001000001af0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>

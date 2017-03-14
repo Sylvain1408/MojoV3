@@ -1,0 +1,3 @@
+vhdtdtfi -lib work i2c_ram_interface.vhd -lib work ../i2C/i2cmaster.vhd -lib work i2c.vhd -prj Mojo-Base-VHDL -o i2c.spl -module i2c -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 i2c.spl C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c.sym 
+vhdtdtfi -prj Mojo-Base-VHDL -o C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c.vhi -module i2c -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work i2c_ram_interface.vhd -lib work ../i2C/i2cmaster.vhd -lib work i2c.vhd 

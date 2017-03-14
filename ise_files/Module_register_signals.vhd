@@ -56,7 +56,7 @@ signal test : std_logic;
 begin
 
 test <= '1' when ram_addr = X"00000004" and byte_enable_a /= "0000" else
-					'0';
+					'0';--check ram_data
 
 enable_i2c <= test;--Flip Flop to clean the output
 

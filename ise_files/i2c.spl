@@ -1,0 +1,12 @@
+[Inputs]
+clk
+fetch_decode
+=ram_dout[31:0]=
+[Outputs]
+=ram_din[31:0]=
+=ram_addr[31:0]=
+=ram_byte[3:0]=
+=led[7:0]=
+[BiDir]
+scl
+sda

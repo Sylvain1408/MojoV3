@@ -4,15 +4,15 @@ Xilinx Mapping Report File for Design 'mojo_top'
 Design Information
 ------------------
 Command Line   : map -filter
-E:/workspace/Mojo-Base-VHDL/ise_files/iseconfig/filter.filter -intstyle ise -p
-xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off
--r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o
-mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+C:/Users/CAO-PCB/Documents/MojoV3/ise_files/iseconfig/filter.filter -intstyle
+ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0
+-register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off
+-power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
 Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Jul 15 23:09:26 2016
+Mapped Date    : Sun Feb 05 12:23:21 2017
 
 Design Summary
 --------------
@@ -93,9 +93,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.59
 
-Peak Memory Usage:  395 MB
-Total REAL time to MAP completion:  1 mins 7 secs 
-Total CPU time to MAP completion:   1 mins 
+Peak Memory Usage:  404 MB
+Total REAL time to MAP completion:  21 secs 
+Total CPU time to MAP completion:   20 secs 
 
 Table of Contents
 -----------------

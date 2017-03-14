@@ -4,15 +4,15 @@ Xilinx Map Application Log File for Design 'mojo_top'
 Design Information
 ------------------
 Command Line   : map -filter
-E:/workspace/Mojo-Base-VHDL/ise_files/iseconfig/filter.filter -intstyle ise -p
-xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off
--r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o
-mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
+C:/Users/CAO-PCB/Documents/MojoV3/ise_files/iseconfig/filter.filter -intstyle
+ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0
+-register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off
+-power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
 Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Jul 15 23:09:26 2016
+Mapped Date    : Sun Feb 05 12:23:21 2017
 
 Mapping design into LUTs...
 Running directed packing...
@@ -21,34 +21,34 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 15 secs 
-Total CPU  time at the beginning of Placer: 14 secs 
+Total REAL time at the beginning of Placer: 6 secs 
+Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3547b7ef) REAL time: 16 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:3547b7ef) REAL time: 7 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:3547b7ef) REAL time: 16 secs 
+Phase 2.7  Design Feasibility Check (Checksum:3547b7ef) REAL time: 7 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:3547b7ef) REAL time: 16 secs 
+Phase 3.31  Local Placement Optimization (Checksum:3547b7ef) REAL time: 7 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:a4b5071f) REAL time: 25 secs 
+(Checksum:a4b5071f) REAL time: 10 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:a4b5071f) REAL time: 25 secs 
+Phase 5.36  Local Placement Optimization (Checksum:a4b5071f) REAL time: 10 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:a4b5071f) REAL time: 25 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:a4b5071f) REAL time: 10 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:a4b5071f) REAL time: 25 secs 
+Phase 7.3  Local Placement Optimization (Checksum:a4b5071f) REAL time: 10 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:a4b5071f) REAL time: 25 secs 
+Phase 8.5  Local Placement Optimization (Checksum:a4b5071f) REAL time: 10 secs 
 
 Phase 9.8  Global Placement
 ......................
@@ -56,22 +56,22 @@ Phase 9.8  Global Placement
 .......................................
 ........................................................................................
 ...............................
-Phase 9.8  Global Placement (Checksum:be59ed03) REAL time: 56 secs 
+Phase 9.8  Global Placement (Checksum:be59ed03) REAL time: 18 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:be59ed03) REAL time: 56 secs 
+Phase 10.5  Local Placement Optimization (Checksum:be59ed03) REAL time: 18 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:96f21ffb) REAL time: 1 mins 2 secs 
+Phase 11.18  Placement Optimization (Checksum:96f21ffb) REAL time: 20 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:96f21ffb) REAL time: 1 mins 2 secs 
+Phase 12.5  Local Placement Optimization (Checksum:96f21ffb) REAL time: 20 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:959b040b) REAL time: 1 mins 3 secs 
+Phase 13.34  Placement Validation (Checksum:959b040b) REAL time: 20 secs 
 
-Total REAL time to Placer completion: 1 mins 4 secs 
-Total CPU  time to Placer completion: 57 secs 
+Total REAL time to Placer completion: 20 secs 
+Total CPU  time to Placer completion: 18 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -156,9 +156,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.59
 
-Peak Memory Usage:  395 MB
-Total REAL time to MAP completion:  1 mins 7 secs 
-Total CPU time to MAP completion:   1 mins 
+Peak Memory Usage:  404 MB
+Total REAL time to MAP completion:  21 secs 
+Total CPU time to MAP completion:   20 secs 
 
 Mapping completed.
 See MAP report file "mojo_top_map.mrp" for details.

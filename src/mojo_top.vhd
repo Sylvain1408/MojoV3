@@ -47,7 +47,7 @@ signal new_rx_data		: std_logic;
 signal tx_busy			: std_logic;
 
 -- signals for UART echo test
-signal uart_data		: std_logic_vector(7 downto 0);	-- data buffer for UART (holds last recieved/sent byte)
+signal uart_data		: std_logic_vector(7 downto 0);	-- data buffer for UART (holds last received/sent byte)
 signal data_to_send		: std_logic;					-- indicates data to send in uart_data
 
 -- signals for sample test

@@ -1,28 +1,24 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o E:/workspace/Mojo-Base-VHDL/ise_files/TbI2c_isim_beh.exe -prj E:/workspace/Mojo-Base-VHDL/ise_files/TbI2c_beh.prj work.TbI2c 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbI2c_isim_beh.exe -prj C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbI2c_beh.prj work.TbI2c 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "E:/workspace/Mojo-Base-VHDL/ise_files/i2c_ram_interface.vhd" into library work
-Parsing VHDL file "E:/workspace/Mojo-Base-VHDL/ise_files/i2c_master.vhd" into library work
-WARNING:HDLCompiler:957 - "E:/workspace/Mojo-Base-VHDL/ise_files/i2c_master.vhd" Line 86: Case choice must be a locally static expression
-WARNING:HDLCompiler:957 - "E:/workspace/Mojo-Base-VHDL/ise_files/i2c_master.vhd" Line 89: Case choice must be a locally static expression
-WARNING:HDLCompiler:957 - "E:/workspace/Mojo-Base-VHDL/ise_files/i2c_master.vhd" Line 92: Case choice must be a locally static expression
-Parsing VHDL file "E:/workspace/Mojo-Base-VHDL/ise_files/i2c.vhd" into library work
-Parsing VHDL file "E:/workspace/Mojo-Base-VHDL/ise_files/TbI2c.vhd" into library work
+Parsing VHDL file "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c_ram_interface.vhd" into library work
+Parsing VHDL file "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/../i2C/i2cmaster.vhd" into library work
+Parsing VHDL file "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c.vhd" into library work
+Parsing VHDL file "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbI2c.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
-Compiling architecture logic of entity i2c_master [\i2c_master(50000000,100000)\]
+Compiling package numeric_std
+Compiling architecture rtl of entity I2CMASTER [\I2CMASTER(('0','0','1','1','1',...]
 Compiling architecture behavioral of entity i2c_ram_interface [i2c_ram_interface_default]
 Compiling architecture behavioral of entity i2c [i2c_default]
 Compiling architecture behavior of entity tbi2c
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 11 VHDL Units
-Built simulation executable E:/workspace/Mojo-Base-VHDL/ise_files/TbI2c_isim_beh.exe
-Fuse Memory Usage: 33424 KB
-Fuse CPU Usage: 935 ms
+Compiled 10 VHDL Units
+Built simulation executable C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbI2c_isim_beh.exe
+Fuse Memory Usage: 34840 KB
+Fuse CPU Usage: 593 ms

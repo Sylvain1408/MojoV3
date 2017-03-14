@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/ram.vhd"
+vhdl work "RamChain.vhd"
+vhdl work "TbRamChain.vhd"

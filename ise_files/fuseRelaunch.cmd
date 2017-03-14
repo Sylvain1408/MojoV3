@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "E:/workspace/Mojo-Base-VHDL/ise_files/TbI2c_isim_beh.exe" -prj "E:/workspace/Mojo-Base-VHDL/ise_files/TbI2c_beh.prj" "work.TbI2c" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbI2c_isim_beh.exe" -prj "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbI2c_beh.prj" "work.TbI2c" 

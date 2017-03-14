@@ -1,0 +1,2 @@
+vhdl isim_temp "../../../Desktop/i2cmaster.vhd"
+vhdl isim_temp "../../../Desktop/tb_i2cmaster.vhd"

@@ -1,0 +1,29 @@
+Command line:
+   tb_I2CMASTER_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60371
+
+Tue Mar 14 13:20:12 2017
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 841.703 Meg
+
+ Total Signals          : 44
+ Total Nets             : 63
+ Total Signal Drivers   : 27
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 7
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 554
+Total Line Count : 249
+
+ Total Simulation Time: 0.234375 sec
+
+ Current Memory Usage: 684.417 Meg
+
+Tue Mar 14 13:22:13 2017
+

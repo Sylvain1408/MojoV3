@@ -1,2 +1,3 @@
-work	"RamChain.vhd"
-work	"ipcore_dir/ram.vhd"
+work	"../i2C/i2cmaster.vhd"
+work	"i2c.vhd"
+work	"i2c_ram_interface.vhd"
