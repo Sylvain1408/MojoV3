@@ -149,12 +149,12 @@ END COMPONENT;
 	END COMPONENT;
 	
 
-signal fetch_decode : std_logic;
+signal go : std_logic;
 
 COMPONENT i2c
 	PORT(
 		clk : IN  STD_LOGIC;
-		fetch_decode : IN std_logic;--start i2c component
+		go : IN std_logic;--start i2c component
 		ram_din : OUT std_logic_vector(31 downto 0);
 		ram_dout : IN std_logic_vector(31 downto 0);
 		ram_addr : OUT std_logic_vector(31 downto 0);
@@ -303,7 +303,7 @@ begin
 	Module_I2C : i2c
 		PORT MAP(
 			clk => clk,
-			fetch_decode => fetch_decode,
+			go => go,
 			ram_addr => addr_b,
 			ram_din => data_in_b,
 			ram_dout => data_out_b,
@@ -318,7 +318,7 @@ begin
 		clk => clk,
 		ram_addr => addr_a,
 		ram_read => data_in_a,
-		enable_i2c => fetch_decode,
+		enable_i2c => go,
 		byte_enable_a => byte_enable_a,
 		
 		led => open

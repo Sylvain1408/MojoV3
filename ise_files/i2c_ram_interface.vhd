@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Sylvain ROULAND
 -- 
 -- Create Date:    20:15:52 05/07/2016 
 -- Design Name: 
@@ -22,6 +22,7 @@
 --nb byte | busy	|Error|	RW	|	Go	|
 --	  7-4  |	3		|	2	|	1	|	 0	|
 -------------------------------------
+--RW : 0 write, 1 read
 --register C_BASEADDR + 0x01
 -------------------------------------
 --| X |		   i2c slv_addr			|
@@ -39,6 +40,7 @@
 -------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.ALL; 
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -64,7 +66,7 @@ entity i2c_ram_interface is
 		queue						: IN std_logic;
 		data_valid				: IN std_logic;
 		stop						: IN std_logic;
-		fetch_decode 			: IN std_logic;
+		go				 			: IN std_logic;
 		reset_n					: OUT std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
@@ -75,23 +77,24 @@ end i2c_ram_interface;
 
 architecture Behavioral of i2c_ram_interface is
 
-TYPE machine IS(idle, ready, fetch_setup, fetch_data, decode_data, wait_data, done); --needed states for I2C control
+TYPE machine IS(idle, ready, fetch_setup, fetch_data, decode_data, data_transfer, done); --needed states for I2C control
 TYPE tic_states IS(low, high); --needed states for tic signal
 SIGNAL state         : machine := idle;               --state machine
 signal setup_word : std_logic_vector(31 downto 0);
 signal data_word : std_logic_vector(31 downto 0);
+signal data_recv : std_logic_vector(31 downto 0);
 signal led_signal : std_logic_vector(7 downto 0) := "00000000";
-signal busy_prev : std_logic;
-signal start_micro : std_logic;
 signal T : integer range 0 to 1 := 0;
 signal tic_counter : integer range 0 to 170 := 0;
+signal nb_bytes : integer range 1 to 4 := 0;
+signal tic_go : std_logic;
 
 begin
 
-main : process(clk, fetch_decode)
+main : process(clk, go)
 	begin
 	if( clk'event and clk = '1')then				
-		if(fetch_decode = '1' and state = idle)then
+		if(go = '1' and state = idle)then
 			state <= ready;
 		end if;
 		
@@ -100,9 +103,10 @@ main : process(clk, fetch_decode)
 				ram_addr <= X"00000000";
 				ram_byte <= "0000";
 				reset_n <= '0';
+				tic_go <= '0';
 				led <= X"01";
 
-			when ready =>--waiting on fetch_decode signal to start
+			when ready =>--waiting on go signal to start
 				ram_addr <= X"00000004";
 				ram_byte <= "0000";
 				state <= fetch_setup;			
@@ -110,24 +114,48 @@ main : process(clk, fetch_decode)
 				
 			when fetch_setup =>--fetch data from ram
 				setup_word <= ram_read;
-				state <= decode_data;
-				if(ram_read(1) = '0')then
+				if(ram_read(1) = '0')then -- write to slave, get data from RAM
 					ram_addr <= X"00000008";
 					ram_byte <= "0000";
 				end if;
-				
 				state <= fetch_data;
 				led <= X"22";
+				
 			when fetch_data =>
 				data_word <= ram_read;
+				if(to_integer(unsigned(setup_word(6 downto 4))) > 4)then
+					nb_bytes <= 4;
+				else
+					nb_bytes <= to_integer(unsigned(setup_word(6 downto 4)));
+				end if;
 				state <= decode_data;
 				led <= X"23";
-			when decode_data =>--decode data
+				
+			when decode_data =>--slave addr first
+				rd <= '0';
+				we <= '1';
+				slave_din <= setup_word(14 downto 8);
+				reset_n <= '1';
+				tic_go <= '1';
+				if(queue'event and queue = '0')then
+					state <= data_transfer;
+					rd <= setup_word(1);
+					we <= not setup_word(1);
+				end if;
 
-			when wait_data =>--waiting physical to get back data from slave
-
-				state <= done;
+			when data_transfer =>--waiting physical to get back data from slave
+				if(queue = '0')then
+					if(nb_bytes = 0)then
+						state <= done;
+					else
+						nb_bytes <= nb_bytes - 1;
+						slave_din <= data_word( (8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes))));
+						data_recv((8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes)))) <= salve_dout;
+					end if;
+					
+				end if;
 				led(7 downto 0) <= X"00";
+				
 			when done =>
 
 				state <= idle;
@@ -139,7 +167,7 @@ main : process(clk, fetch_decode)
 
 	end process main;
 	
-clock_gen : process(clk, fetch_decode)--300kHz clock generator from 50MHz (to finally drive I2C at 100KHz)
+clock_gen : process(clk, tic_go)--300kHz clock generator from 50MHz (to finally drive I2C at 100KHz)
 	begin
 		if(tic_counter < 167)then
 			tic <= '0';

@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/xst"
+set -tmpdir "C:/Users/Sylvain/Desktop/MojoV3/ise_files/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Sylvain/Desktop/MojoV3/ise_files/xst"
 run -compileonly yes
 -p xc6slx9-2-tqg144
 -top i2c

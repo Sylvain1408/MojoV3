@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity i2c is
     Port ( 
 		clk : IN  STD_LOGIC;
-		fetch_decode : IN std_logic;--start i2c component
+		go : IN std_logic;--start i2c component
 		ram_din : OUT std_logic_vector(31 downto 0);
 		ram_dout : IN std_logic_vector(31 downto 0);
 		ram_addr : OUT std_logic_vector(31 downto 0);
@@ -103,7 +103,7 @@ signal status : std_logic_vector(2 downto 0);
 		queue						: IN std_logic;
 		data_valid				: IN std_logic;
 		stop						: IN std_logic;
-		fetch_decode 			: IN std_logic;
+		go				 			: IN std_logic;
 		reset_n					: OUT std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
@@ -118,7 +118,7 @@ begin
 	PORT MAP(
 		MCLK => clk,
 		nRST => reset_n,
-		SRST => reset_sync,
+		SRST => '0',
 		TIC => tic,
 		DIN => slave_din,
 		DOUT => slave_dout,
@@ -144,7 +144,7 @@ begin
 		ram_read => ram_dout,
 		ram_addr => ram_addr,
 		ram_byte => ram_byte,
-		fetch_decode => fetch_decode,
+		go => go,
 		
 		--I2C side
 		slave_dout => slave_dout,

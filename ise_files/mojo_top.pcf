@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Feb 05 12:23:42 2017
+// Written by: Map P.20131013 on Fri Mar 17 23:13:07 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -351,128 +351,17 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_ram_interface/ram_write_2" BEL
         "Module_ram_interface/ram_write_1" BEL
         "Module_ram_interface/ram_write_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd1" BEL
         "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd3" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_write_7" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_write_6" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_write_5" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_write_4" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_write_3" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_write_2" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_write_1" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_write_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/busy_cnt_2" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/busy_cnt_1" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/busy_cnt_0" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd1" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_addr_3" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_addr_2" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_byte_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_addr_6" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_addr_5" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_addr_4" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_addr_3" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_addr_2" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_addr_1" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/slave_addr_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_31" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_30" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_29" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_28" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_27" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_26" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_25" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_24" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_23" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_22" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_21" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_20" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_19" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_18" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_17" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_16" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_15" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_14" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_13" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_12" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_11" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_10" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_9" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_8" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_7" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_6" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_5" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_4" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_3" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_2" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_1" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/data_word_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_7" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_6" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_5" BEL
         "Module_I2C/SubModule_i2c_ram_interface/led_4" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_3" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/led_1" BEL
         "Module_I2C/SubModule_i2c_ram_interface/led_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_23" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_22" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_21" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_20" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_19" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_18" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_17" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_16" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_14" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_13" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_12" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_11" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_10" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_9" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_8" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/setup_word_1" BEL
-        "Module_I2C/SubModule_i2c_physical/state_FSM_FFd2" BEL
-        "Module_I2C/SubModule_i2c_physical/state_FSM_FFd4" BEL
-        "Module_I2C/SubModule_i2c_physical/state_FSM_FFd3" BEL
-        "Module_I2C/SubModule_i2c_physical/count_8" BEL
-        "Module_I2C/SubModule_i2c_physical/count_7" BEL
-        "Module_I2C/SubModule_i2c_physical/count_6" BEL
-        "Module_I2C/SubModule_i2c_physical/count_5" BEL
-        "Module_I2C/SubModule_i2c_physical/count_4" BEL
-        "Module_I2C/SubModule_i2c_physical/count_3" BEL
-        "Module_I2C/SubModule_i2c_physical/count_2" BEL
-        "Module_I2C/SubModule_i2c_physical/count_1" BEL
-        "Module_I2C/SubModule_i2c_physical/count_0" BEL
-        "Module_I2C/SubModule_i2c_physical/bit_cnt_2" BEL
-        "Module_I2C/SubModule_i2c_physical/bit_cnt_1" BEL
-        "Module_I2C/SubModule_i2c_physical/bit_cnt_0" BEL
-        "Module_I2C/SubModule_i2c_physical/data_clk_prev" BEL
-        "Module_I2C/SubModule_i2c_physical/data_clk" BEL
-        "Module_I2C/SubModule_i2c_physical/scl_clk" BEL
-        "Module_I2C/SubModule_i2c_physical/addr_rw_7" BEL
-        "Module_I2C/SubModule_i2c_physical/addr_rw_6" BEL
-        "Module_I2C/SubModule_i2c_physical/addr_rw_5" BEL
-        "Module_I2C/SubModule_i2c_physical/addr_rw_4" BEL
-        "Module_I2C/SubModule_i2c_physical/addr_rw_3" BEL
-        "Module_I2C/SubModule_i2c_physical/addr_rw_2" BEL
-        "Module_I2C/SubModule_i2c_physical/addr_rw_1" BEL
-        "Module_I2C/SubModule_i2c_physical/data_tx_7" BEL
-        "Module_I2C/SubModule_i2c_physical/data_tx_6" BEL
-        "Module_I2C/SubModule_i2c_physical/data_tx_5" BEL
-        "Module_I2C/SubModule_i2c_physical/data_tx_4" BEL
-        "Module_I2C/SubModule_i2c_physical/data_tx_3" BEL
-        "Module_I2C/SubModule_i2c_physical/data_tx_2" BEL
-        "Module_I2C/SubModule_i2c_physical/data_tx_1" BEL
-        "Module_I2C/SubModule_i2c_physical/data_tx_0" BEL
-        "Module_I2C/SubModule_i2c_physical/sda_int" BEL
-        "Module_I2C/SubModule_i2c_physical/busy" BEL
-        "Module_I2C/SubModule_i2c_physical/scl_ena" BEL
-        "Module_I2C/SubModule_i2c_physical/stretch" BEL
         "Module_ram_interface/mcs_ready" BEL
         "Module_ram_interface/ram_byte_enable_0" BEL "Module_ram_interface/rw"
-        BEL "Module_I2C/SubModule_i2c_ram_interface/reset_n" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/busy_prev" BEL
-        "Inst_Module_UART_interface/rx_new_data" BEL "clk_BUFGP/BUFG" BEL
+        BEL "Inst_Module_UART_interface/rx_new_data" BEL "clk_BUFGP/BUFG" BEL
         "mcs_0/U0/ilmb_cntlr/Sl_Rdy" BEL "mcs_0/U0/ilmb_cntlr/lmb_as" BEL
         "mcs_0/U0/ilmb/POR_FF_I" BEL "mcs_0/U0/filter_reset.reset_vec_0" BEL
         "mcs_0/U0/filter_reset.reset_vec_1" BEL

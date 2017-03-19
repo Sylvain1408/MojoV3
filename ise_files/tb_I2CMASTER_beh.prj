@@ -1,0 +1,2 @@
+vhdl work "../i2C/i2cmaster.vhd"
+vhdl work "../i2C/tb_i2cmaster.vhd"
