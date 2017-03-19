@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Mar 17 23:13:07 2017
+// Written by: Map P.20131013 on Sun Mar 19 20:33:26 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -351,14 +351,21 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_ram_interface/ram_write_2" BEL
         "Module_ram_interface/ram_write_1" BEL
         "Module_ram_interface/ram_write_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd2" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd3" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_1" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_0" BEL
         "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd1" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_addr_3" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_addr_2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd3" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/led_4" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/led_1" BEL
         "Module_I2C/SubModule_i2c_ram_interface/led_0" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_addr_3" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_addr_2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/setup_word_6" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/setup_word_5" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/setup_word_4" BEL
         "Module_ram_interface/mcs_ready" BEL
         "Module_ram_interface/ram_byte_enable_0" BEL "Module_ram_interface/rw"
         BEL "Inst_Module_UART_interface/rx_new_data" BEL "clk_BUFGP/BUFG" BEL

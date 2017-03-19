@@ -16,18 +16,20 @@
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Module_UART_interface_ - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|MojoV3|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|MojoV3|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
          <ClosedNode>/mojo_top - RTL E:|workspace|Mojo-Base-VHDL|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL E:|workspace|Mojo-Base-VHDL|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
          <ClosedNode>/tb_I2CMASTER - stimulus C:|Users|Sylvain|Desktop|MojoV3|i2C|tb_i2cmaster.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>tb_I2CMASTER - stimulus (C:/Users/Sylvain/Desktop/MojoV3/i2C/tb_i2cmaster.vhd)</SelectedItem>
+         <SelectedItem>mojo_top - RTL (C:/Users/Sylvain/Desktop/MojoV3/src/mojo_top.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>tb_I2CMASTER - stimulus (C:/Users/Sylvain/Desktop/MojoV3/i2C/tb_i2cmaster.vhd)</CurrentItem>
+      <CurrentItem>mojo_top - RTL (C:/Users/Sylvain/Desktop/MojoV3/src/mojo_top.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -41,13 +43,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000150000000010000000100000000000000000000000064ffffffff000000810000000000000001000001500000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -76,22 +78,24 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
-         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
          <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
          <ClosedNode>Implement Design/Place &amp; Route/Back-annotate Pin Locations</ClosedNode>
          <ClosedNode>Implement Design/Place &amp; Route/Generate IBIS Model</ClosedNode>
          <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Implement Design</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000150000000010000000100000000000000000000000064ffffffff000000810000000000000001000001500000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Implement Design</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
@@ -120,7 +124,7 @@
       <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001940000014501000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
@@ -149,6 +153,7 @@
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/Module_I2C - i2c - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|MojoV3|src|mojo_top.vhd</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|Desktop|MojoV3|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL E:|workspace|Mojo-Base-VHDL|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL E:|workspace|Mojo-Base-VHDL|src|mojo_top.vhd/Module_I2C - i2c - Behavioral</ClosedNode>
@@ -158,9 +163,9 @@
       <SelectedItems>
          <SelectedItem>tb_I2CMASTER - stimulus (C:/Users/Sylvain/Desktop/MojoV3/i2C/tb_i2cmaster.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >8</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025c0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000231000000020000000000000000000000000200000064ffffffff000000810000000300000002000002310000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>tb_I2CMASTER - stimulus (C:/Users/Sylvain/Desktop/MojoV3/i2C/tb_i2cmaster.vhd)</CurrentItem>
    </ItemView>

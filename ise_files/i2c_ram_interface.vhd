@@ -71,6 +71,9 @@ entity i2c_ram_interface is
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
 		
+		sdain: IN std_logic;
+		sclin: IN std_logic;
+		
 		led						: OUT std_logic_vector(7 downto 0)
 		);
 end i2c_ram_interface;
@@ -86,7 +89,7 @@ signal data_recv : std_logic_vector(31 downto 0);
 signal led_signal : std_logic_vector(7 downto 0) := "00000000";
 signal T : integer range 0 to 1 := 0;
 signal tic_counter : integer range 0 to 170 := 0;
-signal nb_bytes : integer range 1 to 4 := 0;
+signal nb_bytes : integer range 1 to 4 := 1;
 signal tic_go : std_logic;
 
 begin
@@ -134,10 +137,10 @@ main : process(clk, go)
 			when decode_data =>--slave addr first
 				rd <= '0';
 				we <= '1';
-				slave_din <= setup_word(14 downto 8);
+				slave_din <= setup_word(15 downto 8);
 				reset_n <= '1';
 				tic_go <= '1';
-				if(queue'event and queue = '0')then
+				if(queue = '0')then--error
 					state <= data_transfer;
 					rd <= setup_word(1);
 					we <= not setup_word(1);
@@ -150,7 +153,7 @@ main : process(clk, go)
 					else
 						nb_bytes <= nb_bytes - 1;
 						slave_din <= data_word( (8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes))));
-						data_recv((8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes)))) <= salve_dout;
+						data_recv((8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes)))) <= slave_dout;
 					end if;
 					
 				end if;

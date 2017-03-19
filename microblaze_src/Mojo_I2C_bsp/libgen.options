@@ -1,0 +1,3 @@
+PROCESSOR=microblaze_mcs
+REPOSITORIES=
+HWSPEC=../Mojo_HW/system.xml

@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Fri Mar 17 23:13:10 2017">
+<application name="pn" timeStamp="Sun Mar 19 20:33:28 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="D5F012D4F94A44C7BABAB085E4FFBB04" type="project"/>
-<property name="ProjectIteration" value="255" type="project"/>
+<property name="ProjectIteration" value="257" type="project"/>
 <property name="ProjectFile" value="C:/Users/Sylvain/Desktop/MojoV3/ise_files/Mojo-Base-VHDL.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-05-10T21:09:57" type="project"/>
 </section>
@@ -17,7 +17,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
-<property name="PROP_SelectedInstanceHierarchicalPath" value="/mojo_top" type="process"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/tb_I2CMASTER" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -28,11 +28,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_bitgen_otherCmdLineOptions_spartan6" value="-bd "E:\workspace\workspace\retest\Debug\retest.elf" tag microblaze_mcs" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-05-10T21:09:57" type="design"/>
 <property name="PROP_intWbtProjectID" value="D5F012D4F94A44C7BABAB085E4FFBB04" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="255" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="257" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_ngdbuild_otherCmdLineOptions" value="-bm "ipcore_dir/microblaze_mcs.bmm"" type="process"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.mojo_top" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.tb_I2CMASTER" type="process"/>
 <property name="PROP_xilxBitgCfg_GenOpt_Compress" value="true" type="process"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>

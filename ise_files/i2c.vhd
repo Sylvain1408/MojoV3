@@ -63,6 +63,9 @@ signal data_valid : std_logic;
 signal stop : std_logic;
 signal status : std_logic_vector(2 downto 0);
 
+signal sdai: std_logic;
+signal scli : std_logic;
+
 	COMPONENT i2cmaster
 		generic(
 		DEVICE 		: std_logic_vector(7 downto 0) := x"38"
@@ -108,6 +111,9 @@ signal status : std_logic_vector(2 downto 0);
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
 		
+		sdain: IN std_logic;
+		sclin: IN std_logic;
+		
 		led						: OUT std_logic_vector(7 downto 0)
 		);
 	END COMPONENT;
@@ -129,9 +135,9 @@ begin
 		DATA_VALID =>	data_valid,
 		STOP =>	stop,
 		STATUS => status,
-		SCL_IN => scl,
+		SCL_IN => scli,
 		SCL_OUT => scl,
-		SDA_IN => sda,
+		SDA_IN => sdai,
 		SDA_OUT => sda
 	);
 	
@@ -157,6 +163,9 @@ begin
 		stop	=> stop,
 		status => status,
 		ack_error => ack_error,
+		
+		sdain => sdai,
+		sclin => scli,
 		
 		led => led
 	);
