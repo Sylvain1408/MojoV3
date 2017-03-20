@@ -37,6 +37,7 @@ entity i2c is
 		ram_dout : IN std_logic_vector(31 downto 0);
 		ram_addr : OUT std_logic_vector(31 downto 0);
 		ram_byte : OUT std_logic_vector(3 downto 0);
+		reset_in					: IN std_logic;
 		scl : INOUT std_logic;
 		sda : INOUT std_logic;
 		
@@ -65,6 +66,8 @@ signal status : std_logic_vector(2 downto 0);
 
 signal sdai: std_logic;
 signal scli : std_logic;
+signal sdao: std_logic;
+signal sclo : std_logic;
 
 	COMPONENT i2cmaster
 		generic(
@@ -110,11 +113,20 @@ signal scli : std_logic;
 		reset_n					: OUT std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
-		
-		sdain: IN std_logic;
-		sclin: IN std_logic;
+		reset_in					: IN std_logic;
 		
 		led						: OUT std_logic_vector(7 downto 0)
+		);
+	END COMPONENT;
+	
+		COMPONENT I2C_buffer
+	PORT(
+		sda_in : IN std_logic;
+		scl_in : IN std_logic;    
+		sda : INOUT std_logic;
+		scl : INOUT std_logic;      
+		sda_out : OUT std_logic;
+		scl_out : OUT std_logic
 		);
 	END COMPONENT;
 
@@ -136,10 +148,11 @@ begin
 		STOP =>	stop,
 		STATUS => status,
 		SCL_IN => scli,
-		SCL_OUT => scl,
+		SCL_OUT => sclo,
 		SDA_IN => sdai,
-		SDA_OUT => sda
+		SDA_OUT => sdao
 	);
+	
 	
 	SubModule_i2c_ram_interface: i2c_ram_interface 
 	PORT MAP(
@@ -163,12 +176,20 @@ begin
 		stop	=> stop,
 		status => status,
 		ack_error => ack_error,
-		
-		sdain => sdai,
-		sclin => scli,
+		reset_in => reset_in,
 		
 		led => led
 	);
+
+	Inst_I2C_buffer: I2C_buffer PORT MAP(
+		sda_in => sdao,
+		scl_in => sclo,
+		sda_out => sdai,
+		scl_out => scli,
+		sda => sda,
+		scl => scl
+	);
+
 
 
 end Behavioral;

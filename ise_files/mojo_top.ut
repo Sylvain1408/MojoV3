@@ -1,4 +1,4 @@
--bd "E:\workspace\workspace\retest\Debug\retest.elf" tag microblaze_mcs
+-bd "C:\Users\Sylvain\workspace\test\Debug\test.elf" tag microblaze_mcs
 -w
 -g Binary:yes
 -g Compress

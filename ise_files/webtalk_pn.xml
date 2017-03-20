@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sun Mar 19 20:33:28 2017">
+<application name="pn" timeStamp="Mon Mar 20 20:41:09 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="D5F012D4F94A44C7BABAB085E4FFBB04" type="project"/>
-<property name="ProjectIteration" value="257" type="project"/>
-<property name="ProjectFile" value="C:/Users/Sylvain/Desktop/MojoV3/ise_files/Mojo-Base-VHDL.xise" type="project"/>
+<property name="ProjectIteration" value="265" type="project"/>
+<property name="ProjectFile" value="C:/Users/Sylvain/workspace/MojoV3/ise_files/Mojo-Base-VHDL.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-05-10T21:09:57" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -25,10 +25,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserBrowsedStrategyFiles" value="C:/Xilinx/14.7/ISE_DS/ISE/data/default.xds" type="process"/>
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_VHDLSourceAnalysisStandard" value="VHDL-200X" type="process"/>
-<property name="PROP_bitgen_otherCmdLineOptions_spartan6" value="-bd "E:\workspace\workspace\retest\Debug\retest.elf" tag microblaze_mcs" type="process"/>
+<property name="PROP_bitgen_otherCmdLineOptions_spartan6" value="-bd "C:\Users\Sylvain\workspace\test\Debug\test.elf" tag microblaze_mcs" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-05-10T21:09:57" type="design"/>
 <property name="PROP_intWbtProjectID" value="D5F012D4F94A44C7BABAB085E4FFBB04" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="257" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="265" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_ngdbuild_otherCmdLineOptions" value="-bm "ipcore_dir/microblaze_mcs.bmm"" type="process"/>
@@ -47,7 +47,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
 <property name="FILE_COREGEN" value="2" type="source"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VHDL" value="20" type="source"/>
+<property name="FILE_VHDL" value="21" type="source"/>
 </section>
 </application>
 </document>

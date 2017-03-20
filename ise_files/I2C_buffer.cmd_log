@@ -1,0 +1,1 @@
+vhdtdtfi -prj Mojo-Base-VHDL -o C:/Users/Sylvain/workspace/MojoV3/ise_files/I2C_buffer.vhi -module I2C_buffer -template C:/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work I2C_buffer.vhd 

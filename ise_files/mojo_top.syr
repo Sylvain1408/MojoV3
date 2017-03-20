@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.34 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.34 secs
  
 --> Reading design: mojo_top.prj
 
@@ -108,44 +108,47 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs.vhd" into library work
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\ise_files\ipcore_dir\ram.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\ipcore_dir\microblaze_mcs.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\ipcore_dir\ram.vhd" into library work
 Parsing entity <ram>.
 Parsing architecture <ram_a> of entity <ram>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\src\spi_slave.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\src\spi_slave.vhd" into library work
 Parsing entity <spi_slave>.
 Parsing architecture <RTL> of entity <spi_slave>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\src\serial_tx.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\src\serial_tx.vhd" into library work
 Parsing entity <serial_tx>.
 Parsing architecture <RTL> of entity <serial_tx>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\src\serial_rx.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\src\serial_rx.vhd" into library work
 Parsing entity <serial_rx>.
 Parsing architecture <RTL> of entity <serial_rx>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\src\cclk_detector.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\src\cclk_detector.vhd" into library work
 Parsing entity <cclk_detector>.
 Parsing architecture <RTL> of entity <cclk_detector>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" into library work
 Parsing entity <i2c_ram_interface>.
 Parsing architecture <Behavioral> of entity <i2c_ram_interface>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\i2C\i2cmaster.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\I2C_buffer.vhd" into library work
+Parsing entity <I2C_buffer>.
+Parsing architecture <Behavioral> of entity <i2c_buffer>.
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\i2C\i2cmaster.vhd" into library work
 Parsing entity <I2CMASTER>.
 Parsing architecture <rtl> of entity <i2cmaster>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\src\avr_interface.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\src\avr_interface.vhd" into library work
 Parsing entity <avr_interface>.
 Parsing architecture <RTL> of entity <avr_interface>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\ise_files\ram_interface.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\ram_interface.vhd" into library work
 Parsing entity <ram_interface>.
 Parsing architecture <Behavioral> of entity <ram_interface>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\ise_files\Module_UART_interface.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\Module_UART_interface.vhd" into library work
 Parsing entity <Module_UART_interface>.
 Parsing architecture <Behavioral> of entity <module_uart_interface>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\ise_files\Module_register_signals.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\Module_register_signals.vhd" into library work
 Parsing entity <Module_register_signals>.
 Parsing architecture <Behavioral> of entity <module_register_signals>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c.vhd" into library work
 Parsing entity <i2c>.
 Parsing architecture <Behavioral> of entity <i2c>.
-Parsing VHDL file "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" into library work
 Parsing entity <mojo_top>.
 Parsing architecture <RTL> of entity <mojo_top>.
 
@@ -154,6 +157,7 @@ Parsing architecture <RTL> of entity <mojo_top>.
 =========================================================================
 
 Elaborating entity <mojo_top> (architecture <RTL>) from library <work>.
+WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" Line 184: Assignment to rst ignored, since the identifier is never used
 
 Elaborating entity <avr_interface> (architecture <RTL>) from library <work>.
 
@@ -162,65 +166,61 @@ Elaborating entity <cclk_detector> (architecture <RTL>) from library <work>.
 Elaborating entity <spi_slave> (architecture <RTL>) from library <work>.
 
 Elaborating entity <serial_rx> (architecture <RTL>) with generics from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sylvain\Desktop\MojoV3\src\serial_rx.vhd" Line 80. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\Sylvain\workspace\MojoV3\src\serial_rx.vhd" Line 80. Case statement is complete. others clause is never selected
 
 Elaborating entity <serial_tx> (architecture <RTL>) with generics from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sylvain\Desktop\MojoV3\src\serial_tx.vhd" Line 96. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:89 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" Line 72: <microblaze_mcs> remains a black-box since it has no binding entity.
+INFO:HDLCompiler:679 - "C:\Users\Sylvain\workspace\MojoV3\src\serial_tx.vhd" Line 96. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:89 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" Line 72: <microblaze_mcs> remains a black-box since it has no binding entity.
 
 Elaborating entity <ram> (architecture <ram_a>) from library <work>.
 
 Elaborating entity <Module_UART_interface> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <serial_rx> (architecture <RTL>) with generics from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sylvain\Desktop\MojoV3\src\serial_rx.vhd" Line 80. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\Sylvain\workspace\MojoV3\src\serial_rx.vhd" Line 80. Case statement is complete. others clause is never selected
 
 Elaborating entity <serial_tx> (architecture <RTL>) with generics from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sylvain\Desktop\MojoV3\src\serial_tx.vhd" Line 96. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\Sylvain\workspace\MojoV3\src\serial_tx.vhd" Line 96. Case statement is complete. others clause is never selected
 
 Elaborating entity <ram_interface> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\ram_interface.vhd" Line 114. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\ram_interface.vhd" Line 69: Assignment to word ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\ram_interface.vhd" Line 59: Net <addr[7]> does not have a driver.
+INFO:HDLCompiler:679 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\ram_interface.vhd" Line 114. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\ram_interface.vhd" Line 69: Assignment to word ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\ram_interface.vhd" Line 59: Net <addr[7]> does not have a driver.
 
 Elaborating entity <i2c> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <I2CMASTER> (architecture <rtl>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\Desktop\MojoV3\i2C\i2cmaster.vhd" Line 82: Assignment to next_counter ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\Desktop\MojoV3\i2C\i2cmaster.vhd" Line 84: Assignment to sda_in_qq ignored, since the identifier is never used
 
 Elaborating entity <i2c_ram_interface> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd" Line 166. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd" Line 97: Assignment to tic_go ignored, since the identifier is never used
-WARNING:HDLCompiler:92 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd" Line 175: tic_counter should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd" Line 177: tic_counter should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd" Line 178: tic_counter should be on the sensitivity list of the process
-WARNING:HDLCompiler:634 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c.vhd" Line 66: Net <sdai> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c.vhd" Line 67: Net <scli> does not have a driver.
+WARNING:HDLCompiler:92 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 190: tic_counter should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 192: tic_counter should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 193: tic_counter should be on the sensitivity list of the process
+
+Elaborating entity <I2C_buffer> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Module_register_signals> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" Line 39: Net <channel[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" Line 39: Net <channel[3]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mojo_top>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd".
-INFO:Xst:3210 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" line 196: Output port <sample> of the instance <avr_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" line 196: Output port <sample_channel> of the instance <avr_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" line 196: Output port <new_sample> of the instance <avr_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" line 224: Output port <GPO1> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" line 224: Output port <FIT1_Toggle> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" line 280: Output port <led> of the instance <Module_ram_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain\Desktop\MojoV3\src\mojo_top.vhd" line 317: Output port <led> of the instance <Module_enabler> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd".
+INFO:Xst:3210 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" line 197: Output port <sample> of the instance <avr_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" line 197: Output port <sample_channel> of the instance <avr_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" line 197: Output port <new_sample> of the instance <avr_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" line 225: Output port <GPO1> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" line 225: Output port <FIT1_Toggle> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" line 281: Output port <led> of the instance <Module_ram_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" line 319: Output port <led> of the instance <Module_enabler> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <channel> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <mojo_top> synthesized.
 
 Synthesizing Unit <avr_interface>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\src\avr_interface.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\src\avr_interface.vhd".
     Found 10-bit register for signal <sample_q>.
     Found 1-bit register for signal <new_sample_q>.
     Found 1-bit register for signal <byte_ct_q>.
@@ -238,18 +238,17 @@ Synthesizing Unit <avr_interface>.
 Unit <avr_interface> synthesized.
 
 Synthesizing Unit <cclk_detector>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\src\cclk_detector.vhd".
-    Found 9-bit register for signal <ctr_q>.
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\src\cclk_detector.vhd".
     Found 1-bit register for signal <ready_q>.
+    Found 9-bit register for signal <ctr_q>.
     Found 9-bit adder for signal <ctr_q[8]_GND_6_o_add_1_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  10 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
 Unit <cclk_detector> synthesized.
 
 Synthesizing Unit <spi_slave>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\src\spi_slave.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\src\spi_slave.vhd".
     Found 1-bit register for signal <miso_q>.
     Found 3-bit register for signal <bit_ct_q>.
     Found 8-bit register for signal <dout_q>.
@@ -267,15 +266,15 @@ Synthesizing Unit <spi_slave>.
 Unit <spi_slave> synthesized.
 
 Synthesizing Unit <serial_rx_1>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\src\serial_rx.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\src\serial_rx.vhd".
         CLK_PER_BIT = 100
         CTR_SIZE = 7
     Found 3-bit register for signal <bit_ctr_q>.
-    Found 2-bit register for signal <state_q>.
-    Found 7-bit register for signal <ctr_q>.
     Found 1-bit register for signal <new_data_q>.
+    Found 2-bit register for signal <state_q>.
     Found 1-bit register for signal <rx_q>.
     Found 8-bit register for signal <data_q>.
+    Found 7-bit register for signal <ctr_q>.
     Found finite state machine <FSM_0> for signal <state_q>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -283,9 +282,6 @@ Synthesizing Unit <serial_rx_1>.
     | Inputs             | 4                                              |
     | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
-    | Reset              | rst (positive)                                 |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | idle                                           |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
@@ -295,20 +291,20 @@ Synthesizing Unit <serial_rx_1>.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
-	inferred   7 Multiplexer(s).
+	inferred   6 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <serial_rx_1> synthesized.
 
 Synthesizing Unit <serial_tx_1>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\src\serial_tx.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\src\serial_tx.vhd".
         CLK_PER_BIT = 100
         CTR_SIZE = 7
-    Found 1-bit register for signal <tx_q>.
-    Found 2-bit register for signal <state_q>.
     Found 1-bit register for signal <block_q>.
     Found 8-bit register for signal <data_q>.
     Found 3-bit register for signal <bit_ctr_q>.
     Found 7-bit register for signal <ctr_q>.
+    Found 2-bit register for signal <state_q>.
+    Found 1-bit register for signal <tx_q>.
     Found finite state machine <FSM_1> for signal <state_q>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -316,9 +312,6 @@ Synthesizing Unit <serial_tx_1>.
     | Inputs             | 4                                              |
     | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
-    | Reset              | rst (positive)                                 |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | idle                                           |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
@@ -334,7 +327,7 @@ Synthesizing Unit <serial_tx_1>.
 Unit <serial_tx_1> synthesized.
 
 Synthesizing Unit <Module_UART_interface>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\ise_files\Module_UART_interface.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\ise_files\Module_UART_interface.vhd".
         CLK_PER_BIT = 5208
     Found 1-bit register for signal <rx_new_data>.
     Found 8-bit register for signal <rx_data>.
@@ -346,8 +339,8 @@ Synthesizing Unit <Module_UART_interface>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
     | Transitions        | 5                                              |
-    | Inputs             | 3                                              |
-    | Outputs            | 2                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
@@ -366,20 +359,19 @@ Synthesizing Unit <Module_UART_interface>.
     -----------------------------------------------------------------------
     Summary:
 	inferred  18 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
 	inferred   2 Finite State Machine(s).
 Unit <Module_UART_interface> synthesized.
 
 Synthesizing Unit <serial_rx_2>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\src\serial_rx.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\src\serial_rx.vhd".
         CLK_PER_BIT = 5208
         CTR_SIZE = 16
     Found 3-bit register for signal <bit_ctr_q>.
-    Found 2-bit register for signal <state_q>.
-    Found 16-bit register for signal <ctr_q>.
     Found 1-bit register for signal <new_data_q>.
+    Found 2-bit register for signal <state_q>.
     Found 1-bit register for signal <rx_q>.
     Found 8-bit register for signal <data_q>.
+    Found 16-bit register for signal <ctr_q>.
     Found finite state machine <FSM_4> for signal <state_q>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -387,58 +379,52 @@ Synthesizing Unit <serial_rx_2>.
     | Inputs             | 4                                              |
     | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
-    | Reset              | rst (positive)                                 |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | idle                                           |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit adder for signal <ctr_q[15]_GND_23_o_add_6_OUT> created at line 1241.
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_23_o_add_8_OUT> created at line 1241.
+    Found 16-bit adder for signal <ctr_q[15]_GND_25_o_add_6_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_25_o_add_8_OUT> created at line 1241.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  29 D-type flip-flop(s).
-	inferred   7 Multiplexer(s).
+	inferred   6 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <serial_rx_2> synthesized.
 
 Synthesizing Unit <serial_tx_2>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\src\serial_tx.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\src\serial_tx.vhd".
         CLK_PER_BIT = 5208
         CTR_SIZE = 16
-    Found 2-bit register for signal <state_q>.
-    Found 1-bit register for signal <tx_q>.
-    Found 1-bit register for signal <block_q>.
     Found 8-bit register for signal <data_q>.
     Found 3-bit register for signal <bit_ctr_q>.
     Found 16-bit register for signal <ctr_q>.
+    Found 2-bit register for signal <state_q>.
+    Found 1-bit register for signal <tx_q>.
     Found finite state machine <FSM_5> for signal <state_q>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
-    | Transitions        | 10                                             |
-    | Inputs             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
     | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
-    | Reset              | rst (positive)                                 |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | idle                                           |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_24_o_add_12_OUT> created at line 1241.
-    Found 16-bit adder for signal <ctr_q[15]_GND_24_o_add_19_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_26_o_add_12_OUT> created at line 1241.
+    Found 16-bit adder for signal <ctr_q[15]_GND_26_o_add_19_OUT> created at line 1241.
     Found 16-bit 4-to-1 multiplexer for signal <ctr_d> created at line 53.
+    WARNING:Xst:2404 -  FFs/Latches <block_q<0:0>> (without init value) have a constant value of 0 in block <serial_tx_2>.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  29 D-type flip-flop(s).
-	inferred   7 Multiplexer(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <serial_tx_2> synthesized.
 
 Synthesizing Unit <ram_interface>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\ise_files\ram_interface.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\ise_files\ram_interface.vhd".
 WARNING:Xst:647 - Input <mcs_addr<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <mcs_byte_enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <mcs_rd_strobe> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -468,71 +454,54 @@ WARNING:Xst:653 - Signal <addr<7:0>> is used but never assigned. This sourceless
 Unit <ram_interface> synthesized.
 
 Synthesizing Unit <i2c>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c.vhd".
-WARNING:Xst:653 - Signal <sdai> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <scli> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c.vhd".
     Summary:
 	no macro.
 Unit <i2c> synthesized.
 
 Synthesizing Unit <I2CMASTER>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\i2C\i2cmaster.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\i2C\i2cmaster.vhd".
         DEVICE = "00111000"
-WARNING:Xst:647 - Input <DIN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <MCLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <nRST> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <SRST> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <TIC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <RD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <WE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <SCL_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <SDA_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <DOUT> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <STATUS> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <NACK> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <QUEUED> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <DATA_VALID> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <STOP> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <sda_in_qq>.
+    Found 1-bit register for signal <SCL_OUT>.
+    Found 1-bit register for signal <SDA_OUT>.
+    Found 1-bit register for signal <sda_in_q>.
+    Found 3-bit register for signal <STATUS>.
+    Found 5-bit register for signal <state>.
+    Found 8-bit register for signal <DOUT>.
+    Found 8-bit register for signal <shift>.
+    Found 4-bit register for signal <counter>.
+    Found 1-bit register for signal <NACK>.
+    Found 1-bit register for signal <QUEUED>.
+    Found 1-bit register for signal <DATA_VALID>.
+    Found 1-bit register for signal <nackdet>.
+    Found 1-bit register for signal <STOP>.
+    Found 5-bit register for signal <next_state>.
+    Found 4-bit adder for signal <next_counter> created at line 82.
     Summary:
-	no macro.
+	inferred   1 Adder/Subtractor(s).
+	inferred  42 D-type flip-flop(s).
+	inferred  71 Multiplexer(s).
 Unit <I2CMASTER> synthesized.
 
 Synthesizing Unit <i2c_ram_interface>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd".
+WARNING:Xst:647 - Input <ram_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <slave_dout> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <status> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <queue> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <data_valid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <stop> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <go> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ack_error> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <sdain> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <sclin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <ram_write> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 32-bit register for signal <ram_addr>.
-    Found 4-bit register for signal <ram_byte>.
-    Found 1-bit register for signal <reset_n>.
+WARNING:Xst:653 - Signal <slave_din> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <rd> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <we> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <reset_n> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <ram_write>.
     Found 8-bit register for signal <led>.
-    Found 32-bit register for signal <setup_word>.
-    Found 32-bit register for signal <data_word>.
-    Found 3-bit register for signal <nb_bytes>.
-    Found 1-bit register for signal <rd>.
-    Found 1-bit register for signal <we>.
-    Found 8-bit register for signal <slave_din>.
-    Found 3-bit register for signal <state>.
-    Found finite state machine <FSM_7> for signal <state>.
-    -----------------------------------------------------------------------
-    | States             | 7                                              |
-    | Transitions        | 11                                             |
-    | Inputs             | 3                                              |
-    | Outputs            | 12                                             |
-    | Clock              | clk (rising_edge)                              |
-    | Power Up State     | idle                                           |
-    | Encoding           | auto                                           |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
-    Found 4-bit subtractor for signal <GND_32_o_GND_32_o_sub_10_OUT> created at line 155.
-    Found 7-bit adder for signal <n0099> created at line 155.
-    Found 8-bit adder for signal <tic_counter[7]_GND_32_o_add_108_OUT> created at line 177.
-    Found 3-bit subtractor for signal <GND_32_o_GND_32_o_sub_9_OUT<2:0>> created at line 154.
+    Found 8-bit adder for signal <tic_counter[7]_GND_35_o_add_7_OUT> created at line 192.
 WARNING:Xst:737 - Found 1-bit latch for signal <tic_counter<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tic_counter<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tic_counter<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -542,20 +511,26 @@ WARNING:Xst:737 - Found 1-bit latch for signal <tic_counter<2>>. Latches may be 
 WARNING:Xst:737 - Found 1-bit latch for signal <tic_counter<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tic_counter<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tic>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 3-bit comparator greater for signal <PWR_28_o_setup_word[6]_LessThan_5_o> created at line 129
-    Found 8-bit comparator greater for signal <tic_counter[7]_PWR_28_o_LessThan_108_o> created at line 175
-    Found 8-bit comparator greater for signal <PWR_28_o_tic_counter[7]_LessThan_110_o> created at line 178
+    Found 8-bit comparator greater for signal <tic_counter[7]_PWR_28_o_LessThan_7_o> created at line 190
+    Found 8-bit comparator greater for signal <PWR_28_o_tic_counter[7]_LessThan_9_o> created at line 193
+    WARNING:Xst:2404 -  FFs/Latches <ram_byte<1:4>> (without init value) have a constant value of 1 in block <i2c_ram_interface>.
+    WARNING:Xst:2404 -  FFs/Latches <ram_addr<1:32>> (without init value) have a constant value of 0 in block <i2c_ram_interface>.
     Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred 118 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
 	inferred   9 Latch(s).
-	inferred   3 Comparator(s).
-	inferred  13 Multiplexer(s).
-	inferred   1 Finite State Machine(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
 Unit <i2c_ram_interface> synthesized.
 
+Synthesizing Unit <I2C_buffer>.
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\ise_files\I2C_buffer.vhd".
+    Summary:
+	no macro.
+Unit <I2C_buffer> synthesized.
+
 Synthesizing Unit <Module_register_signals>.
-    Related source file is "C:\Users\Sylvain\Desktop\MojoV3\ise_files\Module_register_signals.vhd".
+    Related source file is "C:\Users\Sylvain\workspace\MojoV3\ise_files\Module_register_signals.vhd".
 WARNING:Xst:647 - Input <ram_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <led> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -567,42 +542,42 @@ Unit <Module_register_signals> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 14
+# Adders/Subtractors                                   : 12
  16-bit adder                                          : 2
  3-bit adder                                           : 5
- 3-bit subtractor                                      : 1
- 4-bit subtractor                                      : 1
- 7-bit adder                                           : 3
+ 4-bit adder                                           : 1
+ 7-bit adder                                           : 2
  8-bit adder                                           : 1
  9-bit adder                                           : 1
-# Registers                                            : 54
- 1-bit register                                        : 24
+# Registers                                            : 61
+ 1-bit register                                        : 29
  10-bit register                                       : 1
  16-bit register                                       : 2
  3-bit register                                        : 6
- 32-bit register                                       : 6
- 4-bit register                                        : 2
+ 32-bit register                                       : 4
+ 4-bit register                                        : 3
+ 5-bit register                                        : 2
  7-bit register                                        : 2
- 8-bit register                                        : 10
+ 8-bit register                                        : 11
  9-bit register                                        : 1
 # Latches                                              : 9
  1-bit latch                                           : 9
-# Comparators                                          : 3
- 3-bit comparator greater                              : 1
+# Comparators                                          : 2
  8-bit comparator greater                              : 2
-# Multiplexers                                         : 50
- 1-bit 2-to-1 multiplexer                              : 23
+# Multiplexers                                         : 109
+ 1-bit 2-to-1 multiplexer                              : 55
  10-bit 2-to-1 multiplexer                             : 1
- 16-bit 2-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 5
  16-bit 4-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 7
+ 3-bit 2-to-1 multiplexer                              : 9
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 20
  7-bit 2-to-1 multiplexer                              : 6
  7-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 4
- 9-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 8
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
-# FSMs                                                 : 8
+# FSMs                                                 : 7
 
 =========================================================================
 
@@ -614,53 +589,25 @@ Reading core <ipcore_dir/microblaze_mcs.ngc>.
 Reading core <ipcore_dir/ram.ngc>.
 Loading core <microblaze_mcs> for timing and area information for instance <mcs_0>.
 Loading core <ram> for timing and area information for instance <dual_bram_0>.
+WARNING:Xst:1290 - Hierarchical block <Module_enabler> is unconnected in block <mojo_top>.
+   It will be removed from the design.
 INFO:Xst:2261 - The FF/Latch <ram_addr_16> in Unit <Module_ram_interface> is equivalent to the following 15 FFs/Latches, which will be removed : <ram_addr_17> <ram_addr_18> <ram_addr_19> <ram_addr_20> <ram_addr_21> <ram_addr_22> <ram_addr_23> <ram_addr_24> <ram_addr_25> <ram_addr_26> <ram_addr_27> <ram_addr_28> <ram_addr_29> <ram_addr_30> <ram_addr_31> 
-INFO:Xst:2261 - The FF/Latch <led_3> in Unit <SubModule_i2c_ram_interface> is equivalent to the following FF/Latch, which will be removed : <led_7> 
-INFO:Xst:2261 - The FF/Latch <ram_addr_0> in Unit <SubModule_i2c_ram_interface> is equivalent to the following 29 FFs/Latches, which will be removed : <ram_addr_1> <ram_addr_4> <ram_addr_5> <ram_addr_6> <ram_addr_7> <ram_addr_8> <ram_addr_9> <ram_addr_10> <ram_addr_11> <ram_addr_12> <ram_addr_13> <ram_addr_14> <ram_addr_15> <ram_addr_16> <ram_addr_17> <ram_addr_18> <ram_addr_19> <ram_addr_20> <ram_addr_21> <ram_addr_22> <ram_addr_23> <ram_addr_24> <ram_addr_25> <ram_addr_26> <ram_addr_27> <ram_addr_28> <ram_addr_29> <ram_addr_30> <ram_addr_31> 
-WARNING:Xst:1710 - FF/Latch <block_q> (without init value) has a constant value of 0 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <led_0> in Unit <SubModule_i2c_ram_interface> is equivalent to the following 7 FFs/Latches, which will be removed : <led_1> <led_2> <led_3> <led_4> <led_5> <led_6> <led_7> 
+INFO:Xst:2261 - The FF/Latch <ram_write_0> in Unit <SubModule_i2c_ram_interface> is equivalent to the following 7 FFs/Latches, which will be removed : <ram_write_4> <ram_write_8> <ram_write_12> <ram_write_16> <ram_write_20> <ram_write_24> <ram_write_28> 
+INFO:Xst:2261 - The FF/Latch <ram_write_1> in Unit <SubModule_i2c_ram_interface> is equivalent to the following 23 FFs/Latches, which will be removed : <ram_write_2> <ram_write_3> <ram_write_5> <ram_write_6> <ram_write_7> <ram_write_9> <ram_write_10> <ram_write_11> <ram_write_13> <ram_write_14> <ram_write_15> <ram_write_17> <ram_write_18> <ram_write_19> <ram_write_21> <ram_write_22> <ram_write_23> <ram_write_25> <ram_write_26> <ram_write_27> <ram_write_29> <ram_write_30> <ram_write_31> 
+INFO:Xst:2261 - The FF/Latch <next_state_0> in Unit <SubModule_i2c_physical> is equivalent to the following 2 FFs/Latches, which will be removed : <next_state_1> <next_state_3> 
+INFO:Xst:2261 - The FF/Latch <next_state_2> in Unit <SubModule_i2c_physical> is equivalent to the following FF/Latch, which will be removed : <next_state_4> 
+WARNING:Xst:1426 - The value init of the FF/Latch next_state_0 hinder the constant cleaning in the block SubModule_i2c_physical.
+   You should achieve better results by setting this init to 1.
 WARNING:Xst:1710 - FF/Latch <ram_addr_16> (without init value) has a constant value of 0 in block <Module_ram_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <led_3> (without init value) has a constant value of 0 in block <SubModule_i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ram_addr_0> (without init value) has a constant value of 0 in block <SubModule_i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <setup_word_0> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_1> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_2> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_3> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_7> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_8> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_9> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_10> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_11> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_12> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_13> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_14> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_15> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_16> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_17> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_18> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_19> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_20> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_21> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_22> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_23> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_24> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_25> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_26> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_27> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_28> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_29> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_30> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_31> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
+WARNING:Xst:1710 - FF/Latch <ram_write_0> (without init value) has a constant value of 1 in block <SubModule_i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_state_0> has a constant value of 0 in block <SubModule_i2c_physical>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_state_2> has a constant value of 0 in block <SubModule_i2c_physical>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2404 -  FFs/Latches <ram_addr<31:16>> (without init value) have a constant value of 0 in block <ram_interface>.
-WARNING:Xst:2404 -  FFs/Latches <ram_addr<31:4>> (without init value) have a constant value of 0 in block <i2c_ram_interface>.
-WARNING:Xst:2404 -  FFs/Latches <led<7:7>> (without init value) have a constant value of 0 in block <i2c_ram_interface>.
 
 Synthesizing (advanced) Unit <cclk_detector>.
 The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
 Unit <cclk_detector> synthesized (advanced).
-
-Synthesizing (advanced) Unit <i2c_ram_interface>.
-The following registers are absorbed into counter <nb_bytes>: 1 register on signal <nb_bytes>.
-Unit <i2c_ram_interface> synthesized (advanced).
 
 Synthesizing (advanced) Unit <serial_rx_1>.
 The following registers are absorbed into counter <bit_ctr_q>: 1 register on signal <bit_ctr_q>.
@@ -681,66 +628,56 @@ Unit <serial_tx_2> synthesized (advanced).
 Synthesizing (advanced) Unit <spi_slave>.
 The following registers are absorbed into counter <bit_ct_q>: 1 register on signal <bit_ct_q>.
 Unit <spi_slave> synthesized (advanced).
-WARNING:Xst:2677 - Node <setup_word_0> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_2> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_3> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_7> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_16> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_17> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_18> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_19> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_20> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_21> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_22> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_23> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_24> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_25> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_26> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_27> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_28> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_29> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_30> of sequential type is unconnected in block <i2c_ram_interface>.
-WARNING:Xst:2677 - Node <setup_word_31> of sequential type is unconnected in block <i2c_ram_interface>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 7
+# Adders/Subtractors                                   : 6
  16-bit adder                                          : 2
- 3-bit subtractor                                      : 1
- 6-bit adder                                           : 1
+ 4-bit adder                                           : 1
  7-bit adder                                           : 2
  8-bit adder                                           : 1
-# Counters                                             : 7
- 3-bit down counter                                    : 1
+# Counters                                             : 6
  3-bit up counter                                      : 5
  9-bit up counter                                      : 1
-# Registers                                            : 295
- Flip-Flops                                            : 295
-# Comparators                                          : 3
- 3-bit comparator greater                              : 1
+# Registers                                            : 310
+ Flip-Flops                                            : 310
+# Comparators                                          : 2
  8-bit comparator greater                              : 2
-# Multiplexers                                         : 41
- 1-bit 2-to-1 multiplexer                              : 21
+# Multiplexers                                         : 109
+ 1-bit 2-to-1 multiplexer                              : 61
  10-bit 2-to-1 multiplexer                             : 1
- 16-bit 2-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 5
  16-bit 4-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 4
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 20
  7-bit 2-to-1 multiplexer                              : 6
  7-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 4
-# FSMs                                                 : 8
+ 8-bit 2-to-1 multiplexer                              : 7
+# FSMs                                                 : 7
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <block_q> (without init value) has a constant value of 0 in block <serial_tx_2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ram_addr_0> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_addr_1> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_3> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ram_write_0> (without init value) has a constant value of 1 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_write_4> (without init value) has a constant value of 1 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_write_8> (without init value) has a constant value of 1 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_write_12> (without init value) has a constant value of 1 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_write_16> (without init value) has a constant value of 1 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_write_20> (without init value) has a constant value of 1 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_write_24> (without init value) has a constant value of 1 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_write_28> (without init value) has a constant value of 1 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch next_state_3 hinder the constant cleaning in the block I2CMASTER.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <next_state_2> has a constant value of 0 in block <I2CMASTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <next_state_4> has a constant value of 0 in block <I2CMASTER>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <led_0> in Unit <i2c_ram_interface> is equivalent to the following 7 FFs/Latches, which will be removed : <led_1> <led_2> <led_3> <led_4> <led_5> <led_6> <led_7> 
+INFO:Xst:2261 - The FF/Latch <ram_write_1> in Unit <i2c_ram_interface> is equivalent to the following 23 FFs/Latches, which will be removed : <ram_write_2> <ram_write_3> <ram_write_5> <ram_write_6> <ram_write_7> <ram_write_9> <ram_write_10> <ram_write_11> <ram_write_13> <ram_write_14> <ram_write_15> <ram_write_17> <ram_write_18> <ram_write_19> <ram_write_21> <ram_write_22> <ram_write_23> <ram_write_25> <ram_write_26> <ram_write_27> <ram_write_29> <ram_write_30> <ram_write_31> 
+INFO:Xst:2261 - The FF/Latch <next_state_0> in Unit <I2CMASTER> is equivalent to the following FF/Latch, which will be removed : <next_state_1> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <avr_interface/serial_tx/FSM_1> on signal <state_q[1:2]> with gray encoding.
 -----------------------
@@ -808,22 +745,7 @@ Optimizing FSM <Module_ram_interface/FSM_6> on signal <state[1:2]> with user enc
  buffering | 01
  writing   | 10
 -----------------------
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <Module_I2C/SubModule_i2c_ram_interface/FSM_7> on signal <state[1:3]> with user encoding.
----------------------------
- State         | Encoding
----------------------------
- idle          | 000
- ready         | 001
- fetch_setup   | 010
- fetch_data    | 011
- decode_data   | 100
- data_transfer | 101
- done          | 110
----------------------------
 INFO:Xst:2261 - The FF/Latch <ram_byte_enable_0> in Unit <ram_interface> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_byte_enable_1> <ram_byte_enable_2> <ram_byte_enable_3> 
-INFO:Xst:2261 - The FF/Latch <led_1> in Unit <i2c_ram_interface> is equivalent to the following FF/Latch, which will be removed : <led_5> 
-INFO:Xst:2261 - The FF/Latch <led_2> in Unit <i2c_ram_interface> is equivalent to the following FF/Latch, which will be removed : <led_6> 
 WARNING:Xst:2677 - Node <avr_interface/sample_q_9> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/sample_q_8> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/sample_q_7> of sequential type is unconnected in block <mojo_top>.
@@ -883,6 +805,10 @@ Optimizing unit <serial_tx_2> ...
 Optimizing unit <ram_interface> ...
 
 Optimizing unit <i2c_ram_interface> ...
+
+Optimizing unit <I2CMASTER> ...
+WARNING:Xst:1293 - FF/Latch <Module_I2C/SubModule_i2c_physical/next_state_3> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/next_state_0> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_7> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_6> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_5> of sequential type is unconnected in block <mojo_top>.
@@ -892,79 +818,67 @@ WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_2> of sequential type is
 WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_1> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_0> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/spi_slave/done_q> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DOUT_7> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DOUT_6> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DOUT_5> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DOUT_4> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DOUT_3> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DOUT_2> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DOUT_1> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DOUT_0> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/DATA_VALID> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/NACK> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/STATUS_2> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/STATUS_1> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/STATUS_0> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/STOP> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/QUEUED> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:1710 - FF/Latch <Module_I2C/SubModule_i2c_physical/sda_in_q> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/counter_0> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/counter_1> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/counter_2> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/counter_3> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/nackdet> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_0> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_1> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_2> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_3> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_0> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_1> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_2> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_3> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_4> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_5> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_6> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_7> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/SCL_OUT> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/SDA_OUT> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/sda_in_qq> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/tic> is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_0> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/slave_din_7> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/slave_din_6> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/slave_din_5> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/slave_din_4> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/slave_din_3> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/slave_din_2> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/slave_din_1> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/slave_din_0> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/rd> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_1> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_2> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_3> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_4> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_5> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_2> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_6> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_7> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/we> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/reset_n> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_31> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_30> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_29> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_28> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_27> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_26> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_25> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_24> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_23> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_22> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_21> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_20> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_19> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_18> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_17> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_16> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_15> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_14> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_13> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_12> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_11> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_10> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_9> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_8> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_7> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_6> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_5> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_4> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_3> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_2> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_1> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_0> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_15> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_14> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_13> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_12> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_11> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_10> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_9> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_8> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/setup_word_1> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_5> of sequential type is unconnected in block <mojo_top>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 16.
+INFO:Xst:2260 - The FF/Latch <Module_I2C/SubModule_i2c_ram_interface/ram_write_1> in Unit <mojo_top> is equivalent to the following FF/Latch : <Module_I2C/SubModule_i2c_ram_interface/led_0> 
 INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 30 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2261 - The FF/Latch <Module_I2C/SubModule_i2c_ram_interface/ram_write_1> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <Module_I2C/SubModule_i2c_ram_interface/led_0> 
 INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 30 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+FlipFlop Module_I2C/SubModule_i2c_ram_interface/ram_write_1 has been replicated 8 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -972,8 +886,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 253
- Flip-Flops                                            : 253
+# Registers                                            : 247
+ Flip-Flops                                            : 247
 
 =========================================================================
 
@@ -996,15 +910,15 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1135
+# BELS                             : 1119
 #      GND                         : 3
-#      INV                         : 26
-#      LUT1                        : 33
-#      LUT2                        : 73
-#      LUT3                        : 125
-#      LUT4                        : 237
-#      LUT5                        : 71
-#      LUT6                        : 170
+#      INV                         : 28
+#      LUT1                        : 41
+#      LUT2                        : 63
+#      LUT3                        : 122
+#      LUT4                        : 235
+#      LUT5                        : 65
+#      LUT6                        : 165
 #      LUT6_2                      : 90
 #      MULT_AND                    : 3
 #      MUXCY                       : 38
@@ -1014,15 +928,13 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 13
 #      VCC                         : 3
 #      XORCY                       : 100
-# FlipFlops/Latches                : 818
-#      FD                          : 135
-#      FDC                         : 11
-#      FDCE                        : 41
-#      FDE                         : 280
-#      FDP                         : 2
+# FlipFlops/Latches                : 812
+#      FD                          : 180
+#      FDCE                        : 3
+#      FDE                         : 271
 #      FDPE                        : 1
 #      FDR                         : 115
-#      FDRE                        : 196
+#      FDRE                        : 205
 #      FDS                         : 13
 #      FDSE                        : 24
 # RAMS                             : 73
@@ -1032,9 +944,9 @@ Primitive and Black Box Usage:
 #      SRL16E                      : 53
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 21
+# IO Buffers                       : 23
 #      IBUF                        : 7
-#      OBUF                        : 8
+#      OBUF                        : 10
 #      OBUFT                       : 6
 
 Device utilization summary:
@@ -1044,23 +956,24 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             818  out of  11440     7%  
- Number of Slice LUTs:                 1006  out of   5720    17%  
-    Number used as Logic:               825  out of   5720    14%  
+ Number of Slice Registers:             804  out of  11440     7%  
+ Number of Slice LUTs:                  990  out of   5720    17%  
+    Number used as Logic:               809  out of   5720    14%  
     Number used as Memory:              181  out of   1440    12%  
        Number used as RAM:              128
        Number used as SRL:               53
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1419
-   Number with an unused Flip Flop:     601  out of   1419    42%  
-   Number with an unused LUT:           413  out of   1419    29%  
-   Number of fully used LUT-FF pairs:   405  out of   1419    28%  
-   Number of unique control sets:        66
+ Number of LUT Flip Flop pairs used:   1399
+   Number with an unused Flip Flop:     595  out of   1399    42%  
+   Number with an unused LUT:           409  out of   1399    29%  
+   Number of fully used LUT-FF pairs:   395  out of   1399    28%  
+   Number of unique control sets:        60
 
 IO Utilization: 
  Number of IOs:                          24
- Number of bonded IOBs:                  22  out of    102    21%  
+ Number of bonded IOBs:                  24  out of    102    23%  
+    IOB Flip Flops/Latches:               8
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                9  out of     32    28%  
@@ -1088,7 +1001,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 944   |
+clk                                | BUFGP                  | 938   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1100,7 +1013,7 @@ Timing Summary:
 Speed Grade: -2
 
    Minimum period: 8.619ns (Maximum Frequency: 116.019MHz)
-   Minimum input arrival time before clock: 5.430ns
+   Minimum input arrival time before clock: 3.742ns
    Maximum output required time after clock: 5.610ns
    Maximum combinational path delay: 6.005ns
 
@@ -1111,7 +1024,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.619ns (frequency: 116.019MHz)
-  Total number of paths / destination ports: 137935 / 2967
+  Total number of paths / destination ports: 137847 / 2962
 -------------------------------------------------------------------------
 Delay:               8.619ns (Levels of Logic = 5)
   Source:            mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
@@ -1136,27 +1049,27 @@ Delay:               8.619ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 186 / 141
+  Total number of paths / destination ports: 24 / 24
 -------------------------------------------------------------------------
-Offset:              5.430ns (Levels of Logic = 2)
-  Source:            rst_n (PAD)
+Offset:              3.742ns (Levels of Logic = 2)
+  Source:            cclk (PAD)
   Destination:       avr_interface/cclk_detector/ctr_q_8 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst_n to avr_interface/cclk_detector/ctr_q_8
+  Data Path: cclk to avr_interface/cclk_detector/ctr_q_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            34   1.328   1.552  rst_n_IBUF (Inst_Module_UART_interface/serial_rx/rst_inv)
-     INV:I->O             52   0.255   1.836  rst1_INV_0 (rst)
-     FDC:CLR                   0.459          avr_interface/cclk_detector/ready_q
+     IBUF:I->O             2   1.328   0.725  cclk_IBUF (cclk_IBUF)
+     INV:I->O              9   0.255   0.975  avr_interface/cclk_detector/cclk_inv1_INV_0 (avr_interface/cclk_detector/cclk_inv)
+     FDRE:R                    0.459          avr_interface/cclk_detector/ctr_q_0
     ----------------------------------------
-    Total                      5.430ns (2.042ns logic, 3.388ns route)
-                                       (37.6% logic, 62.4% route)
+    Total                      3.742ns (2.042ns logic, 1.700ns route)
+                                       (54.6% logic, 45.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 14 / 12
+  Total number of paths / destination ports: 16 / 14
 -------------------------------------------------------------------------
 Offset:              5.610ns (Levels of Logic = 2)
   Source:            avr_interface/cclk_detector/ready_q (FF)
@@ -1167,7 +1080,7 @@ Offset:              5.610ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              8   0.525   0.943  avr_interface/cclk_detector/ready_q (avr_interface/cclk_detector/ready_q)
+     FD:C->Q               8   0.525   0.943  avr_interface/cclk_detector/ready_q (avr_interface/cclk_detector/ready_q)
      INV:I->O              9   0.255   0.975  avr_interface/n_rdy1_INV_0 (avr_interface/n_rdy)
      OBUFT:T->O                2.912          spi_channel_3_OBUFT (spi_channel<3>)
     ----------------------------------------
@@ -1209,14 +1122,14 @@ clk            |    8.619|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.96 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.43 secs
  
 --> 
 
-Total memory usage is 268556 kilobytes
+Total memory usage is 270536 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  202 (   0 filtered)
-Number of infos    :   17 (   0 filtered)
+Number of warnings :  134 (   0 filtered)
+Number of infos    :   23 (   0 filtered)
 

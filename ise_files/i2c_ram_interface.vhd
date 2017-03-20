@@ -70,9 +70,7 @@ entity i2c_ram_interface is
 		reset_n					: OUT std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
-		
-		sdain: IN std_logic;
-		sclin: IN std_logic;
+		reset_in					: IN std_logic;
 		
 		led						: OUT std_logic_vector(7 downto 0)
 		);
@@ -80,7 +78,7 @@ end i2c_ram_interface;
 
 architecture Behavioral of i2c_ram_interface is
 
-TYPE machine IS(idle, ready, fetch_setup, fetch_data, decode_data, data_transfer, done); --needed states for I2C control
+TYPE machine IS(idle, set_busy, ready, fetch_setup, fetch_data, decode_data, data_transfer, done); --needed states for I2C control
 TYPE tic_states IS(low, high); --needed states for tic signal
 SIGNAL state         : machine := idle;               --state machine
 signal setup_word : std_logic_vector(31 downto 0);
@@ -93,6 +91,23 @@ signal nb_bytes : integer range 1 to 4 := 1;
 signal tic_go : std_logic;
 
 begin
+
+--debug : process(clk, reset_in)
+--	begin
+--		if( clk'event and clk = '1')then
+--		ram_addr <= X"00000000";
+--		ram_byte <= "0000";
+--			if(reset_in = '0')then
+--				ram_write <= X"FFFFFFFF";
+--				ram_byte <= "1111";
+--				led <= X"FF";
+--			else
+--				ram_write <= X"11111111";
+--				ram_byte <= "1111";
+--				led <= X"00";
+--			end if;
+--		end if;
+--	end process debug;
 
 main : process(clk, go)
 	begin
@@ -107,22 +122,29 @@ main : process(clk, go)
 				ram_byte <= "0000";
 				reset_n <= '0';
 				tic_go <= '0';
-				led <= X"01";
-
+				--led <= X"01";
+				
 			when ready =>--waiting on go signal to start
 				ram_addr <= X"00000004";
 				ram_byte <= "0000";
-				state <= fetch_setup;			
-				led <= X"11";				
+				state <= set_busy;			
+				--led <= X"11";				
 				
-			when fetch_setup =>--fetch data from ram
+			when set_busy =>
 				setup_word <= ram_read;
+				ram_addr <= X"00000004";
+				ram_byte <= "1111";
+				ram_din <= (31 downto 4 & '1' & 2 downto 0);
+				state <= fetch_setup;
+			
+			when fetch_setup =>--fetch data from ram
+				
 				if(ram_read(1) = '0')then -- write to slave, get data from RAM
 					ram_addr <= X"00000008";
 					ram_byte <= "0000";
 				end if;
 				state <= fetch_data;
-				led <= X"22";
+				--led <= X"22";
 				
 			when fetch_data =>
 				data_word <= ram_read;
@@ -155,12 +177,13 @@ main : process(clk, go)
 						slave_din <= data_word( (8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes))));
 						data_recv((8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes)))) <= slave_dout;
 					end if;
-					
 				end if;
 				led(7 downto 0) <= X"00";
 				
 			when done =>
-
+				ram_byte <= "1111";
+				ram_addr <= X"00000008";
+				ram_din <= data_recv;
 				state <= idle;
 				led <= X"66";
 			when others =>

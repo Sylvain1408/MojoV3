@@ -159,6 +159,7 @@ COMPONENT i2c
 		ram_dout : IN std_logic_vector(31 downto 0);
 		ram_addr : OUT std_logic_vector(31 downto 0);
 		ram_byte : OUT std_logic_vector(3 downto 0);
+		reset_in					: IN std_logic;
 		scl : INOUT std_logic;
 		sda : INOUT std_logic;
 		
@@ -196,7 +197,7 @@ begin
 	avr_interface : entity work.avr_interface
 		port map (
 			clk			=> clk,				-- 50Mhz clock
-			rst			=> rst,				-- reset signal
+			rst			=> '0',				-- reset signal
 			-- AVR MCU pin connections (that will be managed)
 			cclk		=> cclk,
 			spi_miso	=> spi_miso,
@@ -224,7 +225,7 @@ begin
 	mcs_0 : microblaze_mcs
 		port map (
 			 clk => clk,
-			 Reset => rst,
+			 Reset => '0',
 			 IO_Addr_Strobe => addr_strobe,
 			 IO_Read_Strobe => read_strobe,
 			 IO_Write_Strobe => write_strobe,
@@ -266,7 +267,7 @@ begin
 	Inst_Module_UART_interface: Module_UART_interface 
 		PORT MAP(
 			clk => clk,
-			rst => rst,
+			rst => '0',
 			rx => mcs_tx,
 			tx => mcs_rx,
 			rx_data => tx_data,
@@ -308,6 +309,7 @@ begin
 			ram_din => data_in_b,
 			ram_dout => data_out_b,
 			ram_byte => byte_enable_b,
+			reset_in => rst_n,
 			scl => i2c_scl,
 			sda => i2c_sda,
 			
