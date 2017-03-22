@@ -1,0 +1,2 @@
+vhdtdtfi -lib work ../i2C/i2cmaster.vhd -prj Mojo-Base-VHDL -o I2CMASTER.spl -module I2CMASTER -template C:/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 I2CMASTER.spl C:/Users/Sylvain/workspace/MojoV3/ise_files/I2CMASTER.sym 

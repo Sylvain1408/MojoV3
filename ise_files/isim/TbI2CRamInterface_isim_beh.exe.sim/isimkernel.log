@@ -1,0 +1,29 @@
+Command line:
+   TbI2CRamInterface_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50395
+
+Wed Mar 22 22:00:36 2017
+
+
+ Elaboration Time: 0.0312 sec
+
+ Current Memory Usage: 667.619 Meg
+
+ Total Signals          : 48
+ Total Nets             : 255
+ Total Signal Drivers   : 20
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 4
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 739
+Total Line Count : 68
+
+ Total Simulation Time: 0.0468 sec
+
+ Current Memory Usage: 667.619 Meg
+
+Wed Mar 22 22:00:51 2017
+

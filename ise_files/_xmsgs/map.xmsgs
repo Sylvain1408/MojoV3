@@ -5,15 +5,15 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">Module_ram_interface/ram_addr&lt;15&gt;</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">rst_n_IBUF</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">119</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">Module_ram_interface/ram_addr&lt;14&gt;,
-Module_ram_interface/ram_addr&lt;13&gt;,
-Module_ram_interface/ram_addr&lt;12&gt;,
-Module_ram_interface/ram_addr&lt;11&gt;,
-Module_ram_interface/ram_addr&lt;1&gt;</arg>
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">82</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">mcs_0/U0/iomodule_0/IO_Address&lt;31&gt;,
+mcs_0/U0/iomodule_0/IO_Address&lt;29&gt;,
+mcs_0/U0/iomodule_0/IO_Address&lt;28&gt;,
+mcs_0/U0/iomodule_0/IO_Address&lt;27&gt;,
+mcs_0/U0/iomodule_0/IO_Address&lt;26&gt;</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
@@ -21,27 +21,6 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
-</msg>
-
-<msg type="warning" file="Pack" num="2548" delta="old" >The register &quot;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/ram_write_1_2</arg>&quot; has the property IOB=TRUE, but was not packed into the ILOGIC component. <arg fmt="%z" index="2"></arg>
-</msg>
-
-<msg type="warning" file="Pack" num="2548" delta="old" >The register &quot;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/ram_write_1_3</arg>&quot; has the property IOB=TRUE, but was not packed into the ILOGIC component. <arg fmt="%z" index="2"></arg>
-</msg>
-
-<msg type="warning" file="Pack" num="2548" delta="old" >The register &quot;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/ram_write_1_4</arg>&quot; has the property IOB=TRUE, but was not packed into the ILOGIC component. <arg fmt="%z" index="2"></arg>
-</msg>
-
-<msg type="warning" file="Pack" num="2548" delta="old" >The register &quot;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/ram_write_1_5</arg>&quot; has the property IOB=TRUE, but was not packed into the ILOGIC component. <arg fmt="%z" index="2"></arg>
-</msg>
-
-<msg type="warning" file="Pack" num="2548" delta="old" >The register &quot;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/ram_write_1_6</arg>&quot; has the property IOB=TRUE, but was not packed into the ILOGIC component. <arg fmt="%z" index="2"></arg>
-</msg>
-
-<msg type="warning" file="Pack" num="2548" delta="old" >The register &quot;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/ram_write_1_7</arg>&quot; has the property IOB=TRUE, but was not packed into the ILOGIC component. <arg fmt="%z" index="2"></arg>
-</msg>
-
-<msg type="warning" file="Pack" num="2548" delta="old" >The register &quot;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/ram_write_1_8</arg>&quot; has the property IOB=TRUE, but was not packed into the ILOGIC component. <arg fmt="%z" index="2"></arg>
 </msg>
 
 <msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)

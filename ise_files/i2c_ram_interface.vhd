@@ -83,12 +83,14 @@ TYPE tic_states IS(low, high); --needed states for tic signal
 SIGNAL state         : machine := idle;               --state machine
 signal setup_word : std_logic_vector(31 downto 0);
 signal data_word : std_logic_vector(31 downto 0);
-signal data_recv : std_logic_vector(31 downto 0);
+signal data_recv : std_logic_vector(31 downto 0) := X"00000000";
 signal led_signal : std_logic_vector(7 downto 0) := "00000000";
 signal T : integer range 0 to 1 := 0;
 signal tic_counter : integer range 0 to 170 := 0;
 signal nb_bytes : integer range 1 to 4 := 1;
 signal tic_go : std_logic;
+
+signal test : std_logic_vector(7 downto 0) := X"00";
 
 begin
 
@@ -122,37 +124,36 @@ main : process(clk, go)
 				ram_byte <= "0000";
 				reset_n <= '0';
 				tic_go <= '0';
-				--led <= X"01";
+				led <= X"01";
 				
 			when ready =>--waiting on go signal to start
 				ram_addr <= X"00000004";
 				ram_byte <= "0000";
 				state <= set_busy;			
-				--led <= X"11";				
+				led <= X"11";				
 				
 			when set_busy =>
 				setup_word <= ram_read;
 				ram_addr <= X"00000004";
 				ram_byte <= "1111";
-				ram_din <= (31 downto 4 & '1' & 2 downto 0);
+				ram_write <= ram_read(31 downto 4) & '1' & ram_read(2 downto 0);
 				state <= fetch_setup;
 			
 			when fetch_setup =>--fetch data from ram
-				
+				ram_byte <= "0000";
 				if(ram_read(1) = '0')then -- write to slave, get data from RAM
 					ram_addr <= X"00000008";
-					ram_byte <= "0000";
 				end if;
 				state <= fetch_data;
-				--led <= X"22";
+				led <= X"22";
 				
 			when fetch_data =>
 				data_word <= ram_read;
-				if(to_integer(unsigned(setup_word(6 downto 4))) > 4)then
-					nb_bytes <= 4;
-				else
-					nb_bytes <= to_integer(unsigned(setup_word(6 downto 4)));
-				end if;
+--				if(to_integer(unsigned(setup_word(6 downto 4))) > 4)then
+--					nb_bytes <= 4;
+--				else
+--					nb_bytes <= to_integer(unsigned(setup_word(6 downto 4)));
+--				end if;
 				state <= decode_data;
 				led <= X"23";
 				
@@ -167,23 +168,25 @@ main : process(clk, go)
 					rd <= setup_word(1);
 					we <= not setup_word(1);
 				end if;
+				led <= X"44";
 
 			when data_transfer =>--waiting physical to get back data from slave
 				if(queue = '0')then
-					if(nb_bytes = 0)then
+					if(nb_bytes = 1)then
 						state <= done;
+						led(7 downto 0) <= X"55";
 					else
 						nb_bytes <= nb_bytes - 1;
-						slave_din <= data_word( (8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes))));
-						data_recv((8*(4-nb_bytes)+7) downto ((8*(4-nb_bytes)))) <= slave_dout;
+						led(7 downto 0) <= X"50";
 					end if;
 				end if;
-				led(7 downto 0) <= X"00";
+				slave_din <= data_word( (8*(nb_bytes)+7) downto ((8*(nb_bytes))));
+				data_recv((8*(nb_bytes-1)+7) downto ((8*(nb_bytes-1)))) <= slave_dout;
 				
 			when done =>
 				ram_byte <= "1111";
 				ram_addr <= X"00000008";
-				ram_din <= data_recv;
+				ram_write <= data_recv;
 				state <= idle;
 				led <= X"66";
 			when others =>
@@ -193,14 +196,16 @@ main : process(clk, go)
 
 	end process main;
 	
-clock_gen : process(clk, tic_go)--300kHz clock generator from 50MHz (to finally drive I2C at 100KHz)
+clock_gen : process(clk)--300kHz clock generator from 50MHz (to finally drive I2C at 100KHz)
 	begin
-		if(tic_counter < 167)then
-			tic <= '0';
-			tic_counter <= tic_counter + 1;
-		elsif (tic_counter > 167)then
-			tic <= '1';
-			tic_counter <= 1;
+		if( clk'event and clk = '1')then	
+			if(tic_counter < 167)then
+				tic <= '0';
+				tic_counter <= tic_counter + 1;
+			elsif (tic_counter > 166)then
+				tic <= '1';
+				tic_counter <= 0;
+			end if;
 		end if;
 			
 	end process clock_gen;

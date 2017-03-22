@@ -56,7 +56,7 @@ signal ack_error : std_logic;
 
 signal slave_dout : std_logic_vector(7 downto 0);
 signal slave_din : std_logic_vector(7 downto 0);
-signal tic : std_logic;
+signal tic_sig : std_logic;
 signal rd  : std_logic;
 signal we : std_logic;
 signal queue : std_logic;
@@ -137,7 +137,7 @@ begin
 		MCLK => clk,
 		nRST => reset_n,
 		SRST => '0',
-		TIC => tic,
+		TIC => tic_sig,
 		DIN => slave_din,
 		DOUT => slave_dout,
 		RD =>	rd,
@@ -168,7 +168,7 @@ begin
 		--I2C side
 		slave_dout => slave_dout,
 		slave_din => slave_din,
-		tic => tic,
+		tic => tic_sig,
 		rd => rd,
 		we	=> we,
 		queue	=> queue,

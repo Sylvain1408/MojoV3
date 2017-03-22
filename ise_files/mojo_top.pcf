@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Mar 20 20:41:07 2017
+// Written by: Map P.20131013 on Wed Mar 22 21:08:08 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -267,6 +267,11 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Inst_Module_UART_interface/serial_tx/tx_q" BEL
         "Module_ram_interface/state_FSM_FFd2" BEL
         "Module_ram_interface/state_FSM_FFd1" BEL
+        "Module_ram_interface/ram_addr_15" BEL
+        "Module_ram_interface/ram_addr_14" BEL
+        "Module_ram_interface/ram_addr_13" BEL
+        "Module_ram_interface/ram_addr_12" BEL
+        "Module_ram_interface/ram_addr_11" BEL
         "Module_ram_interface/ram_addr_10" BEL
         "Module_ram_interface/ram_addr_9" BEL
         "Module_ram_interface/ram_addr_8" BEL
@@ -276,6 +281,8 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_ram_interface/ram_addr_4" BEL
         "Module_ram_interface/ram_addr_3" BEL
         "Module_ram_interface/ram_addr_2" BEL
+        "Module_ram_interface/ram_addr_1" BEL
+        "Module_ram_interface/ram_addr_0" BEL
         "Module_ram_interface/mcs_read_31" BEL
         "Module_ram_interface/mcs_read_30" BEL
         "Module_ram_interface/mcs_read_29" BEL
@@ -340,22 +347,67 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_ram_interface/ram_write_2" BEL
         "Module_ram_interface/ram_write_1" BEL
         "Module_ram_interface/ram_write_0" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_1" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_0" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd1" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/state_FSM_FFd3" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_31" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_30" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_29" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_28" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_27" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_26" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_25" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_24" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_23" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_22" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_21" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_20" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_19" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_18" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_17" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_16" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_15" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_14" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_13" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_12" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_11" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_10" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_9" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_8" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_7" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_6" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_5" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_4" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_3" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_write_0" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_addr_3" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_addr_2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_4" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_1" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_0" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/data_recv_31" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/data_recv_23" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/data_recv_15" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/data_recv_7" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/setup_word_6" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/setup_word_5" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/setup_word_4" BEL
         "avr_interface/cclk_detector/ready_q" BEL
         "avr_interface/serial_rx/new_data_q" BEL
         "Inst_Module_UART_interface/new_mcs_tx_data" BEL
         "Inst_Module_UART_interface/serial_rx/new_data_q" BEL
         "Module_ram_interface/mcs_ready" BEL
         "Module_ram_interface/ram_byte_enable_0" BEL "Module_ram_interface/rw"
-        BEL "Module_I2C/SubModule_i2c_ram_interface/ram_write_1" BEL
-        "Inst_Module_UART_interface/rx_new_data" BEL "clk_BUFGP/BUFG" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1_1" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1_2" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1_3" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1_4" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1_5" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1_6" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1_7" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/ram_write_1_8" BEL
+        BEL "Module_I2C/SubModule_i2c_ram_interface/reset_n" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/ram_byte_0" BEL
+        "Inst_Module_UART_interface/rx_new_data" BEL
+        "Module_I2C/SubModule_i2c_physical/DOUT_7" BEL "clk_BUFGP/BUFG" BEL
         "mcs_0/U0/ilmb_cntlr/Sl_Rdy" BEL "mcs_0/U0/ilmb_cntlr/lmb_as" BEL
         "mcs_0/U0/ilmb/POR_FF_I" BEL "mcs_0/U0/iomodule_0/lmb_reg_read_Q" BEL
         "mcs_0/U0/iomodule_0/IO_Write_Strobe" BEL
@@ -413,6 +465,11 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "mcs_0/U0/iomodule_0/write_data_2" BEL
         "mcs_0/U0/iomodule_0/write_data_1" BEL
         "mcs_0/U0/iomodule_0/write_data_0" BEL
+        "mcs_0/U0/iomodule_0/IO_Address_15" BEL
+        "mcs_0/U0/iomodule_0/IO_Address_14" BEL
+        "mcs_0/U0/iomodule_0/IO_Address_13" BEL
+        "mcs_0/U0/iomodule_0/IO_Address_12" BEL
+        "mcs_0/U0/iomodule_0/IO_Address_11" BEL
         "mcs_0/U0/iomodule_0/IO_Address_10" BEL
         "mcs_0/U0/iomodule_0/IO_Address_9" BEL
         "mcs_0/U0/iomodule_0/IO_Address_8" BEL
@@ -422,6 +479,8 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "mcs_0/U0/iomodule_0/IO_Address_4" BEL
         "mcs_0/U0/iomodule_0/IO_Address_3" BEL
         "mcs_0/U0/iomodule_0/IO_Address_2" BEL
+        "mcs_0/U0/iomodule_0/IO_Address_1" BEL
+        "mcs_0/U0/iomodule_0/IO_Address_0" BEL
         "mcs_0/U0/iomodule_0/io_bus_read_data_31" BEL
         "mcs_0/U0/iomodule_0/io_bus_read_data_30" BEL
         "mcs_0/U0/iomodule_0/io_bus_read_data_29" BEL

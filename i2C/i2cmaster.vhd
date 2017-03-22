@@ -32,7 +32,7 @@ use IEEE.numeric_std.all;
 
 -- -- STATUS -- --
 -- IDLE		000
--- START		001
+-- START	001
 -- STOP		111
 -- SENDBIT	010
 -- RECVBIT	101
@@ -370,4 +370,3 @@ begin
 	end process OTO;
 
 end rtl;
-
