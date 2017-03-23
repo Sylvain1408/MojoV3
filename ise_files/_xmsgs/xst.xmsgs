@@ -5,49 +5,43 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" Line 184: Assignment to <arg fmt="%s" index="1">rst</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd" Line 72: &lt;<arg fmt="%s" index="1">microblaze_mcs</arg>&gt; remains a black-box since it has no binding entity.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" Line 72: &lt;<arg fmt="%s" index="1">microblaze_mcs</arg>&gt; remains a black-box since it has no binding entity.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\CAO-PCB\Documents\MojoV3\ise_files\ram_interface.vhd" Line 69: Assignment to <arg fmt="%s" index="1">word</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Sylvain\workspace\MojoV3\ise_files\ram_interface.vhd" Line 69: Assignment to <arg fmt="%s" index="1">word</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\CAO-PCB\Documents\MojoV3\ise_files\ram_interface.vhd" Line 59: Net &lt;<arg fmt="%s" index="1">addr[7]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Sylvain\workspace\MojoV3\ise_files\ram_interface.vhd" Line 59: Net &lt;<arg fmt="%s" index="1">addr[7]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\CAO-PCB\Documents\MojoV3\ise_files\i2c_ram_interface.vhd" Line 114: Assignment to <arg fmt="%s" index="1">tic_go</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 114: Assignment to <arg fmt="%s" index="1">tic_go</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd" Line 39: Net &lt;<arg fmt="%s" index="1">channel[3]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" Line 39: Net &lt;<arg fmt="%s" index="1">channel[3]</arg>&gt; does not have a driver.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">197</arg>: Output port &lt;<arg fmt="%s" index="3">sample</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">avr_interface</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">197</arg>: Output port &lt;<arg fmt="%s" index="3">sample</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">avr_interface</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">197</arg>: Output port &lt;<arg fmt="%s" index="3">sample_channel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">avr_interface</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">197</arg>: Output port &lt;<arg fmt="%s" index="3">sample_channel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">avr_interface</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">197</arg>: Output port &lt;<arg fmt="%s" index="3">new_sample</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">avr_interface</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">197</arg>: Output port &lt;<arg fmt="%s" index="3">new_sample</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">avr_interface</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">225</arg>: Output port &lt;<arg fmt="%s" index="3">GPO1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mcs_0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">225</arg>: Output port &lt;<arg fmt="%s" index="3">GPO1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mcs_0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">225</arg>: Output port &lt;<arg fmt="%s" index="3">FIT1_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mcs_0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">225</arg>: Output port &lt;<arg fmt="%s" index="3">FIT1_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mcs_0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">281</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Module_ram_interface</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">281</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Module_ram_interface</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">319</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Module_enabler</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\CAO-PCB\Documents\MojoV3\src\mojo_top.vhd</arg>&quot; line <arg fmt="%s" index="2">319</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Module_enabler</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">channel</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">block_q</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">serial_tx_2</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">mcs_addr&lt;31:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -83,6 +77,18 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">reset_in</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">sda_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">scl_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">scl</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">I2C_buffer</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">sda</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">I2C_buffer</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ram_read</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
@@ -95,7 +101,13 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Module_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_addr_17&gt; &lt;ram_addr_18&gt; &lt;ram_addr_19&gt; &lt;ram_addr_20&gt; &lt;ram_addr_21&gt; &lt;ram_addr_22&gt; &lt;ram_addr_23&gt; &lt;ram_addr_24&gt; &lt;ram_addr_25&gt; &lt;ram_addr_26&gt; &lt;ram_addr_27&gt; &lt;ram_addr_28&gt; &lt;ram_addr_29&gt; &lt;ram_addr_30&gt; &lt;ram_addr_31&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubModule_i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">29 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_addr_1&gt; &lt;ram_addr_4&gt; &lt;ram_addr_5&gt; &lt;ram_addr_6&gt; &lt;ram_addr_7&gt; &lt;ram_addr_8&gt; &lt;ram_addr_9&gt; &lt;ram_addr_10&gt; &lt;ram_addr_11&gt; &lt;ram_addr_12&gt; &lt;ram_addr_13&gt; &lt;ram_addr_14&gt; &lt;ram_addr_15&gt; &lt;ram_addr_16&gt; &lt;ram_addr_17&gt; &lt;ram_addr_18&gt; &lt;ram_addr_19&gt; &lt;ram_addr_20&gt; &lt;ram_addr_21&gt; &lt;ram_addr_22&gt; &lt;ram_addr_23&gt; &lt;ram_addr_24&gt; &lt;ram_addr_25&gt; &lt;ram_addr_26&gt; &lt;ram_addr_27&gt; &lt;ram_addr_28&gt; &lt;ram_addr_29&gt; &lt;ram_addr_30&gt; &lt;ram_addr_31&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">_i000092_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubModule_i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;_i000092_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">_i000092_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubModule_i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;_i000092_3&gt; &lt;_i000092_5&gt; &lt;_i000092_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">_i000092_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubModule_i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;_i000092_2&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">next_state_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SubModule_i2c_physical</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;next_state_4&gt; </arg>
@@ -108,10 +120,16 @@
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">block_q</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">serial_tx</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_16</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Module_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SubModule_i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">_i000092_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SubModule_i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">_i000092_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">SubModule_i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_state_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SubModule_i2c_physical</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -189,7 +207,7 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">ram_addr</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">16</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">ram_interface</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">ram_addr</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">4</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">i2c_ram_interface</arg>&gt;.
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">_i000092</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">7</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">i2c_ram_interface</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">setup_word_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_ram_interface</arg>&gt;.
@@ -261,10 +279,22 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">setup_word_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">i2c_ram_interface</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">block_q</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">serial_tx_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">_i000092_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">_i000092_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">_i000092_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">_i000092_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">_i000092_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">next_state_3</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">I2CMASTER</arg>.
@@ -277,22 +307,115 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">next_state_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">I2CMASTER</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">_i000092_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;_i000092_2&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">next_state_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">I2CMASTER</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;next_state_1&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">led_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">led_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">led_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">led_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_28</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_27</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_26</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_25</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_24</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_18</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_17</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_16</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ram_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_ram_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_byte_enable_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_byte_enable_1&gt; &lt;ram_byte_enable_2&gt; &lt;ram_byte_enable_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">led_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;led_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_byte_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_byte_1&gt; &lt;ram_byte_2&gt; &lt;ram_byte_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_byte_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_byte_1&gt; &lt;ram_byte_2&gt; &lt;ram_byte_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">led_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_ram_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;led_5&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">avr_interface/sample_q_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
@@ -388,165 +511,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_physical/STOP</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_recv_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/nb_bytes_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/nb_bytes_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/nb_bytes_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/data_word_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt;.
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/led_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Module_I2C/SubModule_i2c_ram_interface/led_2&gt; &lt;Module_I2C/SubModule_i2c_ram_interface/reset_n&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="3203" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Module_I2C/SubModule_i2c_ram_interface/rd</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Module_I2C/SubModule_i2c_ram_interface/we&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/ilmb/POR_FF_I</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mcs_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;U0/dlmb/POR_FF_I&gt; </arg>
 </msg>
 
@@ -557,6 +521,9 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mcs_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">30 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

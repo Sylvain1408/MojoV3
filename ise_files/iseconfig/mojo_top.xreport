@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-03-23T21:03:42</DateModified>
+  <DateModified>2017-03-23T14:23:09</DateModified>
   <ModuleName>mojo_top</ModuleName>
   <SummaryTimeStamp>2016-04-22T17:32:14</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Sylvain/workspace/MojoV3/ise_files/iseconfig/mojo_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Sylvain/workspace/MojoV3/ise_files\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/CAO-PCB/Documents/MojoV3/ise_files/iseconfig/mojo_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/CAO-PCB/Documents/MojoV3/ise_files\</ImplementationReportsDirectory>
   <DateInitialized>2016-04-20T21:04:00</DateInitialized>
   <EnableMessageFiltering>true</EnableMessageFiltering>
  </header>

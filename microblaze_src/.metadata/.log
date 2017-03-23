@@ -1,0 +1,9 @@
+!SESSION 2017-03-23 14:50:34.592 -----------------------------------------------
+eclipse.buildId=Release 14.7 Build SDK_P.20131013
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-03-23 14:53:41.154
+!MESSAGE Indexed 'test' (2 sources, 37 headers) in 0,83 sec: 1 397 declarations; 1 635 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00 %)

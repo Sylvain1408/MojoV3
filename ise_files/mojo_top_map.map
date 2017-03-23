@@ -4,7 +4,7 @@ Xilinx Map Application Log File for Design 'mojo_top'
 Design Information
 ------------------
 Command Line   : map -filter
-C:/Users/Sylvain/workspace/MojoV3/ise_files/iseconfig/filter.filter -intstyle
+C:/Users/CAO-PCB/Documents/MojoV3/ise_files/iseconfig/filter.filter -intstyle
 ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0
 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off
 -power off -o mojo_top_map.ncd mojo_top.ngd mojo_top.pcf 
@@ -12,94 +12,66 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Mar 23 20:46:28 2017
+Mapped Date    : Thu Mar 23 17:15:42 2017
 
 Mapping design into LUTs...
 Running directed packing...
 Running delay-based LUT packing...
 Updating timing models...
-WARNING:Pack:1653 - At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing
-   constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE
-   (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays
-   alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to
-   components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the
-   environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
-
-
-   For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE,
-   consult the Xilinx Command Line Tools User Guide "TRACE" chapter.
-INFO:Timing:3284 - This timing report was generated using estimated delay 
-   information.  For accurate numbers, please refer to the post Place and Route 
-   timing report.
-Asterisk (*) preceding a constraint indicates it was not met.
-   This may be due to a setup or hold violation.
-
-----------------------------------------------------------------------------------------------------------
-  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
-                                            |             |    Slack   | Achievable | Errors |    Score   
-----------------------------------------------------------------------------------------------------------
-* TS_clk = PERIOD TIMEGRP "clk" 1000 MHz HI | SETUP       |    -2.285ns|     3.285ns|    2417|     1983068
-  GH 50%                                    | HOLD        |    -0.097ns|            |     256|       24576
-                                            | MINPERIOD   |    -2.570ns|     3.570ns|     200|      101969
-----------------------------------------------------------------------------------------------------------
-
-
-1 constraint not met.
-
-
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 6 secs 
+Total REAL time at the beginning of Placer: 5 secs 
 Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:338e7fe1) REAL time: 7 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:ccfd8fea) REAL time: 6 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:338e7fe1) REAL time: 7 secs 
+Phase 2.7  Design Feasibility Check (Checksum:ccfd8fea) REAL time: 6 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:338e7fe1) REAL time: 7 secs 
+Phase 3.31  Local Placement Optimization (Checksum:ccfd8fea) REAL time: 6 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:b88a9cd1) REAL time: 10 secs 
+(Checksum:e6b989da) REAL time: 9 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:b88a9cd1) REAL time: 10 secs 
+Phase 5.36  Local Placement Optimization (Checksum:e6b989da) REAL time: 9 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:b88a9cd1) REAL time: 10 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:e6b989da) REAL time: 9 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:b88a9cd1) REAL time: 10 secs 
+Phase 7.3  Local Placement Optimization (Checksum:e6b989da) REAL time: 9 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:b88a9cd1) REAL time: 10 secs 
+Phase 8.5  Local Placement Optimization (Checksum:e6b989da) REAL time: 9 secs 
 
 Phase 9.8  Global Placement
-...................................................
-...................................................
-..................................................................................................................................................................................................
-.........................................................................................
-Phase 9.8  Global Placement (Checksum:c8bccb8b) REAL time: 20 secs 
+.........................
+......................
+..............................................................
+.........................................
+............................
+Phase 9.8  Global Placement (Checksum:6d62978d) REAL time: 19 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:c8bccb8b) REAL time: 20 secs 
+Phase 10.5  Local Placement Optimization (Checksum:6d62978d) REAL time: 19 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:692e9e0a) REAL time: 30 secs 
+Phase 11.18  Placement Optimization (Checksum:cbe851c0) REAL time: 20 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:692e9e0a) REAL time: 30 secs 
+Phase 12.5  Local Placement Optimization (Checksum:cbe851c0) REAL time: 20 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:225cbcfa) REAL time: 30 secs 
+Phase 13.34  Placement Validation (Checksum:9af2c02f) REAL time: 21 secs 
 
-Total REAL time to Placer completion: 31 secs 
-Total CPU  time to Placer completion: 28 secs 
+Total REAL time to Placer completion: 21 secs 
+Total CPU  time to Placer completion: 21 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -108,18 +80,18 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                   795 out of  11,440    6%
-    Number used as Flip Flops:                 793
+  Number of Slice Registers:                   862 out of  11,440    7%
+    Number used as Flip Flops:                 860
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                2
-  Number of Slice LUTs:                        879 out of   5,720   15%
-    Number used as logic:                      742 out of   5,720   12%
-      Number using O6 output only:             454
+  Number of Slice LUTs:                        951 out of   5,720   16%
+    Number used as logic:                      803 out of   5,720   14%
+      Number using O6 output only:             509
       Number using O5 output only:              53
-      Number using O5 and O6:                  235
+      Number using O5 and O6:                  241
       Number used as ROM:                        0
     Number used as Memory:                     109 out of   1,440    7%
       Number used as Dual Port RAM:             64
@@ -131,21 +103,21 @@ Slice Logic Utilization:
         Number using O6 output only:            37
         Number using O5 output only:             0
         Number using O5 and O6:                  8
-    Number used exclusively as route-thrus:     28
-      Number with same-slice register load:     22
+    Number used exclusively as route-thrus:     39
+      Number with same-slice register load:     33
       Number with same-slice carry load:         6
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   364 out of   1,430   25%
+  Number of occupied Slices:                   377 out of   1,430   26%
   Number of MUXCYs used:                       144 out of   2,860    5%
-  Number of LUT Flip Flop pairs used:        1,080
-    Number with an unused Flip Flop:           383 out of   1,080   35%
-    Number with an unused LUT:                 201 out of   1,080   18%
-    Number of fully used LUT-FF pairs:         496 out of   1,080   45%
-    Number of unique control sets:              78
+  Number of LUT Flip Flop pairs used:        1,123
+    Number with an unused Flip Flop:           374 out of   1,123   33%
+    Number with an unused LUT:                 172 out of   1,123   15%
+    Number of fully used LUT-FF pairs:         577 out of   1,123   51%
+    Number of unique control sets:              84
     Number of slice register sites lost
-      to control set restrictions:             266 out of  11,440    2%
+      to control set restrictions:             295 out of  11,440    2%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -182,11 +154,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.40
+Average Fanout of Non-Clock Nets:                3.53
 
-Peak Memory Usage:  396 MB
-Total REAL time to MAP completion:  32 secs 
-Total CPU time to MAP completion:   29 secs 
+Peak Memory Usage:  424 MB
+Total REAL time to MAP completion:  22 secs 
+Total CPU time to MAP completion:   22 secs 
 
 Mapping completed.
 See MAP report file "mojo_top_map.mrp" for details.

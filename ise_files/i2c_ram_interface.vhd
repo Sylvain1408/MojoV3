@@ -78,7 +78,7 @@ end i2c_ram_interface;
 
 architecture Behavioral of i2c_ram_interface is
 
-TYPE machine IS(idle, set_busy, ready, fetch_setup, fetch_data, decode_data, data_transfer, done); --needed states for I2C control
+TYPE machine IS(idle, set_busy, ready, fetch_setup, fetch_data, decode_data, wait_queue, data_transfer, done); --needed states for I2C control
 TYPE tic_states IS(low, high); --needed states for tic signal
 SIGNAL state         : machine := idle;               --state machine
 signal setup_word : std_logic_vector(31 downto 0);
@@ -87,7 +87,7 @@ signal data_recv : std_logic_vector(31 downto 0) := X"00000000";
 signal led_signal : std_logic_vector(7 downto 0) := "00000000";
 signal T : integer range 0 to 1 := 0;
 signal tic_counter : integer range 0 to 170 := 0;
-signal nb_bytes : integer range 1 to 4 := 1;
+signal nb_bytes : integer range 1 to 4 := 4;
 signal tic_go : std_logic;
 
 signal test : std_logic_vector(7 downto 0) := X"00";
@@ -163,15 +163,22 @@ main : process(clk, go)
 				slave_din <= setup_word(15 downto 8);
 				reset_n <= '1';
 				tic_go <= '1';
-				if(queue = '0')then--error
-					state <= data_transfer;
+				if(queue = '1')then--error
+					state <= wait_queue;
 					rd <= setup_word(1);
 					we <= not setup_word(1);
 				end if;
 				led <= X"44";
+				
+			when wait_queue =>
+				if(queue = '0')then
+					state <= data_transfer;
+					rd <= setup_word(1);
+					we <= not setup_word(1);
+				end if;
 
 			when data_transfer =>--waiting physical to get back data from slave
-				if(queue = '0')then
+				if(falling_edge(queue))then
 					if(nb_bytes = 1)then
 						state <= done;
 						led(7 downto 0) <= X"55";

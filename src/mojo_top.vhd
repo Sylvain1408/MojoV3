@@ -225,7 +225,7 @@ begin
 	mcs_0 : microblaze_mcs
 		port map (
 			 clk => clk,
-			 Reset => '0',
+			 Reset => rst,
 			 IO_Addr_Strobe => addr_strobe,
 			 IO_Read_Strobe => read_strobe,
 			 IO_Write_Strobe => write_strobe,
@@ -267,7 +267,7 @@ begin
 	Inst_Module_UART_interface: Module_UART_interface 
 		PORT MAP(
 			clk => clk,
-			rst => '0',
+			rst => rst,
 			rx => mcs_tx,
 			tx => mcs_rx,
 			rx_data => tx_data,

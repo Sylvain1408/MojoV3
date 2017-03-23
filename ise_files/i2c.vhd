@@ -121,6 +121,7 @@ signal sclo : std_logic;
 	
 		COMPONENT I2C_buffer
 	PORT(
+		clk : in std_logic;
 		sda_in : IN std_logic;
 		scl_in : IN std_logic;    
 		sda : INOUT std_logic;
@@ -148,9 +149,9 @@ begin
 		STOP =>	stop,
 		STATUS => status,
 		SCL_IN => scli,
-		SCL_OUT => sclo,
+		SCL_OUT => scl,
 		SDA_IN => sdai,
-		SDA_OUT => sdao
+		SDA_OUT => sda
 	);
 	
 	
@@ -182,12 +183,13 @@ begin
 	);
 
 	Inst_I2C_buffer: I2C_buffer PORT MAP(
-		sda_in => sdao,
-		scl_in => sclo,
+		clk => clk,
+		sda_in => '1',
+		scl_in => '1',
 		sda_out => sdai,
 		scl_out => scli,
-		sda => sda,
-		scl => scl
+		sda => open,
+		scl => open
 	);
 
 

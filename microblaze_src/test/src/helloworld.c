@@ -38,9 +38,20 @@
 #include "xil_testmem.h"
 #include "xbram.h"
 #include "xiomodule.h"
+#include "pthread.h"
+
+#define I2C_BASEADDR 0x4
 
 XIOModule gpo;
 volatile u32 ct = 0;
+
+void I2C_write_8b(XIOModule* ram, u32 addr, u8 data){
+	XIOModule_IoWriteByte(ram, addr, data);
+}
+
+u8 I2C_read_8b(XIOModule* ram, u32 addr){
+	return XIOModule_IoReadByte(ram, addr);
+}
 
 void Memory_test_32b(XIOModule ioModule){
 	u32 addr;
@@ -103,8 +114,8 @@ int main()
 
     delay(5000);
 
-
-    XIOModule_IoWriteByte(&gpo, 0x4, 0x2);
+    XIOModule_IoWriteWord(&gpo, 0x8, 0x12121212);
+    XIOModule_IoWriteWord(&gpo, 0x4, 0x3442);
     xil_printf("0x%x : %x\r\n", 4, XIOModule_IoReadByte(&gpo, 0x4));
     xil_printf("0x%x : %x\r\n", 4, XIOModule_IoReadByte(&gpo, 0x4));
     xil_printf("0x%x : %x\r\n", 4, XIOModule_IoReadByte(&gpo, 0x4));
