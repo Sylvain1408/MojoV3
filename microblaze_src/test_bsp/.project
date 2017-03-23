@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Mojo_I2C_bsp</name>
+	<name>test_bsp</name>
 	<comment></comment>
 	<projects>
 		<project>Mojo_HW</project>

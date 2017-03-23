@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.39 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.39 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: mojo_top.prj
 
@@ -192,8 +192,8 @@ Elaborating entity <i2c> (architecture <Behavioral>) from library <work>.
 Elaborating entity <I2CMASTER> (architecture <rtl>) with generics from library <work>.
 
 Elaborating entity <i2c_ram_interface> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 188. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 112: Assignment to tic_go ignored, since the identifier is never used
+INFO:HDLCompiler:679 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 192. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 114: Assignment to tic_go ignored, since the identifier is never used
 
 Elaborating entity <I2C_buffer> (architecture <Behavioral>) from library <work>.
 
@@ -498,10 +498,10 @@ WARNING:Xst:647 - Input <reset_in> is never used. This port will be preserved an
     Found 32-bit register for signal <setup_word>.
     Found 32-bit register for signal <ram_write>.
     Found 32-bit register for signal <data_word>.
-    Found 3-bit register for signal <nb_bytes>.
     Found 1-bit register for signal <rd>.
     Found 1-bit register for signal <we>.
     Found 8-bit register for signal <slave_din>.
+    Found 3-bit register for signal <nb_bytes>.
     Found 32-bit register for signal <data_recv>.
     Found 1-bit register for signal <tic>.
     Found 8-bit register for signal <tic_counter>.
@@ -511,23 +511,22 @@ WARNING:Xst:647 - Input <reset_in> is never used. This port will be preserved an
     | States             | 8                                              |
     | Transitions        | 12                                             |
     | Inputs             | 3                                              |
-    | Outputs            | 16                                             |
+    | Outputs            | 19                                             |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit subtractor for signal <GND_35_o_GND_35_o_sub_9_OUT> created at line 176.
-    Found 7-bit adder for signal <n0123> created at line 176.
-    Found 8-bit adder for signal <tic_counter[7]_GND_35_o_add_109_OUT> created at line 200.
-    Found 3-bit subtractor for signal <GND_35_o_GND_35_o_sub_8_OUT<2:0>> created at line 175.
-    Found 3-bit comparator greater for signal <PWR_28_o_setup_word[6]_LessThan_4_o> created at line 150
-    Found 8-bit comparator greater for signal <tic_counter[7]_PWR_28_o_LessThan_109_o> created at line 198
-    Found 8-bit comparator greater for signal <PWR_28_o_tic_counter[7]_LessThan_111_o> created at line 201
+    Found 4-bit subtractor for signal <n0120[3:0]> created at line 179.
+    Found 6-bit adder for signal <nb_bytes[2]_GND_35_o_add_12_OUT> created at line 183.
+    Found 7-bit adder for signal <n0128> created at line 184.
+    Found 8-bit adder for signal <tic_counter[7]_GND_35_o_add_96_OUT> created at line 204.
+    Found 8-bit comparator greater for signal <tic_counter[7]_PWR_28_o_LessThan_96_o> created at line 202
+    Found 8-bit comparator greater for signal <PWR_28_o_tic_counter[7]_LessThan_98_o> created at line 205
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred 195 D-type flip-flop(s).
-	inferred   3 Comparator(s).
+	inferred   2 Comparator(s).
 	inferred  37 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <i2c_ram_interface> synthesized.
@@ -554,9 +553,9 @@ Macro Statistics
 # Adders/Subtractors                                   : 15
  16-bit adder                                          : 2
  3-bit adder                                           : 5
- 3-bit subtractor                                      : 1
  4-bit adder                                           : 1
  4-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
  7-bit adder                                           : 3
  8-bit adder                                           : 1
  9-bit adder                                           : 1
@@ -571,21 +570,20 @@ Macro Statistics
  7-bit register                                        : 2
  8-bit register                                        : 13
  9-bit register                                        : 1
-# Comparators                                          : 3
- 3-bit comparator greater                              : 1
+# Comparators                                          : 2
  8-bit comparator greater                              : 2
 # Multiplexers                                         : 138
  1-bit 2-to-1 multiplexer                              : 79
  10-bit 2-to-1 multiplexer                             : 1
  16-bit 2-to-1 multiplexer                             : 5
  16-bit 4-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 11
+ 3-bit 2-to-1 multiplexer                              : 9
  32-bit 2-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 3
  5-bit 2-to-1 multiplexer                              : 20
  7-bit 2-to-1 multiplexer                              : 6
  7-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 10
+ 8-bit 2-to-1 multiplexer                              : 12
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
 # FSMs                                                 : 8
@@ -601,7 +599,6 @@ Reading core <ipcore_dir/ram.ngc>.
 Loading core <microblaze_mcs> for timing and area information for instance <mcs_0>.
 Loading core <ram> for timing and area information for instance <dual_bram_0>.
 INFO:Xst:2261 - The FF/Latch <ram_addr_16> in Unit <Module_ram_interface> is equivalent to the following 15 FFs/Latches, which will be removed : <ram_addr_17> <ram_addr_18> <ram_addr_19> <ram_addr_20> <ram_addr_21> <ram_addr_22> <ram_addr_23> <ram_addr_24> <ram_addr_25> <ram_addr_26> <ram_addr_27> <ram_addr_28> <ram_addr_29> <ram_addr_30> <ram_addr_31> 
-INFO:Xst:2261 - The FF/Latch <led_3> in Unit <SubModule_i2c_ram_interface> is equivalent to the following FF/Latch, which will be removed : <led_7> 
 INFO:Xst:2261 - The FF/Latch <ram_addr_0> in Unit <SubModule_i2c_ram_interface> is equivalent to the following 29 FFs/Latches, which will be removed : <ram_addr_1> <ram_addr_4> <ram_addr_5> <ram_addr_6> <ram_addr_7> <ram_addr_8> <ram_addr_9> <ram_addr_10> <ram_addr_11> <ram_addr_12> <ram_addr_13> <ram_addr_14> <ram_addr_15> <ram_addr_16> <ram_addr_17> <ram_addr_18> <ram_addr_19> <ram_addr_20> <ram_addr_21> <ram_addr_22> <ram_addr_23> <ram_addr_24> <ram_addr_25> <ram_addr_26> <ram_addr_27> <ram_addr_28> <ram_addr_29> <ram_addr_30> <ram_addr_31> 
 INFO:Xst:2261 - The FF/Latch <next_state_2> in Unit <SubModule_i2c_physical> is equivalent to the following FF/Latch, which will be removed : <next_state_4> 
 INFO:Xst:2261 - The FF/Latch <next_state_0> in Unit <SubModule_i2c_physical> is equivalent to the following FF/Latch, which will be removed : <next_state_1> 
@@ -609,11 +606,13 @@ WARNING:Xst:1426 - The value init of the FF/Latch next_state_3 hinder the consta
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1710 - FF/Latch <ram_addr_16> (without init value) has a constant value of 0 in block <Module_ram_interface>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ram_addr_0> (without init value) has a constant value of 0 in block <SubModule_i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <led_3> (without init value) has a constant value of 0 in block <SubModule_i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_state_2> has a constant value of 0 in block <SubModule_i2c_physical>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <setup_word_0> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_2> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_3> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
+WARNING:Xst:2677 - Node <setup_word_4> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
+WARNING:Xst:2677 - Node <setup_word_5> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
+WARNING:Xst:2677 - Node <setup_word_6> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_7> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_16> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_17> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
@@ -633,15 +632,14 @@ WARNING:Xst:2677 - Node <setup_word_30> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <setup_word_31> of sequential type is unconnected in block <SubModule_i2c_ram_interface>.
 WARNING:Xst:2404 -  FFs/Latches <ram_addr<31:16>> (without init value) have a constant value of 0 in block <ram_interface>.
 WARNING:Xst:2404 -  FFs/Latches <ram_addr<31:4>> (without init value) have a constant value of 0 in block <i2c_ram_interface>.
-WARNING:Xst:2404 -  FFs/Latches <led<7:7>> (without init value) have a constant value of 0 in block <i2c_ram_interface>.
 
 Synthesizing (advanced) Unit <cclk_detector>.
 The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
 Unit <cclk_detector> synthesized (advanced).
 
 Synthesizing (advanced) Unit <i2c_ram_interface>.
-The following registers are absorbed into counter <nb_bytes>: 1 register on signal <nb_bytes>.
 The following registers are absorbed into counter <tic_counter>: 1 register on signal <tic_counter>.
+The following registers are absorbed into counter <nb_bytes>: 1 register on signal <nb_bytes>.
 Unit <i2c_ram_interface> synthesized (advanced).
 
 Synthesizing (advanced) Unit <serial_rx_1>.
@@ -666,6 +664,9 @@ Unit <spi_slave> synthesized (advanced).
 WARNING:Xst:2677 - Node <setup_word_0> of sequential type is unconnected in block <i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_2> of sequential type is unconnected in block <i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_3> of sequential type is unconnected in block <i2c_ram_interface>.
+WARNING:Xst:2677 - Node <setup_word_4> of sequential type is unconnected in block <i2c_ram_interface>.
+WARNING:Xst:2677 - Node <setup_word_5> of sequential type is unconnected in block <i2c_ram_interface>.
+WARNING:Xst:2677 - Node <setup_word_6> of sequential type is unconnected in block <i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_7> of sequential type is unconnected in block <i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_16> of sequential type is unconnected in block <i2c_ram_interface>.
 WARNING:Xst:2677 - Node <setup_word_17> of sequential type is unconnected in block <i2c_ram_interface>.
@@ -688,33 +689,32 @@ WARNING:Xst:2677 - Node <setup_word_31> of sequential type is unconnected in blo
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 7
+# Adders/Subtractors                                   : 8
  16-bit adder                                          : 2
  3-bit subtractor                                      : 1
  4-bit adder                                           : 1
- 6-bit adder                                           : 1
+ 6-bit adder                                           : 2
  7-bit adder                                           : 2
 # Counters                                             : 8
  3-bit down counter                                    : 1
  3-bit up counter                                      : 5
  8-bit up counter                                      : 1
  9-bit up counter                                      : 1
-# Registers                                            : 405
- Flip-Flops                                            : 405
-# Comparators                                          : 3
- 3-bit comparator greater                              : 1
+# Registers                                            : 403
+ Flip-Flops                                            : 403
+# Comparators                                          : 2
  8-bit comparator greater                              : 2
-# Multiplexers                                         : 167
+# Multiplexers                                         : 169
  1-bit 2-to-1 multiplexer                              : 117
  10-bit 2-to-1 multiplexer                             : 1
  16-bit 2-to-1 multiplexer                             : 5
  16-bit 4-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 4
  4-bit 2-to-1 multiplexer                              : 3
  5-bit 2-to-1 multiplexer                              : 20
  7-bit 2-to-1 multiplexer                              : 6
  7-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 8
+ 8-bit 2-to-1 multiplexer                              : 11
 # FSMs                                                 : 8
 
 =========================================================================
@@ -722,8 +722,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <led_3> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_addr_0> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ram_addr_0> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_addr_1> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1426 - The value init of the FF/Latch next_state_3 hinder the constant cleaning in the block I2CMASTER.
    You should achieve better results by setting this init to 1.
@@ -811,10 +810,11 @@ Optimizing FSM <Module_I2C/SubModule_i2c_ram_interface/FSM_7> on signal <state[1
  data_transfer | 110
  done          | 111
 ---------------------------
+WARNING:Xst:1710 - FF/Latch <led_3> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_7> (without init value) has a constant value of 0 in block <i2c_ram_interface>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <ram_byte_enable_0> in Unit <ram_interface> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_byte_enable_1> <ram_byte_enable_2> <ram_byte_enable_3> 
 INFO:Xst:2261 - The FF/Latch <led_1> in Unit <i2c_ram_interface> is equivalent to the following FF/Latch, which will be removed : <led_5> 
 INFO:Xst:2261 - The FF/Latch <ram_byte_0> in Unit <i2c_ram_interface> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_byte_1> <ram_byte_2> <ram_byte_3> 
-INFO:Xst:2261 - The FF/Latch <led_2> in Unit <i2c_ram_interface> is equivalent to the following FF/Latch, which will be removed : <led_6> 
 WARNING:Xst:2677 - Node <avr_interface/sample_q_9> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/sample_q_8> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/sample_q_7> of sequential type is unconnected in block <mojo_top>.
@@ -866,100 +866,63 @@ WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/STATUS_2> of sequenti
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/STATUS_1> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/STATUS_0> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_physical/STOP> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:1710 - FF/Latch <Module_I2C/SubModule_i2c_physical/next_state_0> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/next_state_3> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/counter_0> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/counter_1> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/counter_2> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/counter_3> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/nackdet> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_0> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_1> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_2> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_3> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/state_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/QUEUED> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_0> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_1> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_2> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_3> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_4> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_5> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_6> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/shift_7> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/SCL_OUT> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/SDA_OUT> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/tic> (without init value) has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/sda_in_q> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_physical/sda_in_qq> (without init value) has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_15> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_23> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_15> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_31> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_7> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/slave_din_7> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_14> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_22> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_14> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_30> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_6> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/slave_din_6> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_13> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_21> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_13> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_29> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_5> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/slave_din_5> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_12> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_20> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_12> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_28> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_4> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/slave_din_4> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_11> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_19> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_11> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_27> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_3> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/slave_din_3> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_10> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_18> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_10> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_26> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_2> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/slave_din_2> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_9> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_17> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_25> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_9> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_1> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/slave_din_1> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_8> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_16> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_24> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_8> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_word_0> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/slave_din_0> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/rd> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/setup_word_1> is unconnected in block <mojo_top>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/we> is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_7> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_6> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_5> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_4> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_3> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_2> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_1> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/tic_counter_0> of sequential type is unconnected in block <mojo_top>.
-INFO:Xst:2261 - The FF/Latch <Module_I2C/SubModule_i2c_physical/DOUT_7> in Unit <mojo_top> is equivalent to the following 7 FFs/Latches, which will be removed : <Module_I2C/SubModule_i2c_physical/DOUT_6> <Module_I2C/SubModule_i2c_physical/DOUT_5> <Module_I2C/SubModule_i2c_physical/DOUT_4> <Module_I2C/SubModule_i2c_physical/DOUT_3> <Module_I2C/SubModule_i2c_physical/DOUT_2> <Module_I2C/SubModule_i2c_physical/DOUT_1> <Module_I2C/SubModule_i2c_physical/DOUT_0> 
-INFO:Xst:2261 - The FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_15> in Unit <mojo_top> is equivalent to the following 7 FFs/Latches, which will be removed : <Module_I2C/SubModule_i2c_ram_interface/data_recv_14> <Module_I2C/SubModule_i2c_ram_interface/data_recv_13> <Module_I2C/SubModule_i2c_ram_interface/data_recv_12> <Module_I2C/SubModule_i2c_ram_interface/data_recv_11> <Module_I2C/SubModule_i2c_ram_interface/data_recv_10> <Module_I2C/SubModule_i2c_ram_interface/data_recv_9> <Module_I2C/SubModule_i2c_ram_interface/data_recv_8> 
-INFO:Xst:2261 - The FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_23> in Unit <mojo_top> is equivalent to the following 7 FFs/Latches, which will be removed : <Module_I2C/SubModule_i2c_ram_interface/data_recv_22> <Module_I2C/SubModule_i2c_ram_interface/data_recv_21> <Module_I2C/SubModule_i2c_ram_interface/data_recv_20> <Module_I2C/SubModule_i2c_ram_interface/data_recv_19> <Module_I2C/SubModule_i2c_ram_interface/data_recv_18> <Module_I2C/SubModule_i2c_ram_interface/data_recv_17> <Module_I2C/SubModule_i2c_ram_interface/data_recv_16> 
-INFO:Xst:2261 - The FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_31> in Unit <mojo_top> is equivalent to the following 7 FFs/Latches, which will be removed : <Module_I2C/SubModule_i2c_ram_interface/data_recv_30> <Module_I2C/SubModule_i2c_ram_interface/data_recv_29> <Module_I2C/SubModule_i2c_ram_interface/data_recv_28> <Module_I2C/SubModule_i2c_ram_interface/data_recv_27> <Module_I2C/SubModule_i2c_ram_interface/data_recv_26> <Module_I2C/SubModule_i2c_ram_interface/data_recv_25> <Module_I2C/SubModule_i2c_ram_interface/data_recv_24> 
-INFO:Xst:2261 - The FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_7> in Unit <mojo_top> is equivalent to the following 7 FFs/Latches, which will be removed : <Module_I2C/SubModule_i2c_ram_interface/data_recv_6> <Module_I2C/SubModule_i2c_ram_interface/data_recv_5> <Module_I2C/SubModule_i2c_ram_interface/data_recv_4> <Module_I2C/SubModule_i2c_ram_interface/data_recv_3> <Module_I2C/SubModule_i2c_ram_interface/data_recv_2> <Module_I2C/SubModule_i2c_ram_interface/data_recv_1> <Module_I2C/SubModule_i2c_ram_interface/data_recv_0> 
+WARNING:Xst:1293 - FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/data_recv_31> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/nb_bytes_0> has a constant value of 1 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/nb_bytes_1> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Module_I2C/SubModule_i2c_ram_interface/nb_bytes_2> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_31> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_30> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_29> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_28> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_27> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_26> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_25> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_24> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_23> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_22> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_21> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_20> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_19> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_18> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_17> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_16> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_7> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_6> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_5> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_4> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_3> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_2> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_1> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <Module_I2C/SubModule_i2c_ram_interface/data_word_0> of sequential type is unconnected in block <mojo_top>.
+INFO:Xst:2261 - The FF/Latch <Module_I2C/SubModule_i2c_ram_interface/led_6> in Unit <mojo_top> is equivalent to the following 2 FFs/Latches, which will be removed : <Module_I2C/SubModule_i2c_ram_interface/led_2> <Module_I2C/SubModule_i2c_ram_interface/reset_n> 
+INFO:Xst:3203 - The FF/Latch <Module_I2C/SubModule_i2c_ram_interface/rd> in Unit <mojo_top> is the opposite to the following FF/Latch, which will be removed : <Module_I2C/SubModule_i2c_ram_interface/we> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 17.
+Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 19.
 INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 30 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i>
@@ -975,8 +938,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 292
- Flip-Flops                                            : 292
+# Registers                                            : 356
+ Flip-Flops                                            : 356
 
 =========================================================================
 
@@ -999,32 +962,33 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1178
+# BELS                             : 1281
 #      GND                         : 3
-#      INV                         : 28
-#      LUT1                        : 41
-#      LUT2                        : 66
-#      LUT3                        : 161
-#      LUT4                        : 239
-#      LUT5                        : 72
-#      LUT6                        : 171
+#      INV                         : 29
+#      LUT1                        : 48
+#      LUT2                        : 102
+#      LUT3                        : 157
+#      LUT4                        : 246
+#      LUT5                        : 77
+#      LUT6                        : 201
 #      LUT6_2                      : 90
 #      MULT_AND                    : 3
-#      MUXCY                       : 38
+#      MUXCY                       : 45
 #      MUXCY_L                     : 83
 #      MUXF5                       : 66
 #      MUXF6                       : 1
-#      MUXF7                       : 13
+#      MUXF7                       : 19
 #      VCC                         : 3
-#      XORCY                       : 100
-# FlipFlops/Latches                : 857
-#      FD                          : 176
-#      FDC                         : 1
-#      FDCE                        : 3
-#      FDE                         : 319
+#      XORCY                       : 108
+# FlipFlops/Latches                : 921
+#      FD                          : 177
+#      FDC                         : 2
+#      FDCE                        : 28
+#      FDE                         : 344
+#      FDP                         : 4
 #      FDPE                        : 1
 #      FDR                         : 115
-#      FDRE                        : 205
+#      FDRE                        : 213
 #      FDS                         : 13
 #      FDSE                        : 24
 # RAMS                             : 73
@@ -1046,19 +1010,19 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             857  out of  11440     7%  
- Number of Slice LUTs:                 1049  out of   5720    18%  
-    Number used as Logic:               868  out of   5720    15%  
+ Number of Slice Registers:             921  out of  11440     8%  
+ Number of Slice LUTs:                 1131  out of   5720    19%  
+    Number used as Logic:               950  out of   5720    16%  
     Number used as Memory:              181  out of   1440    12%  
        Number used as RAM:              128
        Number used as SRL:               53
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1459
-   Number with an unused Flip Flop:     602  out of   1459    41%  
-   Number with an unused LUT:           410  out of   1459    28%  
-   Number of fully used LUT-FF pairs:   447  out of   1459    30%  
-   Number of unique control sets:        67
+ Number of LUT Flip Flop pairs used:   1563
+   Number with an unused Flip Flop:     642  out of   1563    41%  
+   Number with an unused LUT:           432  out of   1563    27%  
+   Number of fully used LUT-FF pairs:   489  out of   1563    31%  
+   Number of unique control sets:        74
 
 IO Utilization: 
  Number of IOs:                          24
@@ -1090,7 +1054,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 983   |
+clk                                | BUFGP                  | 1047  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1113,7 +1077,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.619ns (frequency: 116.019MHz)
-  Total number of paths / destination ports: 138214 / 3078
+  Total number of paths / destination ports: 139047 / 3238
 -------------------------------------------------------------------------
 Delay:               8.619ns (Levels of Logic = 5)
   Source:            mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
@@ -1158,7 +1122,7 @@ Offset:              3.742ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 14 / 12
+  Total number of paths / destination ports: 16 / 14
 -------------------------------------------------------------------------
 Offset:              5.610ns (Levels of Logic = 2)
   Source:            avr_interface/cclk_detector/ready_q (FF)
@@ -1211,14 +1175,14 @@ clk            |    8.619|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.71 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.90 secs
  
 --> 
 
-Total memory usage is 271560 kilobytes
+Total memory usage is 271048 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  192 (   0 filtered)
-Number of infos    :   26 (   0 filtered)
+Number of warnings :  163 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
 

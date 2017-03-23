@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Mojo_I2C</name>
-	<comment>Mojo_I2C_bsp - microblaze_mcs</comment>
+	<name>test</name>
+	<comment>test_bsp - microblaze_mcs</comment>
 	<projects>
-		<project>Mojo_I2C_bsp</project>
+		<project>test_bsp</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

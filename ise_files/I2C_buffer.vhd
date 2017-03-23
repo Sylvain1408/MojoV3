@@ -42,10 +42,14 @@ architecture Behavioral of I2C_buffer is
 
 begin
 
-sda <= sda_in;
-sda_out <= sda;
-scl <= scl_in;
-scl_out <= scl;
-
+buffering : process (clk)
+begin
+	if(rising_edge(clk))then	
+		sda <= sda_in;
+		sda_out <= sda;
+		scl <= scl_in;
+		scl_out <= scl;
+	end if;
+end process buffering;
 end Behavioral;
 

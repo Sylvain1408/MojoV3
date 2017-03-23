@@ -1,1 +1,4 @@
+work	"../i2C/i2cmaster.vhd"
+work	"I2C_buffer.vhd"
+work	"i2c.vhd"
 work	"i2c_ram_interface.vhd"

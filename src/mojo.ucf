@@ -25,9 +25,11 @@ NET "spi_channel[1]" LOC = P61;
 NET "spi_channel[2]" LOC = P62;
 NET "spi_channel[3]" LOC = P65;
 
-NET "i2c_sda" LOC = P5 | IOSTANDARD = I2C;
-NET "i2c_scl" LOC = P6 | IOSTANDARD = I2C;
+NET "i2c_sda" LOC = P5 | IOSTANDARD = "I2C";
+NET "i2c_scl" LOC = P6 | IOSTANDARD = "LVCMOS33";
 
 NET "avr_tx" LOC = P55;
 NET "avr_rx" LOC = P59;
 NET "avr_rx_busy" LOC = P39;
+#Created by Constraints Editor (xc6slx9-tqg144-2) - 2017/03/23
+NET "i2c_sda" OFFSET = OUT 20 ns AFTER "clk" REFERENCE_PIN "i2c_scl";
