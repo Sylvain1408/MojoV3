@@ -1,11 +1,27 @@
-14:54:15 **** Incremental Build of configuration Debug for project test ****
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+17:10:27 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Rien à faire pour « all ».
-15:46:09 **** Auto Build of configuration Debug for project test ****
+17:10:30 **** Auto Build of configuration Debug for project test ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'I2C_Setup':
+../src/helloworld.c:82:3: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:84:3: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:85:2: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:86:2: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:87:2: warning: statement with no effect [-Wunused-value]
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: test.elf'
@@ -16,7 +32,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle
 'Invoking: MicroBlaze Print Size'
 mb-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   8542	    412	   2300	  11254	   2bf6	test.elf
+   8998	    412	   2300	  11710	   2dbe	test.elf
 'Finished building: test.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -31,29 +47,17 @@ ELF file	: test.elf
 elfcheck passed.
 'Finished building: test.elf.elfcheck'
 ' '
-15:50:06 **** Auto Build of configuration Debug for project test ****
+17:39:37 **** Auto Build of configuration Debug for project test ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'I2C_write_8b':
-../src/helloworld.c:48:2: error: incompatible type for argument 1 of 'XIOModule_IoWriteByte'
-../../test_bsp/microblaze_mcs/include/xiomodule.h:575:6: note: expected 'struct XIOModule *' but argument is of type 'XIOModule'
-make: *** [src/helloworld.o] Erreur 1
-15:50:40 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'I2C_write_8b':
-../src/helloworld.c:48:2: error: incompatible type for argument 1 of 'XIOModule_IoWriteByte'
-../../test_bsp/microblaze_mcs/include/xiomodule.h:575:6: note: expected 'struct XIOModule *' but argument is of type 'XIOModule'
-make: *** [src/helloworld.o] Erreur 1
-15:50:50 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'I2C_Setup':
+../src/helloworld.c:82:3: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:84:3: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:85:2: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:86:2: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:87:2: warning: statement with no effect [-Wunused-value]
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: test.elf'
@@ -64,262 +68,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle
 'Invoking: MicroBlaze Print Size'
 mb-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   8542	    412	   2300	  11254	   2bf6	test.elf
-'Finished building: test.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.7 Build EDK_P.20131013
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
-
-ELF file	: test.elf
-elfcheck passed.
-'Finished building: test.elf.elfcheck'
-' '
-15:51:06 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8542	    412	   2300	  11254	   2bf6	test.elf
-'Finished building: test.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.7 Build EDK_P.20131013
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
-
-ELF file	: test.elf
-elfcheck passed.
-'Finished building: test.elf.elfcheck'
-' '
-15:51:58 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'I2C_read_8b':
-../src/helloworld.c:51:1: error: parameter name omitted
-../src/helloworld.c:52:35: error: 'addr' undeclared (first use in this function)
-../src/helloworld.c:52:35: note: each undeclared identifier is reported only once for each function it appears in
-../src/helloworld.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
-make: *** [src/helloworld.o] Erreur 1
-15:52:02 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8542	    412	   2300	  11254	   2bf6	test.elf
-'Finished building: test.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.7 Build EDK_P.20131013
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
-
-ELF file	: test.elf
-elfcheck passed.
-'Finished building: test.elf.elfcheck'
-' '
-15:55:13 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8542	    412	   2300	  11254	   2bf6	test.elf
-'Finished building: test.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.7 Build EDK_P.20131013
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
-
-ELF file	: test.elf
-elfcheck passed.
-'Finished building: test.elf.elfcheck'
-' '
-17:03:13 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:117:5: warning: large integer implicitly truncated to unsigned type [-Woverflow]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8570	    412	   2306	  11288	   2c18	test.elf
-'Finished building: test.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.7 Build EDK_P.20131013
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
-
-ELF file	: test.elf
-elfcheck passed.
-'Finished building: test.elf.elfcheck'
-' '
-17:03:52 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8714	    412	   2306	  11432	   2ca8	test.elf
-'Finished building: test.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.7 Build EDK_P.20131013
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
-
-ELF file	: test.elf
-elfcheck passed.
-'Finished building: test.elf.elfcheck'
-' '
-17:04:06 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:118:5: warning: large integer implicitly truncated to unsigned type [-Woverflow]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8714	    412	   2306	  11432	   2ca8	test.elf
-'Finished building: test.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.7 Build EDK_P.20131013
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
-
-ELF file	: test.elf
-elfcheck passed.
-'Finished building: test.elf.elfcheck'
-' '
-17:04:15 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8574	    412	   2300	  11286	   2c16	test.elf
-'Finished building: test.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.7 Build EDK_P.20131013
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
-
-ELF file	: test.elf
-elfcheck passed.
-'Finished building: test.elf.elfcheck'
-' '
-17:04:34 **** Auto Build of configuration Debug for project test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test.elf  |tee "test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8574	    412	   2300	  11286	   2c16	test.elf
+   8998	    412	   2300	  11710	   2dbe	test.elf
 'Finished building: test.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'

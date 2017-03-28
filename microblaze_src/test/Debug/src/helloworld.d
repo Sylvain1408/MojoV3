@@ -16,7 +16,7 @@ src/helloworld.d: ../src/helloworld.c \
  ../../test_bsp/microblaze_mcs/include/xparameters.h \
  ../../test_bsp/microblaze_mcs/include/xiomodule_l.h \
  ../../test_bsp/microblaze_mcs/include/xiomodule_io.h \
- ../../test_bsp/microblaze_mcs/include/xio.h
+ ../../test_bsp/microblaze_mcs/include/xio.h ../src/Time.h
 
 ../../test_bsp/microblaze_mcs/include/xparameters.h:
 
@@ -53,3 +53,5 @@ src/helloworld.d: ../src/helloworld.c \
 ../../test_bsp/microblaze_mcs/include/xiomodule_io.h:
 
 ../../test_bsp/microblaze_mcs/include/xio.h:
+
+../src/Time.h:

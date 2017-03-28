@@ -1,8 +1,14 @@
-17:04:34 **** Auto Build of configuration Debug for project test ****
+17:39:37 **** Auto Build of configuration Debug for project test ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'I2C_Setup':
+../src/helloworld.c:82:3: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:84:3: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:85:2: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:86:2: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:87:2: warning: statement with no effect [-Wunused-value]
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: test.elf'
@@ -13,7 +19,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle
 'Invoking: MicroBlaze Print Size'
 mb-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   8574	    412	   2300	  11286	   2c16	test.elf
+   8998	    412	   2300	  11710	   2dbe	test.elf
 'Finished building: test.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -29,5 +35,5 @@ elfcheck passed.
 'Finished building: test.elf.elfcheck'
 ' '
 
-17:04:37 Build Finished (took 2s.209ms)
+17:39:39 Build Finished (took 2s.470ms)
 

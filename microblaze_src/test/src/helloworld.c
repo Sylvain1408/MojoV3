@@ -39,18 +39,57 @@
 #include "xbram.h"
 #include "xiomodule.h"
 #include "pthread.h"
+#include "Time.h"
 
 #define I2C_BASEADDR 0x4
+//I2C Setup register macros considering 32 bits
+#define I2C_OFFSET_GO 0
+#define I2C_OFFSET_RW 1
+#define I2C_OFFSET_NB_BYTES 4
+#define I2C_OFFSET_SLAVE_ADDR 8
+#define I2C_OFFSET_RAM_POINTER 16
+#define I2C_READ 1
+#define I2C_WRITE 0
+#define I2C_SET_GO(word) (word|(0x1 << I2C_OFFSET_GO))
+#define I2C_RESET_GO(word) (word|(0x0 << I2C_OFFSET_GO))
+#define I2C_SET_READ(word) (word|(0x1 << I2C_OFFSET_RW))
+#define I2C_SET_WRITE(word) (word|(0x0 << I2C_OFFSET_RW))
+#define I2C_SET_NB_BYTES(word, nb_bytes) (word|(nb_bytes << I2C_OFFSET_NB_BYTES))
+#define I2C_SET_SLAVE_ADDR(word, slave_addr) (word|(slave_addr << I2C_OFFSET_SLAVE_ADDR))
+#define I2C_SET_RAM_POINTER(word, pointer) (word|(pointer << I2C_OFFSET_RAM_POINTER))
+
+//I2C Data macros considering 32 bits
+#define I2C_SET_32B_DATA(word, byte0, byte1, byte2, byte3) (word&(byte0 + (byte1 << 8) + (byte2 << 16) + (byte3 << 24)))
+#define I2C_GET_8B_DATA_0 (word, byte0) (word&0xFF)
+#define I2C_GET_8B_DATA_1 (word, byte1) (word&0xFF00)
+#define I2C_GET_8B_DATA_2 (word, byte2) (word&0xFF0000)
+#define I2C_GET_8B_DATA_3 (word, byte3) (word&0xFF000000)
 
 XIOModule gpo;
-volatile u32 ct = 0;
 
-void I2C_write_8b(XIOModule* ram, u32 addr, u8 data){
-	XIOModule_IoWriteByte(ram, addr, data);
+void I2C_Start(XIOModule* module, u32 I2C_C_BASEADDR){
+	XIOModule_IoWriteWord(module, I2C_C_BASEADDR, I2C_SET_GO(XIOModule_IoReadWord(module, I2C_C_BASEADDR) ) );
+	delay(1);//may be useless, need to test
+	XIOModule_IoWriteByte(module, I2C_C_BASEADDR, I2C_RESET_GO(XIOModule_IoReadWord(module, I2C_C_BASEADDR) ) );
 }
 
-u8 I2C_read_8b(XIOModule* ram, u32 addr){
-	return XIOModule_IoReadByte(ram, addr);
+void I2C_Setup(XIOModule* module, u32 I2C_C_BASEADDR, u8 rw, u8 nb_bytes, u8 i2c_slave_addr, u8 ram_pointer){
+	u32 word = 0;
+	if(nb_bytes > 4)
+		nb_bytes = 4;
+	if(rw != 0 || rw != 1)return;
+	if(rw == 0)
+		I2C_SET_WRITE(word);
+	else if(rw == 1)
+		I2C_SET_READ(word);
+	I2C_SET_NB_BYTES(word, nb_bytes);
+	I2C_SET_SLAVE_ADDR(word, i2c_slave_addr);
+	I2C_SET_RAM_POINTER(word, ram_pointer);
+	XIOModule_IoWriteWord(module, I2C_C_BASEADDR, word);
+}
+
+void I2C_Read_Data(XIOModule* module, u32 I2C_C_BASEADDR, u32* word){
+	*word = XIOModule_IoReadWord(module, I2C_C_BASEADDR);
 }
 
 void Memory_test_32b(XIOModule ioModule){
@@ -88,16 +127,6 @@ void Memory_test_8b(XIOModule ioModule){
 	}
 }
 
-void timerTick(void* ref) {
-  ct++; // increase ct every millisecond
-}
-
-void delay(u32 ms) {
-  ct = 0; // set the counter to 0
-  while (ct < ms) // wait for ms number of milliseconds
-    ;
-}
-
 int main()
 {
     XIOModule_Initialize(&gpo, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
@@ -112,14 +141,17 @@ int main()
 
 	microblaze_enable_interrupts(); // enable global interrupts
 
-    delay(5000);
+    delay(5000);//5s delay to let user time to connect console
 
-    XIOModule_IoWriteWord(&gpo, 0x8, 0x12121212);
-    XIOModule_IoWriteWord(&gpo, 0x4, 0x3442);
-    xil_printf("0x%x : %x\r\n", 4, XIOModule_IoReadByte(&gpo, 0x4));
-    xil_printf("0x%x : %x\r\n", 4, XIOModule_IoReadByte(&gpo, 0x4));
-    xil_printf("0x%x : %x\r\n", 4, XIOModule_IoReadByte(&gpo, 0x4));
-    xil_printf("0x%x : %x\r\n", 4, XIOModule_IoReadByte(&gpo, 0x4));
+    u8 slave_addr = 0x32;
+    u32 data = 0;
+    I2C_Setup(&gpo, I2C_BASEADDR, I2C_READ, 0x4, slave_addr, 0x0);
+    I2C_Start(&gpo, I2C_BASEADDR);
+    delay(100);
+    I2C_Read_Data(&gpo, I2C_BASEADDR, &data);
+
+    xil_printf("%x\r\n", data);
+
     while(1){
     	//xil_printf("0x%x : %x\r\n", 4, XIOModule_IoReadByte(&gpo, 0x4));
     }
