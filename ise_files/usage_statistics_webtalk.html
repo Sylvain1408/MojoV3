@@ -17,7 +17,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project ID (random number)</B></TD>
-<TD><xtag-property name="RandomID">0385e7c1fce54a2ea94d02dc256d8cc1</xtag-property>.<xtag-property name="ProjectID">D5F012D4F94A44C7BABAB085E4FFBB04</xtag-property>.<xtag-property name="ProjectIteration">275</xtag-property></TD>
+<TD><xtag-property name="RandomID">0385e7c1fce54a2ea94d02dc256d8cc1</xtag-property>.<xtag-property name="ProjectID">D5F012D4F94A44C7BABAB085E4FFBB04</xtag-property>.<xtag-property name="ProjectIteration">276</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Target Package:</B></TD>
 <TD><xtag-property name="TargetPackage">tqg144</xtag-property></TD>
 </TR>
@@ -29,7 +29,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Date Generated</B></TD>
-<TD><xtag-property name="Date Generated">2017-03-23T17:16:40</xtag-property></TD>
+<TD><xtag-property name="Date Generated">2017-03-24T10:51:48</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Tool Flow</B></TD>
 <TD><xtag-property name="ToolFlow">ISE</xtag-property></TD>
 </TR>
@@ -3111,6 +3111,12 @@
 <LI><xtag-cmdline>par -filter &lt;ise_file&gt; -w -intstyle ise -ol high -mt off &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
 <LI><xtag-cmdline>trce -filter &lt;fname&gt;.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf</xtag-cmdline></LI>
 <LI><xtag-cmdline>bitgen -filter &lt;ise_file&gt; -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>xst -intstyle ise -filter &lt;ise_file&gt;</xtag-cmdline></LI>
+<LI><xtag-cmdline>ngdbuild -filter &lt;ise_file&gt;</xtag-cmdline></LI>
+<LI><xtag-cmdline>map -filter &lt;ise_file&gt; -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o &lt;fname&gt;.ncd &lt;fname&gt;.ngd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>par -filter &lt;ise_file&gt; -w -intstyle ise -ol high -mt off &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>trce -filter &lt;fname&gt;.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -filter &lt;ise_file&gt; -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
 <LI><xtag-cmdline>fuse</xtag-cmdline></LI>
 </xtag-section></UL></TD></TR>
 </TABLE>
@@ -3118,8 +3124,8 @@
 
 <tr>
   <td><xtag-program-name>bitgen</xtag-program-name></td>
-  <td><xtag-total-run-started>15</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>15</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>16</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>16</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -3128,6 +3134,16 @@
 </tr>
 <tr>
   <td><xtag-program-name>elfcheck</xtag-program-name></td>
+  <td><xtag-total-run-started>17</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>17</xtag-total-run-finished></td>
+  <td><xtag-total-error>0</xtag-total-error></td>
+  <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
+  <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
+  <td><xtag-total-exception>0</xtag-total-exception></td>
+  <td><xtag-total-core-dump>0</xtag-total-core-dump></td>
+</tr>
+<tr>
+  <td><xtag-program-name>map</xtag-program-name></td>
   <td><xtag-total-run-started>15</xtag-total-run-started></td>
   <td><xtag-total-run-finished>15</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
@@ -3137,19 +3153,9 @@
   <td><xtag-total-core-dump>0</xtag-total-core-dump></td>
 </tr>
 <tr>
-  <td><xtag-program-name>map</xtag-program-name></td>
-  <td><xtag-total-run-started>14</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>14</xtag-total-run-finished></td>
-  <td><xtag-total-error>0</xtag-total-error></td>
-  <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
-  <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
-  <td><xtag-total-exception>0</xtag-total-exception></td>
-  <td><xtag-total-core-dump>0</xtag-total-core-dump></td>
-</tr>
-<tr>
   <td><xtag-program-name>ngdbuild</xtag-program-name></td>
-  <td><xtag-total-run-started>14</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>14</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>15</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>15</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -3158,8 +3164,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>par</xtag-program-name></td>
-  <td><xtag-total-run-started>13</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>13</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>14</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>14</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -3168,8 +3174,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>trce</xtag-program-name></td>
-  <td><xtag-total-run-started>13</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>13</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>14</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>14</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -3178,8 +3184,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>xst</xtag-program-name></td>
-  <td><xtag-total-run-started>44</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>44</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>45</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>45</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>

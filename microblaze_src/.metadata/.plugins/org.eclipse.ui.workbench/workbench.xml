@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="156" y="156">
 <fastViewData fastViewLocation="1024"/>
@@ -34,13 +34,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/helloworld.c" title="helloworld.c" tooltip="test/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3533" selectionTopPixel="1198"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5366" selectionTopPixel="1742"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Time.h" partName="Time.h" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/Time.h" title="Time.h" tooltip="test/src/Time.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/Time.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="137" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -53,11 +58,11 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="241"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -185,32 +190,158 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/.project"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/test/src/helloworld.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/test/src/Time.h"/>
 </editors>
-<item historyLabel=".project" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="1673" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="1715" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="1763" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="1805" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="1550" y="0"/>
-</item>
-<item active="true" historyLabel="helloworld.c" index="1">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="3487" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2347" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2452" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2592" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2853" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1824" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1797" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1778" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1795" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1955" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2042" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2086" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2087" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2188" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2216" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2232" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2248" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2720" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2634" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2756" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1883" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2655" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2698" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2678" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2460" y="1"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2807" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2660" y="20"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2800" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2284" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="3453" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5265" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5125" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="3584" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5329" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5357" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5364" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5349" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="3271" y="20"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="4477" y="0"/>
+</item>
+<item historyLabel="Time.h" index="1">
+<position info="not_deleted" x="339" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1568" y="0"/>
+</item>
+<item historyLabel="Time.h" index="1">
+<position info="not_deleted" x="339" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2735" y="0"/>
+</item>
+<item historyLabel="Time.h" index="1">
+<position info="not_deleted" x="137" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2735" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2735" y="0"/>
+</item>
+<item historyLabel="Time.h" index="1">
+<position info="not_deleted" x="137" y="0"/>
+</item>
+<item active="true" historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2735" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -229,6 +360,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Time.h" tooltip="test/src/Time.h">
+<persistable path="/test/src/Time.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="test/src/helloworld.c">
 <persistable path="/test/src/helloworld.c"/>
 </file>
