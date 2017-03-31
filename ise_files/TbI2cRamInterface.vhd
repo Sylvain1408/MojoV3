@@ -59,6 +59,7 @@ ARCHITECTURE behavior OF TbI2CRamInterface IS
          status : IN  std_logic_vector(2 downto 0);
          ack_error : IN  std_logic;
          reset_in : IN  std_logic;
+			device : OUT std_logic_vector(6 downto 0);
          led : OUT  std_logic_vector(7 downto 0)
         );
     END COMPONENT;
@@ -85,6 +86,7 @@ ARCHITECTURE behavior OF TbI2CRamInterface IS
    signal rd : std_logic;
    signal we : std_logic;
    signal reset_n : std_logic;
+   signal device : std_logic_vector(6 downto 0);
    signal led : std_logic_vector(7 downto 0);
 
    -- Clock period definitions
@@ -112,6 +114,7 @@ BEGIN
           status => status,
           ack_error => ack_error,
           reset_in => reset_in,
+			 device => device,
           led => led
         );
 
@@ -137,6 +140,11 @@ BEGIN
 		go <= '0';
 		queue <= '0';
 		slave_dout <= X"12";
+		
+		wait for 10us;
+		queue <= '1';
+		wait for 105ns;
+		queue <= '0';
 
       -- insert stimulus here 
 

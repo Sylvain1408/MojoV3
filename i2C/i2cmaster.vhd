@@ -6,6 +6,7 @@
 ---- Modification History
 ---- 2016/06/04 
 ---- 2016/06/06 Add STOP
+---- 2017/03/30 Sylvain : Move Device generic to device input.
 ----------------------------------------------------------------
 
 --	copyright Philippe Thirion
@@ -40,9 +41,6 @@ use IEEE.numeric_std.all;
 -- SENDACK	110
 
 entity I2CMASTER is
-	generic(
-		DEVICE 		: std_logic_vector(7 downto 0) := x"38"
-	);
 	port(
 		MCLK		: in	std_logic;
 		nRST		: in	std_logic;
@@ -57,6 +55,7 @@ entity I2CMASTER is
 		DATA_VALID		: out	std_logic;					-- new data available on DOUT
 		STOP		: out	std_logic;
 		STATUS		: out	std_logic_vector(2 downto 0);	-- state machine state
+		DEVICE 		: in std_logic_vector(6 downto 0);
 		SCL_IN		: in	std_logic;						-- i2c signals
 		SCL_OUT		: out	std_logic;
 		SDA_IN		: in	std_logic;

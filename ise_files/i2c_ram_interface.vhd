@@ -71,6 +71,7 @@ entity i2c_ram_interface is
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
 		reset_in					: IN std_logic;
+		device					: OUT std_logic_vector(6 downto 0);
 		
 		led						: OUT std_logic_vector(7 downto 0)
 		);
@@ -78,22 +79,33 @@ end i2c_ram_interface;
 
 architecture Behavioral of i2c_ram_interface is
 
-TYPE machine IS(idle, set_busy, ready, fetch_setup, fetch_data, decode_data, wait_queue, data_transfer, done); --needed states for I2C control
-TYPE tic_states IS(low, high); --needed states for tic signal
-SIGNAL state         : machine := idle;               --state machine
+--Signals for main process
+TYPE main_process_FSM IS(idle, set_busy, ready, fetch_setup, fetch_data, decode_data, wait_queue, data_transfer, done); --needed states for I2C control
+SIGNAL prev_queue : std_logic;
+SIGNAL main_process_state : main_process_FSM := idle;               --state machine
 signal setup_word : std_logic_vector(31 downto 0);
 signal data_word : std_logic_vector(31 downto 0);
 signal data_recv : std_logic_vector(31 downto 0) := X"00000000";
 signal led_signal : std_logic_vector(7 downto 0) := "00000000";
 signal T : integer range 0 to 1 := 0;
-signal tic_counter : integer range 0 to 170 := 0;
 signal nb_bytes : integer range 1 to 4 := 4;
+
+--Signals for tic generation
 signal tic_go : std_logic;
+signal tic_counter : integer range 0 to 170 := 0;
+
+--Signals for ram write process
+TYPE ram_process_FSM IS(send_setup, send_data);
+signal ram_process_state : ram_process_FSM := send_setup;
+signal setup_word_to_ram : std_logic_vector(31 downto 0);
+signal data_word_to_ram : std_logic_vector(31 downto 0);
+signal ram_update_go : std_logic;
 
 signal test : std_logic_vector(7 downto 0) := X"00";
 
 begin
 
+--Debug process to test RAM writting
 --debug : process(clk, reset_in)
 --	begin
 --		if( clk'event and clk = '1')then
@@ -114,37 +126,38 @@ begin
 main : process(clk, go)
 	begin
 	if( clk'event and clk = '1')then				
-		if(go = '1' and state = idle)then
-			state <= ready;
+		if(go = '1' and main_process_state = idle)then
+			main_process_state <= ready;
 		end if;
 		
-		case state is
+		case main_process_state is
 			when idle =>
 				ram_addr <= X"00000000";
 				ram_byte <= "0000";
 				reset_n <= '0';
 				tic_go <= '0';
-				led <= X"01";
+				ram_update_go <= '0';
+				--led <= X"01";
 				
 			when ready =>--waiting on go signal to start
 				ram_addr <= X"00000004";
 				ram_byte <= "0000";
-				state <= set_busy;			
-				led <= X"11";				
+				main_process_state <= set_busy;			
+				--led <= X"11";				
 				
 			when set_busy =>
 				setup_word <= ram_read;
 				ram_addr <= X"00000004";
 				ram_byte <= "1111";
 				ram_write <= ram_read(31 downto 4) & '1' & ram_read(2 downto 0);
-				state <= fetch_setup;
+				main_process_state <= fetch_setup;
 			
 			when fetch_setup =>--fetch data from ram
 				ram_byte <= "0000";
 				if(ram_read(1) = '0')then -- write to slave, get data from RAM
 					ram_addr <= X"00000008";
 				end if;
-				state <= fetch_data;
+				main_process_state <= fetch_data;
 				led <= X"22";
 				
 			when fetch_data =>
@@ -154,58 +167,60 @@ main : process(clk, go)
 --				else
 --					nb_bytes <= to_integer(unsigned(setup_word(6 downto 4)));
 --				end if;
-				state <= decode_data;
+				main_process_state <= decode_data;
 				led <= X"23";
 				
 			when decode_data =>--slave addr first
 				rd <= '0';
 				we <= '1';
-				slave_din <= setup_word(15 downto 8);
+				device <= setup_word(15 downto 8);
+				slave_din <= X"AA";
 				reset_n <= '1';
 				tic_go <= '1';
-				if(queue = '1')then--error
-					state <= wait_queue;
+				if(prev_queue = '1' and queue = '0')then
+					main_process_state <= wait_queue;
 					rd <= setup_word(1);
 					we <= not setup_word(1);
 				end if;
 				led <= X"44";
 				
 			when wait_queue =>
-				if(queue = '0')then
-					state <= data_transfer;
-					rd <= setup_word(1);
-					we <= not setup_word(1);
-				end if;
+				main_process_state <= data_transfer;
+				rd <= setup_word(1);
+				we <= not setup_word(1);
+				led <= X"45";
 
 			when data_transfer =>--waiting physical to get back data from slave
-				if(falling_edge(queue))then
-					if(nb_bytes = 1)then
-						state <= done;
+				if( prev_queue = '1' and queue = '0')then
+					if(nb_bytes >= 1)then
+						main_process_state <= done;
 						led(7 downto 0) <= X"55";
 					else
 						nb_bytes <= nb_bytes - 1;
 						led(7 downto 0) <= X"50";
 					end if;
 				end if;
-				slave_din <= data_word( (8*(nb_bytes)+7) downto ((8*(nb_bytes))));
-				data_recv((8*(nb_bytes-1)+7) downto ((8*(nb_bytes-1)))) <= slave_dout;
+				--slave_din <= data_word( (8*(nb_bytes)+7) downto ((8*(nb_bytes))));
+				--data_recv((8*(nb_bytes-1)+7) downto ((8*(nb_bytes-1)))) <= slave_dout;
 				
 			when done =>
 				ram_byte <= "1111";
 				ram_addr <= X"00000008";
 				ram_write <= data_recv;
-				state <= idle;
+				main_process_state <= idle;
 				led <= X"66";
 			when others =>
 				null;
 		end case;
+		prev_queue <= queue;
 	end if;
-
+	
 	end process main;
 	
-clock_gen : process(clk)--300kHz clock generator from 50MHz (to finally drive I2C at 100KHz)
+--300kHz clock generator from 50MHz (to finally drive I2C at 100KHz)
+clock_gen : process(clk)
 	begin
-		if( clk'event and clk = '1')then	
+		if( clk'event and clk = '1' and tic_go = '1')then	
 			if(tic_counter < 167)then
 				tic <= '0';
 				tic_counter <= tic_counter + 1;
@@ -216,6 +231,22 @@ clock_gen : process(clk)--300kHz clock generator from 50MHz (to finally drive I2
 		end if;
 			
 	end process clock_gen;
+	
+ram_write_process : process(clk)
+	begin
+		if( clk'event and clk = '1' and ram_update_go = '1')then	
+			case ram_process_state is
+				when send_setup =>
+					ram_addr <= X"00000004";
+					ram_write <= setup_word;
+					ram_byte <= "1111";
+				when send_data =>
+					ram_addr <= X"00000008";
+					ram_write <= data_word;
+					ram_byte <= "1111";
+				end case;
+		end if;
+	end process ram_write_process;
 	
 end Behavioral;
 

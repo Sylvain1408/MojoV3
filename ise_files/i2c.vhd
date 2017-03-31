@@ -63,6 +63,7 @@ signal queue : std_logic;
 signal data_valid : std_logic;
 signal stop : std_logic;
 signal status : std_logic_vector(2 downto 0);
+signal device : std_logic_vector(6 downto 0);
 
 signal sdai: std_logic;
 signal scli : std_logic;
@@ -70,9 +71,6 @@ signal sdao: std_logic;
 signal sclo : std_logic;
 
 	COMPONENT i2cmaster
-		generic(
-		DEVICE 		: std_logic_vector(7 downto 0) := x"38"
-	);
 	port(
 		MCLK			: IN	std_logic;
 		nRST			: IN	std_logic;
@@ -87,6 +85,7 @@ signal sclo : std_logic;
 		DATA_VALID	: OUT	std_logic;							-- new data available on DOUT
 		STOP			: OUT	std_logic;
 		STATUS		: OUT	std_logic_vector(2 downto 0);	-- state machine state
+		DEVICE		: IN std_logic_vector(6 downto 0);	-- device address
 		SCL_IN		: IN	std_logic;							-- i2c signals
 		SCL_OUT		: OUT	std_logic;
 		SDA_IN		: IN	std_logic;
@@ -114,6 +113,7 @@ signal sclo : std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
 		reset_in					: IN std_logic;
+		device					: OUT std_logic_vector(6 downto 0);
 		
 		led						: OUT std_logic_vector(7 downto 0)
 		);
@@ -148,6 +148,7 @@ begin
 		DATA_VALID =>	data_valid,
 		STOP =>	stop,
 		STATUS => status,
+		DEVICE => device,
 		SCL_IN => scli,
 		SCL_OUT => scl,
 		SDA_IN => sdai,
@@ -178,6 +179,7 @@ begin
 		status => status,
 		ack_error => ack_error,
 		reset_in => reset_in,
+		device => device,
 		
 		led => led
 	);

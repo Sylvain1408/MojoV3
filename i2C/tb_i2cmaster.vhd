@@ -115,34 +115,35 @@ begin
 
 	GO: process
 	begin
+		--DIN <= x"EE";
+		wait for 100 ns ;
 		nRST <= '0';
 		SRST <= '0';
 		--DIN <= (others=>'0');
-		DIN <= x"EE";
 		RD <= '0';
 		WE <= '1';
 		SDA_IN <= '0';
 		SCL_IN <= '0';
-		wait for 1000 ns;
+--		wait for 1000 ns;
 		nRST <= '1';
-		wait until QUEUED'event and QUEUED = '0';
-		WE <= '1';
-		DIN <= x"AA";
-		wait until QUEUED'event and QUEUED = '0';
-		WE <= '0';
-		RD <= '1';
-		wait until QUEUED'event and QUEUED = '0';
-		WE <= '0';
-		RD <= '1';
-		wait until DATA_VALID'event and DATA_VALID = '0';
-		SDA_IN <= '1';
-		wait until QUEUED'event and QUEUED = '0';
-		WE <= '0';
-		RD <= '0';	
-		wait until DATA_VALID'event and DATA_VALID = '0';	
-		wait for 100 uS;
-		RUNNING <= '0';
-		wait;
+--		wait until QUEUED'event and QUEUED = '0';
+--		WE <= '1';
+--		DIN <= x"AA";
+--		wait until QUEUED'event and QUEUED = '0';
+--		WE <= '0';
+--		RD <= '1';
+--		wait until QUEUED'event and QUEUED = '0';
+--		WE <= '0';
+--		RD <= '1';
+--		wait until DATA_VALID'event and DATA_VALID = '0';
+--		SDA_IN <= '1';
+--		wait until QUEUED'event and QUEUED = '0';
+--		WE <= '0';
+--		RD <= '0';	
+--		wait until DATA_VALID'event and DATA_VALID = '0';	
+--		wait for 100 uS;
+--		RUNNING <= '0';
+--		wait;
 	end process GO;
 
 end stimulus;
