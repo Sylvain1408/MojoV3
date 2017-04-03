@@ -31,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity I2C_buffer is
     Port ( clk : in STD_LOGIC;
-				sda_in : in  STD_LOGIC;
+			  sda_in : in  STD_LOGIC;
            scl_in : in  STD_LOGIC;
            sda_out : out  STD_LOGIC;
            scl_out : out  STD_LOGIC;
@@ -46,10 +46,10 @@ begin
 buffering : process (clk)
 begin
 	if(rising_edge(clk))then	
-		sda <= sda_in;
-		--sda_out <= sda;
-		scl <= scl_in;
-		--scl_out <= scl;
+--		sda <= sda_in;
+--		--sda_out <= sda;
+--		scl <= scl_in;
+--		--scl_out <= scl;
 	end if;
 end process buffering;
 end Behavioral;

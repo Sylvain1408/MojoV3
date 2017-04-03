@@ -1,16 +1,16 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Users/CAO-PCB/Documents/MojoV3/ise_files/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/Sylvain/workspace/MojoV3/ise_files/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.09 secs
  
---> Parameter xsthdpdir set to C:/Users/CAO-PCB/Documents/MojoV3/ise_files/xst
+--> Parameter xsthdpdir set to C:/Users/Sylvain/workspace/MojoV3/ise_files/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: i2c.prj
 
@@ -39,26 +39,23 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\CAO-PCB\Documents\MojoV3\ise_files\i2c_ram_interface.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" into library work
 Parsing entity <i2c_ram_interface>.
 Parsing architecture <Behavioral> of entity <i2c_ram_interface>.
-Parsing VHDL file "C:\Users\CAO-PCB\Documents\MojoV3\ise_files\I2C_buffer.vhd" into library work
-Parsing entity <I2C_buffer>.
-Parsing architecture <Behavioral> of entity <i2c_buffer>.
-Parsing VHDL file "C:\Users\CAO-PCB\Documents\MojoV3\i2C\i2cmaster.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\i2C\i2cmaster.vhd" into library work
 Parsing entity <I2CMASTER>.
 Parsing architecture <rtl> of entity <i2cmaster>.
-Parsing VHDL file "C:\Users\CAO-PCB\Documents\MojoV3\ise_files\i2c.vhd" into library work
+Parsing VHDL file "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c.vhd" into library work
 Parsing entity <i2c>.
 Parsing architecture <Behavioral> of entity <i2c>.
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.14 secs
+Total CPU time to Xst completion: 4.04 secs
  
 --> 
 
-Total memory usage is 239684 kilobytes
+Total memory usage is 184856 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/Tbi2c.vhd";
+static const char *ng0 = "C:/Users/Sylvain/workspace/MojoV3/ise_files/Tbi2c.vhd";
 
 
 

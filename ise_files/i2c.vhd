@@ -65,10 +65,10 @@ signal stop : std_logic;
 signal status : std_logic_vector(2 downto 0);
 signal device : std_logic_vector(6 downto 0);
 
-signal sdai: std_logic;
-signal scli : std_logic;
-signal sdao: std_logic;
-signal sclo : std_logic;
+signal SDA_IN: std_logic;
+signal SCL_IN : std_logic;
+signal SDA_OUT: std_logic;
+signal SCL_OUT : std_logic;
 
 	COMPONENT i2cmaster
 	port(
@@ -118,18 +118,6 @@ signal sclo : std_logic;
 		led						: OUT std_logic_vector(7 downto 0)
 		);
 	END COMPONENT;
-	
-		COMPONENT I2C_buffer
-	PORT(
-		clk : in std_logic;
-		sda_in : IN std_logic;
-		scl_in : IN std_logic;    
-		sda : INOUT std_logic;
-		scl : INOUT std_logic;      
-		sda_out : OUT std_logic;
-		scl_out : OUT std_logic
-		);
-	END COMPONENT;
 
 begin
 
@@ -149,10 +137,10 @@ begin
 		STOP =>	stop,
 		STATUS => status,
 		DEVICE => device,
-		SCL_IN => scli,
-		SCL_OUT => scl,
-		SDA_IN => sdai,
-		SDA_OUT => sda
+		SCL_IN => SCL_IN,
+		SCL_OUT => SCL_OUT,
+		SDA_IN => SDA_IN,
+		SDA_OUT => SDA_OUT
 	);
 	
 	
@@ -182,19 +170,12 @@ begin
 		device => device,
 		
 		led => led
-	);
+	);	
 
-	Inst_I2C_buffer: I2C_buffer PORT MAP(
-		clk => clk,
-		sda_in => '1',
-		scl_in => '1',
-		sda_out => sdai,
-		scl_out => scli,
-		sda => open,
-		scl => open
-	);
-
-
+		SCL <= 'Z' when SCL_OUT='1' else '0';
+		SCL_IN <= to_UX01(SCL);
+		SDA <= 'Z' when SDA_OUT='1' else '0';
+		SDA_IN <= to_UX01(SDA);
 
 end Behavioral;
 

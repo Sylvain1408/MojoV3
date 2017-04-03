@@ -27,27 +27,30 @@
          <ClosedNode>/tb_I2CMASTER - stimulus C:|Users|Sylvain|workspace|MojoV3|i2C|tb_i2cmaster.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Module_I2C - i2c - Behavioral (C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c.vhd)</SelectedItem>
+         <SelectedItem>mojo_top - RTL (C:/Users/Sylvain/workspace/MojoV3/src/mojo_top.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000363000000020000000000000000000000000200000064ffffffff000000810000000300000002000003630000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Module_I2C - i2c - Behavioral (C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c.vhd)</CurrentItem>
+      <CurrentItem>mojo_top - RTL (C:/Users/Sylvain/workspace/MojoV3/src/mojo_top.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000150000000010000000100000000000000000000000064ffffffff000000810000000000000001000001500000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -56,9 +59,9 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000001990000000100000000000000d70000000100000000000000660000000100000000000000bc0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000033a000000040101000100000000000000000000000064ffffffff000000810000000000000004000001990000000100000000000000d70000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>C:\Users\CAO-PCB\Documents\MojoV3\i2C\i2cmaster.vhd</CurrentItem>
+      <CurrentItem>avr_interface.vhd</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -76,65 +79,88 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Check Syntax</SelectedItem>
+         <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000150000000010000000100000000000000000000000064ffffffff000000810000000000000001000001500000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Check Syntax</CurrentItem>
+      <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/TbEnabler - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbEnabler.vhd</ClosedNode>
+         <ClosedNode>/TbEnabler - behavior C:|Users|Sylvain|workspace|MojoV3|ise_files|TbEnabler.vhd</ClosedNode>
          <ClosedNode>/TbRam - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbRam.vhd</ClosedNode>
+         <ClosedNode>/TbRam - behavior C:|Users|Sylvain|workspace|MojoV3|ise_files|TbRam.vhd</ClosedNode>
          <ClosedNode>/TbRamChain - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbRamChain.vhd</ClosedNode>
+         <ClosedNode>/TbRamChain - behavior C:|Users|Sylvain|workspace|MojoV3|ise_files|TbRamChain.vhd</ClosedNode>
          <ClosedNode>/TbRamInterface - behavior C:|Users|CAO-PCB|Documents|MojoV3|ise_files|TbRamInterface.vhd</ClosedNode>
+         <ClosedNode>/TbRamInterface - behavior C:|Users|Sylvain|workspace|MojoV3|ise_files|TbRamInterface.vhd</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|CAO-PCB|Documents|MojoV3|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|CAO-PCB|Documents|MojoV3|src|mojo_top.vhd/Module_I2C - i2c - Behavioral</ClosedNode>
          <ClosedNode>/mojo_top - RTL C:|Users|CAO-PCB|Documents|MojoV3|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|workspace|MojoV3|src|mojo_top.vhd/Inst_Module_UART_interface - Module_UART_interface - Behavioral</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|Sylvain|workspace|MojoV3|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Tbi2c - behavior (C:/Users/CAO-PCB/Documents/MojoV3/ise_files/Tbi2c.vhd)</SelectedItem>
+         <SelectedItem>Tbi2c - behavior (C:/Users/Sylvain/workspace/MojoV3/ise_files/Tbi2c.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000363000000020000000000000000000000000200000064ffffffff000000810000000300000002000003630000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Tbi2c - behavior (C:/Users/CAO-PCB/Documents/MojoV3/ise_files/Tbi2c.vhd)</CurrentItem>
+      <CurrentItem>Tbi2c - behavior (C:/Users/Sylvain/workspace/MojoV3/ise_files/Tbi2c.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities</ClosedNode>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem/>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
-   </ItemView>
-   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
-      <ClosedNodes>
-         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ad000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ad0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000150000000010000000100000000000000000000000064ffffffff000000810000000000000001000001500000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000150000000010000000100000000000000000000000064ffffffff000000810000000000000001000001500000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
    <SourceProcessView>000000ff0000000000000002000001c1000000f001000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000150000000010000000100000000000000000000000064ffffffff000000810000000000000001000001500000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
 </Project>
 <?xml version="1.0" encoding="utf-8"?>
 <!--This is an ISE project configuration file.-->
