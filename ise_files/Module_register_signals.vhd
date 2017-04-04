@@ -33,9 +33,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --mcs/ram bus and instantaneously pull up enable signal without needing
 --of read the ram (that need 2 clock rising edge)
 --
---register C_BASEADDR + 0x05 
+--register C_BASEADDR + 0x04 
 -- |			31-1			|		0			|
---	|		not used ATM	|	enable i2c	|
+--	|		see I2C part	|	enable i2c	|
 
 entity Module_register_signals is
     Port ( 
@@ -55,10 +55,10 @@ signal test : std_logic;
 
 begin
 
-test <= '1' when ram_addr = X"00000004" and byte_enable_a /= "0000" else
+test <= '1' when ram_addr = X"00000004" and byte_enable_a /= "0000" and ram_read(0) = '1' else
 					'0';--check ram_data
 
-enable_i2c <= test;--Flip Flop to clean the output
+enable_i2c <= test;--Flip Flop to clean the output may be useless
 
 end Behavioral;
 

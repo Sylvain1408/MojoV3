@@ -1,14 +1,14 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-SYLVAIN-PC::  Mon Apr 03 21:19:38 2017
+DESKTOP-K8Q8V1Q::  Tue Apr 04 18:04:31 2017
 
-par -filter C:/Users/Sylvain/workspace/MojoV3/ise_files/iseconfig/filter.filter
+par -filter C:/Users/CAO-PCB/Documents/MojoV3/ise_files/iseconfig/filter.filter
 -w -intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
 
 
 Constraints file: mojo_top.pcf.
-Loading device for application Rf_Device from file '6slx9.nph' in environment C:\14.7\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '6slx9.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
    "mojo_top" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
@@ -22,16 +22,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   878 out of  11,440    7%
-    Number used as Flip Flops:                 876
+  Number of Slice Registers:                   880 out of  11,440    7%
+    Number used as Flip Flops:                 878
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                2
-  Number of Slice LUTs:                        979 out of   5,720   17%
-    Number used as logic:                      835 out of   5,720   14%
-      Number using O6 output only:             560
+  Number of Slice LUTs:                        976 out of   5,720   17%
+    Number used as logic:                      839 out of   5,720   14%
+      Number using O6 output only:             565
       Number using O5 output only:              53
-      Number using O5 and O6:                  222
+      Number using O5 and O6:                  221
       Number used as ROM:                        0
     Number used as Memory:                     109 out of   1,440    7%
       Number used as Dual Port RAM:             64
@@ -43,18 +43,18 @@ Slice Logic Utilization:
         Number using O6 output only:            37
         Number using O5 output only:             0
         Number using O5 and O6:                  8
-    Number used exclusively as route-thrus:     35
-      Number with same-slice register load:     29
+    Number used exclusively as route-thrus:     28
+      Number with same-slice register load:     22
       Number with same-slice carry load:         6
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   430 out of   1,430   30%
+  Number of occupied Slices:                   422 out of   1,430   29%
   Number of MUXCYs used:                       144 out of   2,860    5%
-  Number of LUT Flip Flop pairs used:        1,233
-    Number with an unused Flip Flop:           439 out of   1,233   35%
-    Number with an unused LUT:                 254 out of   1,233   20%
-    Number of fully used LUT-FF pairs:         540 out of   1,233   43%
+  Number of LUT Flip Flop pairs used:        1,226
+    Number with an unused Flip Flop:           425 out of   1,226   34%
+    Number with an unused LUT:                 250 out of   1,226   20%
+    Number of fully used LUT-FF pairs:         551 out of   1,226   44%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -103,29 +103,29 @@ Finished initial Timing Analysis.  REAL time: 4 secs
 Starting Router
 
 
-Phase  1  : 6668 unrouted;      REAL time: 4 secs 
+Phase  1  : 6707 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 5690 unrouted;      REAL time: 4 secs 
+Phase  2  : 5725 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 2187 unrouted;      REAL time: 7 secs 
+Phase  3  : 2289 unrouted;      REAL time: 9 secs 
 
-Phase  4  : 2187 unrouted; (Setup:0, Hold:14, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  4  : 2289 unrouted; (Setup:0, Hold:256, Component Switching Limit:0)     REAL time: 9 secs 
 
 Updating file: mojo_top.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:3, Component Switching Limit:0)     REAL time: 11 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:256, Component Switching Limit:0)     REAL time: 14 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:3, Component Switching Limit:0)     REAL time: 11 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:256, Component Switching Limit:0)     REAL time: 14 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:3, Component Switching Limit:0)     REAL time: 11 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:256, Component Switching Limit:0)     REAL time: 14 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:3, Component Switching Limit:0)     REAL time: 11 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:256, Component Switching Limit:0)     REAL time: 14 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 14 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
-Total REAL time to Router completion: 11 secs 
-Total CPU time to Router completion: 10 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 14 secs 
+Total REAL time to Router completion: 14 secs 
+Total CPU time to Router completion: 14 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -143,7 +143,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y11| No   |  377 |  0.119     |  1.510      |
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |  379 |  0.118     |  1.509      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -163,12 +163,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  COMP "i2c_sda" OFFSET = OUT 20 ns AFTER C | MAXDELAY    |     1.196ns|    18.804ns|       0|           0
+  COMP "i2c_sda" OFFSET = OUT 20 ns AFTER C | MAXDELAY    |     1.184ns|    18.816ns|       0|           0
   OMP "clk" REFERENCE_PIN BEL         "i2c_ |             |            |            |        |            
   scl"                                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |     8.320ns|    11.680ns|       0|           0
-   50%                                      | HOLD        |     0.345ns|            |       0|           0
+  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |     8.765ns|    11.235ns|       0|           0
+   50%                                      | HOLD        |     0.352ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -179,10 +179,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 12 secs 
-Total CPU time to PAR completion: 11 secs 
+Total REAL time to PAR completion: 15 secs 
+Total CPU time to PAR completion: 15 secs 
 
-Peak Memory Usage:  351 MB
+Peak Memory Usage:  384 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

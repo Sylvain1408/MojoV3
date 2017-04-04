@@ -145,7 +145,7 @@ main : process(clk, go)
 				ram_addr <= X"00000004";
 				ram_byte <= "0000";
 				main_process_state <= set_busy;			
-				--led <= X"11";				
+				led <= X"11";				
 				
 			when set_busy =>
 				setup_word <= ram_read;
@@ -160,17 +160,19 @@ main : process(clk, go)
 					ram_addr <= X"00000008";
 				end if;
 				main_process_state <= fetch_data;
-				--led <= X"22";
+				led <= X"22";
 				
 			when fetch_data =>
 				data_word <= ram_read;
 				main_process_state <= decode_data;
 				if(to_integer(unsigned(setup_word(6 downto 4))) > 4)then
 					nb_bytes <= 4;
-					--led <= X"23";
+					led <= X"23";
 				else 
 					if(to_integer(unsigned(setup_word(6 downto 4))) = 0)then
-						main_process_state <= send_back_setup;
+						--main_process_state <= send_back_setup;
+						--test
+						nb_bytes <= 4;
 					end if;
 					nb_bytes <= to_integer(unsigned(setup_word(6 downto 4)));
 				end if;
@@ -188,10 +190,10 @@ main : process(clk, go)
 					we <= not setup_word(1);
 					slave_din <= data_word(31 downto 24);
 				end if;
-				--led <= X"44";
+				led <= X"44";
 				
 			when data_transfer =>--waiting physical to get back data from slave
-				--led <= X"51";
+				led <= X"51";
 				if( prev_queue = '1' and queue = '0')then
 					if(nb_bytes > 1)then
 						nb_bytes <= nb_bytes - 1;
@@ -205,7 +207,7 @@ main : process(clk, go)
 				
 				if(data_valid = '1')then	
 					data_recv((8*(nb_bytes+1)-1) downto ((8*(nb_bytes+1)-8))) <= slave_dout;-- +1 because data_valid proc after queue
-					--led <= X"53";
+					led <= X"53";
 				end if;
 				
 				slave_din <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
@@ -220,11 +222,11 @@ main : process(clk, go)
 					reset_n <= '0';
 					ram_update_go <= '0';
 					tic_go <= '0';
-					--led <= X"60";
+					led <= X"60";
 				end if;
 				if(data_valid = '1')then	--catch last one
 					data_recv((8*(nb_bytes)-1) downto ((8*(nb_bytes)-8))) <= slave_dout;
-					--led <= X"53";
+					led <= X"53";
 				end if;
 				
 			when done =>
@@ -232,7 +234,7 @@ main : process(clk, go)
 					ram_addr <= X"00000008";
 					ram_write <= data_recv;
 					main_process_state <= idle;
-					--led <= X"66";
+					led <= X"66";
 			when others =>
 				null;
 		end case;

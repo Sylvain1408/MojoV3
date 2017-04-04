@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Apr 03 21:19:35 2017
+// Written by: Map P.20131013 on Tue Apr 04 18:04:28 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -357,15 +357,15 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_I2C/SubModule_i2c_ram_interface/tic_counter_2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/tic_counter_1" BEL
         "Module_I2C/SubModule_i2c_ram_interface/tic_counter_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/main_process_state_FSM_FFd1"
-        BEL
         "Module_I2C/SubModule_i2c_ram_interface/main_process_state_FSM_FFd2"
         BEL
-        "Module_I2C/SubModule_i2c_ram_interface/main_process_state_FSM_FFd4"
+        "Module_I2C/SubModule_i2c_ram_interface/main_process_state_FSM_FFd3"
+        BEL
+        "Module_I2C/SubModule_i2c_ram_interface/main_process_state_FSM_FFd1"
         BEL "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_1" BEL
         "Module_I2C/SubModule_i2c_ram_interface/nb_bytes_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/main_process_state_FSM_FFd3"
+        "Module_I2C/SubModule_i2c_ram_interface/main_process_state_FSM_FFd4"
         BEL "Module_I2C/SubModule_i2c_ram_interface/ram_write_31" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_write_30" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_write_29" BEL
@@ -398,6 +398,12 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_write_2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_write_1" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_write_0" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_6" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_5" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_4" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_2" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_1" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/led_0" BEL
         "Module_I2C/SubModule_i2c_ram_interface/data_recv_31" BEL
         "Module_I2C/SubModule_i2c_ram_interface/data_recv_30" BEL
         "Module_I2C/SubModule_i2c_ram_interface/data_recv_29" BEL
@@ -438,10 +444,6 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_I2C/SubModule_i2c_ram_interface/slave_din_2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/slave_din_1" BEL
         "Module_I2C/SubModule_i2c_ram_interface/slave_din_0" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_4" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_2" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_1" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/led_0" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_addr_3" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ram_addr_2" BEL
         "Module_I2C/SubModule_i2c_ram_interface/device_6" BEL

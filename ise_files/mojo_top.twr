@@ -2,8 +2,8 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
-C:/Users/Sylvain/workspace/MojoV3/ise_files/iseconfig/filter.filter -intstyle
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
+C:/Users/CAO-PCB/Documents/MojoV3/ise_files/iseconfig/filter.filter -intstyle
 ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr
 mojo_top.pcf
 
@@ -30,61 +30,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 106379 paths analyzed, 5122 endpoints analyzed, 0 failing endpoints
+ 106457 paths analyzed, 5148 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  11.680ns.
+ Minimum period is  11.235ns.
 --------------------------------------------------------------------------------
 
-Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF (SLICE_X13Y21.CX), 243 paths
+Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF (SLICE_X9Y35.AX), 321 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     8.320ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      11.614ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.031ns (0.288 - 0.319)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y30.CQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I
-    SLICE_X4Y44.C3       net (fanout=37)       3.524   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<2>
-    SLICE_X4Y44.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D3      net (fanout=19)       2.965   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X10Y19.B3      net (fanout=32)       1.865   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X10Y19.B       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op2_i<27>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Using_LUT6_1.Both_PC_and_MSR.Op1_LUT6/LUT6
-    SLICE_X13Y21.CX      net (fanout=1)        0.881   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/op1_I
-    SLICE_X13Y21.CLK     Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<28>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF
-    -------------------------------------------------  ---------------------------
-    Total                                     11.614ns (1.618ns logic, 9.996ns route)
-                                                       (13.9% logic, 86.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     8.539ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     8.765ns (requirement - (data path - clock path skew + uncertainty))
   Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF (FF)
   Requirement:          20.000ns
-  Data Path Delay:      11.395ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.031ns (0.288 - 0.319)
+  Data Path Delay:      11.203ns (Levels of Logic = 4)
+  Clock Path Skew:      0.003ns (0.717 - 0.714)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -95,254 +53,38 @@ Slack (setup path):     8.539ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y30.BQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+    SLICE_X22Y25.BQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
                                                        mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
-    SLICE_X4Y44.C2       net (fanout=37)       3.305   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
-    SLICE_X4Y44.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
+    SLICE_X4Y16.C2       net (fanout=37)       3.256   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
+    SLICE_X4Y16.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
                                                        mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D3      net (fanout=19)       2.965   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+    SLICE_X16Y29.D5      net (fanout=19)       2.658   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
+    SLICE_X16Y29.D       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
                                                        mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
+    SLICE_X15Y29.B1      net (fanout=1)        0.725   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
+    SLICE_X15Y29.B       Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
                                                        mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X10Y19.B3      net (fanout=32)       1.865   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X10Y19.B       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op2_i<27>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Using_LUT6_1.Both_PC_and_MSR.Op1_LUT6/LUT6
-    SLICE_X13Y21.CX      net (fanout=1)        0.881   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/op1_I
-    SLICE_X13Y21.CLK     Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<28>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF
+    SLICE_X3Y37.A5       net (fanout=32)       1.847   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
+    SLICE_X3Y37.A        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X9Y35.AX       net (fanout=1)        1.100   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/op1_I
+    SLICE_X9Y35.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF
     -------------------------------------------------  ---------------------------
-    Total                                     11.395ns (1.618ns logic, 9.777ns route)
-                                                       (14.2% logic, 85.8% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     8.595ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      11.339ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.031ns (0.288 - 0.319)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y30.CQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I
-    SLICE_X4Y44.B3       net (fanout=37)       3.557   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<2>
-    SLICE_X4Y44.B        Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[13].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D4      net (fanout=19)       2.658   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<2>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X10Y19.B3      net (fanout=32)       1.865   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X10Y19.B       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op2_i<27>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Using_LUT6_1.Both_PC_and_MSR.Op1_LUT6/LUT6
-    SLICE_X13Y21.CX      net (fanout=1)        0.881   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/op1_I
-    SLICE_X13Y21.CLK     Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<28>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Op1_DFF
-    -------------------------------------------------  ---------------------------
-    Total                                     11.339ns (1.617ns logic, 9.722ns route)
-                                                       (14.3% logic, 85.7% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF (SLICE_X13Y21.AX), 256 paths
---------------------------------------------------------------------------------
-Slack (setup path):     8.425ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      11.509ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.031ns (0.288 - 0.319)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y30.CQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I
-    SLICE_X4Y44.C3       net (fanout=37)       3.524   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<2>
-    SLICE_X4Y44.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D3      net (fanout=19)       2.965   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X10Y20.D2      net (fanout=32)       1.776   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X10Y20.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/op1_I
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Using_LUT6_1.Both_PC_and_MSR.Op1_LUT6/LUT6
-    SLICE_X13Y21.AX      net (fanout=1)        0.865   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/op1_I
-    SLICE_X13Y21.CLK     Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<28>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF
-    -------------------------------------------------  ---------------------------
-    Total                                     11.509ns (1.618ns logic, 9.891ns route)
-                                                       (14.1% logic, 85.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     8.644ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      11.290ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.031ns (0.288 - 0.319)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y30.BQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
-    SLICE_X4Y44.C2       net (fanout=37)       3.305   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
-    SLICE_X4Y44.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D3      net (fanout=19)       2.965   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X10Y20.D2      net (fanout=32)       1.776   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X10Y20.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/op1_I
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Using_LUT6_1.Both_PC_and_MSR.Op1_LUT6/LUT6
-    SLICE_X13Y21.AX      net (fanout=1)        0.865   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/op1_I
-    SLICE_X13Y21.CLK     Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<28>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF
-    -------------------------------------------------  ---------------------------
-    Total                                     11.290ns (1.618ns logic, 9.672ns route)
-                                                       (14.3% logic, 85.7% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     8.700ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      11.234ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.031ns (0.288 - 0.319)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y30.CQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I
-    SLICE_X4Y44.B3       net (fanout=37)       3.557   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<2>
-    SLICE_X4Y44.B        Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[13].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D4      net (fanout=19)       2.658   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<2>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X10Y20.D2      net (fanout=32)       1.776   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X10Y20.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/op1_I
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Using_LUT6_1.Both_PC_and_MSR.Op1_LUT6/LUT6
-    SLICE_X13Y21.AX      net (fanout=1)        0.865   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/op1_I
-    SLICE_X13Y21.CLK     Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<28>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Op1_DFF
-    -------------------------------------------------  ---------------------------
-    Total                                     11.234ns (1.617ns logic, 9.617ns route)
+    Total                                     11.203ns (1.617ns logic, 9.586ns route)
                                                        (14.4% logic, 85.6% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF (SLICE_X9Y31.AX), 216 paths
---------------------------------------------------------------------------------
-Slack (setup path):     8.654ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      11.313ns (Levels of Logic = 4)
-  Clock Path Skew:      0.002ns (0.633 - 0.631)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y30.CQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I
-    SLICE_X4Y44.C3       net (fanout=37)       3.524   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<2>
-    SLICE_X4Y44.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D3      net (fanout=19)       2.965   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X9Y32.D3       net (fanout=32)       1.609   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X9Y32.D        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/op1_I
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
-    SLICE_X9Y31.AX       net (fanout=1)        0.812   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/op1_I
-    SLICE_X9Y31.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<24>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF
-    -------------------------------------------------  ---------------------------
-    Total                                     11.313ns (1.642ns logic, 9.671ns route)
-                                                       (14.5% logic, 85.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     8.873ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     9.083ns (requirement - (data path - clock path skew + uncertainty))
   Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF (FF)
   Requirement:          20.000ns
-  Data Path Delay:      11.094ns (Levels of Logic = 4)
-  Clock Path Skew:      0.002ns (0.633 - 0.631)
+  Data Path Delay:      10.885ns (Levels of Logic = 4)
+  Clock Path Skew:      0.003ns (0.717 - 0.714)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -353,38 +95,38 @@ Slack (setup path):     8.873ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y30.BQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+    SLICE_X22Y25.BQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
                                                        mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
-    SLICE_X4Y44.C2       net (fanout=37)       3.305   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
-    SLICE_X4Y44.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D3      net (fanout=19)       2.965   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+    SLICE_X4Y16.B2       net (fanout=37)       3.334   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
+    SLICE_X4Y16.B        Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[13].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X16Y29.D6      net (fanout=19)       2.263   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<2>
+    SLICE_X16Y29.D       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
                                                        mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
+    SLICE_X15Y29.B1      net (fanout=1)        0.725   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
+    SLICE_X15Y29.B       Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
                                                        mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X9Y32.D3       net (fanout=32)       1.609   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X9Y32.D        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/op1_I
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
-    SLICE_X9Y31.AX       net (fanout=1)        0.812   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/op1_I
-    SLICE_X9Y31.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<24>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF
+    SLICE_X3Y37.A5       net (fanout=32)       1.847   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
+    SLICE_X3Y37.A        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X9Y35.AX       net (fanout=1)        1.100   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/op1_I
+    SLICE_X9Y35.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF
     -------------------------------------------------  ---------------------------
-    Total                                     11.094ns (1.642ns logic, 9.452ns route)
+    Total                                     10.885ns (1.616ns logic, 9.269ns route)
                                                        (14.8% logic, 85.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     8.929ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF (FF)
+Slack (setup path):     9.108ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF (FF)
   Requirement:          20.000ns
-  Data Path Delay:      11.038ns (Levels of Logic = 4)
-  Clock Path Skew:      0.002ns (0.633 - 0.631)
+  Data Path Delay:      10.860ns (Levels of Logic = 4)
+  Clock Path Skew:      0.003ns (0.717 - 0.714)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -395,115 +137,374 @@ Slack (setup path):     8.929ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y30.CQ      Tcko                  0.525   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I
-    SLICE_X4Y44.B3       net (fanout=37)       3.557   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<2>
-    SLICE_X4Y44.B        Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[13].SRL16E_I/Use_unisim.MB_SRL16E_I1
-    SLICE_X18Y26.D4      net (fanout=19)       2.658   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<2>
-    SLICE_X18Y26.D       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
-    SLICE_X16Y28.B4      net (fanout=1)        0.761   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
-    SLICE_X16Y28.B       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
-    SLICE_X9Y32.D3       net (fanout=32)       1.609   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
-    SLICE_X9Y32.D        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/op1_I
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
-    SLICE_X9Y31.AX       net (fanout=1)        0.812   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/op1_I
-    SLICE_X9Y31.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<24>
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Op1_DFF
+    SLICE_X22Y25.BQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
+    SLICE_X4Y36.B2       net (fanout=37)       3.232   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
+    SLICE_X4Y36.B        Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Size_17to32.imm_Reg<3>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[17].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X18Y27.C5      net (fanout=22)       2.021   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.imm_Value<1>
+    SLICE_X18Y27.C       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/MSR_Reg_I/rst_Values_II<30>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_3
+    SLICE_X18Y27.A1      net (fanout=1)        0.532   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_2_2
+    SLICE_X18Y27.AMUX    Topaa                 0.456   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/MSR_Reg_I/rst_Values_II<30>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1
+    SLICE_X3Y37.A4       net (fanout=32)       2.181   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1/O
+    SLICE_X3Y37.A        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X9Y35.AX       net (fanout=1)        1.100   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/op1_I
+    SLICE_X9Y35.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Op1_DFF
     -------------------------------------------------  ---------------------------
-    Total                                     11.038ns (1.641ns logic, 9.397ns route)
+    Total                                     10.860ns (1.794ns logic, 9.066ns route)
+                                                       (16.5% logic, 83.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF (SLICE_X9Y35.DX), 303 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.006ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.962ns (Levels of Logic = 4)
+  Clock Path Skew:      0.003ns (0.717 - 0.714)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y25.BQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
+    SLICE_X4Y16.C2       net (fanout=37)       3.256   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
+    SLICE_X4Y16.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X16Y29.D5      net (fanout=19)       2.658   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
+    SLICE_X16Y29.D       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
+    SLICE_X15Y29.B1      net (fanout=1)        0.725   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
+    SLICE_X15Y29.B       Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
+    SLICE_X3Y33.A5       net (fanout=32)       1.593   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
+    SLICE_X3Y33.A        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X9Y35.DX       net (fanout=1)        1.113   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/op1_I
+    SLICE_X9Y35.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF
+    -------------------------------------------------  ---------------------------
+    Total                                     10.962ns (1.617ns logic, 9.345ns route)
+                                                       (14.8% logic, 85.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.324ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.644ns (Levels of Logic = 4)
+  Clock Path Skew:      0.003ns (0.717 - 0.714)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y25.BQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
+    SLICE_X4Y16.B2       net (fanout=37)       3.334   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
+    SLICE_X4Y16.B        Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[13].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X16Y29.D6      net (fanout=19)       2.263   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<2>
+    SLICE_X16Y29.D       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
+    SLICE_X15Y29.B1      net (fanout=1)        0.725   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
+    SLICE_X15Y29.B       Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
+    SLICE_X3Y33.A5       net (fanout=32)       1.593   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
+    SLICE_X3Y33.A        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X9Y35.DX       net (fanout=1)        1.113   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/op1_I
+    SLICE_X9Y35.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF
+    -------------------------------------------------  ---------------------------
+    Total                                     10.644ns (1.616ns logic, 9.028ns route)
+                                                       (15.2% logic, 84.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.349ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.619ns (Levels of Logic = 4)
+  Clock Path Skew:      0.003ns (0.717 - 0.714)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y25.BQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
+    SLICE_X4Y36.B2       net (fanout=37)       3.232   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
+    SLICE_X4Y36.B        Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Size_17to32.imm_Reg<3>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[17].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X18Y27.C5      net (fanout=22)       2.021   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.imm_Value<1>
+    SLICE_X18Y27.C       Tilo                  0.235   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/MSR_Reg_I/rst_Values_II<30>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_3
+    SLICE_X18Y27.A1      net (fanout=1)        0.532   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_2_2
+    SLICE_X18Y27.AMUX    Topaa                 0.456   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/MSR_Reg_I/rst_Values_II<30>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1
+    SLICE_X3Y33.A4       net (fanout=32)       1.927   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1/O
+    SLICE_X3Y33.A        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X9Y35.DX       net (fanout=1)        1.113   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/op1_I
+    SLICE_X9Y35.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Op1_DFF
+    -------------------------------------------------  ---------------------------
+    Total                                     10.619ns (1.794ns logic, 8.825ns route)
+                                                       (16.9% logic, 83.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF (SLICE_X6Y26.CX), 228 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.103ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.872ns (Levels of Logic = 4)
+  Clock Path Skew:      0.010ns (0.631 - 0.621)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y25.BQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
+    SLICE_X4Y16.C2       net (fanout=37)       3.256   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
+    SLICE_X4Y16.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X16Y29.D5      net (fanout=19)       2.658   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
+    SLICE_X16Y29.D       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
+    SLICE_X15Y29.B1      net (fanout=1)        0.725   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
+    SLICE_X15Y29.B       Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
+    SLICE_X7Y26.D5       net (fanout=32)       1.407   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
+    SLICE_X7Y26.D        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X6Y26.CX       net (fanout=1)        1.209   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+    SLICE_X6Y26.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<20>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    -------------------------------------------------  ---------------------------
+    Total                                     10.872ns (1.617ns logic, 9.255ns route)
                                                        (14.9% logic, 85.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.421ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.554ns (Levels of Logic = 4)
+  Clock Path Skew:      0.010ns (0.631 - 0.621)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y25.BQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[3].FDS_I
+    SLICE_X4Y16.B2       net (fanout=37)       3.334   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<3>
+    SLICE_X4Y16.B        Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[13].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X16Y29.D6      net (fanout=19)       2.263   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<2>
+    SLICE_X16Y29.D       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
+    SLICE_X15Y29.B1      net (fanout=1)        0.725   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
+    SLICE_X15Y29.B       Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
+    SLICE_X7Y26.D5       net (fanout=32)       1.407   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
+    SLICE_X7Y26.D        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X6Y26.CX       net (fanout=1)        1.209   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+    SLICE_X6Y26.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<20>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    -------------------------------------------------  ---------------------------
+    Total                                     10.554ns (1.616ns logic, 8.938ns route)
+                                                       (15.3% logic, 84.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.448ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.527ns (Levels of Logic = 4)
+  Clock Path Skew:      0.010ns (0.631 - 0.621)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y25.CQ      Tcko                  0.476   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[2].FDS_I
+    SLICE_X4Y16.C3       net (fanout=37)       2.911   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<2>
+    SLICE_X4Y16.C        Tilo                  0.255   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<4>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[14].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X16Y29.D5      net (fanout=19)       2.658   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.reg1_Addr<3>
+    SLICE_X16Y29.D       Tilo                  0.254   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT2
+    SLICE_X15Y29.B1      net (fanout=1)        0.725   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward1_2
+    SLICE_X15Y29.B       Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op1_SPR
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward1_LUT4
+    SLICE_X7Y26.D5       net (fanout=32)       1.407   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward1
+    SLICE_X7Y26.D        Tilo                  0.259   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6/LUT6
+    SLICE_X6Y26.CX       net (fanout=1)        1.209   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+    SLICE_X6Y26.CLK      Tdick                 0.114   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<20>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    -------------------------------------------------  ---------------------------
+    Total                                     10.527ns (1.617ns logic, 8.910ns route)
+                                                       (15.4% logic, 84.6% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Force_Val2_FDRSE (SLICE_X19Y27.SR), 1 path
+Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I/Using_LUT6.RegFile_X2/DP (SLICE_X16Y28.D2), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.345ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase (FF)
-  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Force_Val2_FDRSE (FF)
+Slack (hold path):      0.352ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1 (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I/Using_LUT6.RegFile_X2/DP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.345ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.353ns (Levels of Logic = 0)
+  Clock Path Skew:      0.001ns (0.042 - 0.041)
   Source Clock:         clk_BUFGP rising at 20.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Force_Val2_FDRSE
+  Minimum Data Path at Fast Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1 to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I/Using_LUT6.RegFile_X2/DP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y28.AQ      Tcko                  0.198   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase
-    SLICE_X19Y27.SR      net (fanout=40)       0.285   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase
-    SLICE_X19Y27.CLK     Tcksr       (-Th)     0.138   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/delay_slot_jump
-                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Force_Val2_FDRSE
+    SLICE_X16Y29.BQ      Tcko                  0.234   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1
+    SLICE_X16Y28.D2      net (fanout=36)       0.414   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<1>
+    SLICE_X16Y28.CLK     Tah         (-Th)     0.295   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.raw_Data_Write<15>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I/Using_LUT6.RegFile_X2/DP
     -------------------------------------------------  ---------------------------
-    Total                                      0.345ns (0.060ns logic, 0.285ns route)
-                                                       (17.4% logic, 82.6% route)
+    Total                                      0.353ns (-0.061ns logic, 0.414ns route)
+                                                       (-17.3% logic, 117.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/Clk_En_Out_i (SLICE_X16Y44.CE), 1 path
+Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[15].Register_File_Bit_I/Using_LUT6.RegFile_X2/DP (SLICE_X16Y28.D2), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.354ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/not_First.Out1 (FF)
-  Destination:          mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/Clk_En_Out_i (FF)
+Slack (hold path):      0.352ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1 (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[15].Register_File_Bit_I/Using_LUT6.RegFile_X2/DP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.359ns (Levels of Logic = 0)
-  Clock Path Skew:      0.005ns (0.074 - 0.069)
+  Data Path Delay:      0.353ns (Levels of Logic = 0)
+  Clock Path Skew:      0.001ns (0.042 - 0.041)
   Source Clock:         clk_BUFGP rising at 20.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/not_First.Out1 to mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/Clk_En_Out_i
+  Minimum Data Path at Fast Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1 to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[15].Register_File_Bit_I/Using_LUT6.RegFile_X2/DP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y44.AQ      Tcko                  0.234   mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/not_First.Out1
-                                                       mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/not_First.Out1
-    SLICE_X16Y44.CE      net (fanout=1)        0.233   mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/not_First.Out1
-    SLICE_X16Y44.CLK     Tckce       (-Th)     0.108   mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/Clk_En_Out_i
-                                                       mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/Implement_FIT.Using_SRL16s.SRL16s[2].Divide_I/Clk_En_Out_i
+    SLICE_X16Y29.BQ      Tcko                  0.234   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1
+    SLICE_X16Y28.D2      net (fanout=36)       0.414   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<1>
+    SLICE_X16Y28.CLK     Tah         (-Th)     0.295   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.raw_Data_Write<15>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[15].Register_File_Bit_I/Using_LUT6.RegFile_X2/DP
     -------------------------------------------------  ---------------------------
-    Total                                      0.359ns (0.126ns logic, 0.233ns route)
-                                                       (35.1% logic, 64.9% route)
+    Total                                      0.353ns (-0.061ns logic, 0.414ns route)
+                                                       (-17.3% logic, 117.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.intr_addr_i_9 (SLICE_X14Y18.A5), 1 path
+Paths for end point mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I/Using_LUT6.RegFile_X1/DP (SLICE_X16Y28.D2), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.365ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0_9 (FF)
-  Destination:          mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.intr_addr_i_9 (FF)
+Slack (hold path):      0.352ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1 (FF)
+  Destination:          mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I/Using_LUT6.RegFile_X1/DP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.367ns (Levels of Logic = 1)
-  Clock Path Skew:      0.002ns (0.042 - 0.040)
+  Data Path Delay:      0.353ns (Levels of Logic = 0)
+  Clock Path Skew:      0.001ns (0.042 - 0.041)
   Source Clock:         clk_BUFGP rising at 20.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0_9 to mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.intr_addr_i_9
+  Minimum Data Path at Fast Process Corner: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1 to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I/Using_LUT6.RegFile_X1/DP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y18.BQ      Tcko                  0.198   mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0<11>
-                                                       mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0_9
-    SLICE_X14Y18.A5      net (fanout=1)        0.048   mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0<9>
-    SLICE_X14Y18.CLK     Tah         (-Th)    -0.121   mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.intr_addr_i<11>
-                                                       mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mmux_Using_Fast.civar_read_addr[3]_Using_Fast.civar[15][11]_wide_mux_49_OUT121
-                                                       mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.intr_addr_i_9
+    SLICE_X16Y29.BQ      Tcko                  0.234   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<2>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I_1
+    SLICE_X16Y28.D2      net (fanout=36)       0.414   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/write_Addr_I<1>
+    SLICE_X16Y28.CLK     Tah         (-Th)     0.295   mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.raw_Data_Write<15>
+                                                       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I/Using_LUT6.RegFile_X1/DP
     -------------------------------------------------  ---------------------------
-    Total                                      0.367ns (0.319ns logic, 0.048ns route)
-                                                       (86.9% logic, 13.1% route)
+    Total                                      0.353ns (-0.061ns logic, 0.414ns route)
+                                                       (-17.3% logic, 117.3% route)
 
 --------------------------------------------------------------------------------
 
@@ -514,7 +515,7 @@ Slack: 16.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[3].RAMB16_S4_1/CLKA
   Logical resource: mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[3].RAMB16_S4_1/CLKA
-  Location pin: RAMB16_X0Y22.CLKA
+  Location pin: RAMB16_X0Y8.CLKA
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 16.430ns (period - min period limit)
@@ -522,7 +523,7 @@ Slack: 16.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
   Physical resource: mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[3].RAMB16_S4_1/CLKB
   Logical resource: mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[3].RAMB16_S4_1/CLKB
-  Location pin: RAMB16_X0Y22.CLKB
+  Location pin: RAMB16_X0Y8.CLKB
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 16.430ns (period - min period limit)
@@ -530,7 +531,7 @@ Slack: 16.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: dual_bram_0/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM18.ram/CLKA
   Logical resource: dual_bram_0/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM18.ram/CLKA
-  Location pin: RAMB16_X0Y20.CLKA
+  Location pin: RAMB16_X0Y18.CLKA
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -541,18 +542,18 @@ For more information, see Offset Out Analysis in the Timing Closure User Guide (
 
  1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
  0 timing errors detected.
- Minimum allowable offset is  18.804ns.
+ Minimum allowable offset is  18.816ns.
 --------------------------------------------------------------------------------
 
 Paths for end point i2c_sda (P5.PAD), 1 path
 --------------------------------------------------------------------------------
-Slack (slowest paths):  1.196ns (requirement - (clock arrival + clock path + data path + uncertainty))
+Slack (slowest paths):  1.184ns (requirement - (clock arrival + clock path + data path + uncertainty))
   Source:               Module_I2C/SubModule_i2c_physical/SDA_OUT (FF)
   Destination:          i2c_sda (PAD)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Requirement:          20.000ns
-  Data Path Delay:      15.195ns (Levels of Logic = 1)
-  Clock Path Delay:     3.584ns (Levels of Logic = 2)
+  Data Path Delay:      15.200ns (Levels of Logic = 1)
+  Clock Path Delay:     3.591ns (Levels of Logic = 2)
   Clock Uncertainty:    0.025ns
 
   Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -568,27 +569,27 @@ Slack (slowest paths):  1.196ns (requirement - (clock arrival + clock path + dat
     P56.I                Tiopi                 1.037   clk
                                                        clk
                                                        clk_BUFGP/IBUFG
-                                                       ProtoComp115.IMUX
+                                                       ProtoComp116.IMUX
     BUFGMUX_X2Y11.I0     net (fanout=1)        0.884   clk_BUFGP/IBUFG
     BUFGMUX_X2Y11.O      Tgi0o                 0.209   clk_BUFGP/BUFG
                                                        clk_BUFGP/BUFG
-    SLICE_X17Y56.CLK     net (fanout=377)      1.454   clk_BUFGP
+    SLICE_X15Y59.CLK     net (fanout=379)      1.461   clk_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      3.584ns (1.246ns logic, 2.338ns route)
-                                                       (34.8% logic, 65.2% route)
+    Total                                      3.591ns (1.246ns logic, 2.345ns route)
+                                                       (34.7% logic, 65.3% route)
 
   Maximum Data Path at Slow Process Corner: Module_I2C/SubModule_i2c_physical/SDA_OUT to i2c_sda
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y56.AQ      Tcko                  0.430   Module_I2C/SubModule_i2c_physical/SDA_OUT
+    SLICE_X15Y59.AQ      Tcko                  0.430   Module_I2C/SubModule_i2c_physical/SDA_OUT
                                                        Module_I2C/SubModule_i2c_physical/SDA_OUT
-    P5.T                 net (fanout=2)        2.873   Module_I2C/SubModule_i2c_physical/SDA_OUT
+    P5.T                 net (fanout=2)        2.878   Module_I2C/SubModule_i2c_physical/SDA_OUT
     P5.PAD               Tiotp                11.892   i2c_sda
                                                        i2c_sda_IOBUF/OBUFT
                                                        i2c_sda
     -------------------------------------------------  ---------------------------
-    Total                                     15.195ns (12.322ns logic, 2.873ns route)
+    Total                                     15.200ns (12.322ns logic, 2.878ns route)
                                                        (81.1% logic, 18.9% route)
 
 --------------------------------------------------------------------------------
@@ -599,12 +600,12 @@ Fastest Paths: COMP "i2c_sda" OFFSET = OUT 20 ns AFTER COMP "clk" REFERENCE_PIN 
 
 Paths for end point i2c_sda (P5.PAD), 1 path
 --------------------------------------------------------------------------------
-Delay (fastest paths):  12.868ns (clock arrival + clock path + data path - uncertainty)
+Delay (fastest paths):  12.878ns (clock arrival + clock path + data path - uncertainty)
   Source:               Module_I2C/SubModule_i2c_physical/SDA_OUT (FF)
   Destination:          i2c_sda (PAD)
   Source Clock:         clk_BUFGP rising at 0.000ns
-  Data Path Delay:      11.745ns (Levels of Logic = 1)
-  Clock Path Delay:     1.148ns (Levels of Logic = 2)
+  Data Path Delay:      11.748ns (Levels of Logic = 1)
+  Clock Path Delay:     1.155ns (Levels of Logic = 2)
   Clock Uncertainty:    0.025ns
 
   Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -620,27 +621,27 @@ Delay (fastest paths):  12.868ns (clock arrival + clock path + data path - uncer
     P56.I                Tiopi                 0.321   clk
                                                        clk
                                                        clk_BUFGP/IBUFG
-                                                       ProtoComp115.IMUX
+                                                       ProtoComp116.IMUX
     BUFGMUX_X2Y11.I0     net (fanout=1)        0.257   clk_BUFGP/IBUFG
     BUFGMUX_X2Y11.O      Tgi0o                 0.059   clk_BUFGP/BUFG
                                                        clk_BUFGP/BUFG
-    SLICE_X17Y56.CLK     net (fanout=377)      0.511   clk_BUFGP
+    SLICE_X15Y59.CLK     net (fanout=379)      0.518   clk_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      1.148ns (0.380ns logic, 0.768ns route)
-                                                       (33.1% logic, 66.9% route)
+    Total                                      1.155ns (0.380ns logic, 0.775ns route)
+                                                       (32.9% logic, 67.1% route)
 
   Minimum Data Path at Fast Process Corner: Module_I2C/SubModule_i2c_physical/SDA_OUT to i2c_sda
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y56.AQ      Tcko                  0.198   Module_I2C/SubModule_i2c_physical/SDA_OUT
+    SLICE_X15Y59.AQ      Tcko                  0.198   Module_I2C/SubModule_i2c_physical/SDA_OUT
                                                        Module_I2C/SubModule_i2c_physical/SDA_OUT
-    P5.T                 net (fanout=2)        1.516   Module_I2C/SubModule_i2c_physical/SDA_OUT
+    P5.T                 net (fanout=2)        1.519   Module_I2C/SubModule_i2c_physical/SDA_OUT
     P5.PAD               Tiotp                10.031   i2c_sda
                                                        i2c_sda_IOBUF/OBUFT
                                                        i2c_sda
     -------------------------------------------------  ---------------------------
-    Total                                     11.745ns (10.229ns logic, 1.516ns route)
+    Total                                     11.748ns (10.229ns logic, 1.519ns route)
                                                        (87.1% logic, 12.9% route)
 
 --------------------------------------------------------------------------------
@@ -663,7 +664,7 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-i2c_sda     |        18.804(R)|      SLOW  |        12.868(R)|      FAST  |clk_BUFGP         |   0.000|
+i2c_sda     |        18.816(R)|      SLOW  |        12.878(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -671,7 +672,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   11.680|         |         |         |
+clk            |   11.235|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 COMP "i2c_sda" OFFSET = OUT 20 ns AFTER COMP "clk" REFERENCE_PIN BEL         "i2c_scl";
@@ -680,7 +681,7 @@ Bus Skew: 0.000 ns;
                                                |Max (slowest)|  Process   |Min (fastest)|  Process   |              |
 PAD                                            | Delay (ns)  |   Corner   | Delay (ns)  |   Corner   |Edge Skew (ns)|
 -----------------------------------------------+-------------+------------+-------------+------------+--------------+
-i2c_sda                                        |       18.804|      SLOW  |       12.868|      FAST  |         0.000|
+i2c_sda                                        |       18.816|      SLOW  |       12.878|      FAST  |         0.000|
 -----------------------------------------------+-------------+------------+-------------+------------+--------------+
 
 
@@ -689,24 +690,24 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 106380 paths, 0 nets, and 6011 connections
+Constraints cover 106458 paths, 0 nets, and 6049 connections
 
 Design statistics:
-   Minimum period:  11.680ns{1}   (Maximum frequency:  85.616MHz)
-   Minimum output required time after clock:  18.804ns
+   Minimum period:  11.235ns{1}   (Maximum frequency:  89.008MHz)
+   Minimum output required time after clock:  18.816ns
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon Apr 03 21:19:57 2017 
+Analysis completed Tue Apr 04 18:04:54 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 240 MB
+Peak Memory Usage: 261 MB
 
 
 
