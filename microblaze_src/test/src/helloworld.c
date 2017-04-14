@@ -70,12 +70,12 @@ XIOModule gpo;
 void I2C_Start(XIOModule* module, u32 I2C_C_BASEADDR){
 	u32 tmp;
 	tmp = XIOModule_IoReadWord(module, I2C_C_BASEADDR);
-	xil_printf("Reading 0x%x : 0x%x\r\n", I2C_C_BASEADDR, tmp);
+	//xil_printf("Reading 0x%x : 0x%x\r\n", I2C_C_BASEADDR, tmp);
 	XIOModule_IoWriteWord(module, I2C_C_BASEADDR, I2C_SET_GO(tmp) );
-	xil_printf("Setting go 0x%x : 0x%x\r\n", I2C_C_BASEADDR, tmp);
+	//xil_printf("Setting go 0x%x : 0x%x\r\n", I2C_C_BASEADDR, tmp);
 	delay(1);//may be useless, need to test
-	XIOModule_IoWriteByte(module, I2C_C_BASEADDR, I2C_RESET_GO(tmp) );
-	xil_printf("Reset go 0x%x : 0x%x\r\n", I2C_C_BASEADDR, tmp);
+	XIOModule_IoWriteWord(module, I2C_C_BASEADDR, I2C_RESET_GO(tmp) );
+	//xil_printf("Reset go 0x%x : 0x%x\r\n", I2C_C_BASEADDR, tmp);
 }
 
 void I2C_Setup(XIOModule* module, u32 I2C_C_BASEADDR, u8 rw, u8 nb_bytes, u8 i2c_slave_addr, u8 ram_pointer){
@@ -91,7 +91,7 @@ void I2C_Setup(XIOModule* module, u32 I2C_C_BASEADDR, u8 rw, u8 nb_bytes, u8 i2c
 	I2C_SET_NB_BYTES(word, nb_bytes);
 	I2C_SET_SLAVE_ADDR(word, i2c_slave_addr);
 	I2C_SET_RAM_POINTER(word, ram_pointer);
-	xil_printf("I2C module configuration : writting 0x%x\r\n", word);
+	//xil_printf("I2C module configuration : writting 0x%x\r\n", word);
 	XIOModule_IoWriteWord(module, I2C_C_BASEADDR, word);
 }
 
@@ -152,15 +152,15 @@ int main()
 
     u8 slave_addr = 0x68;
     u8 slv_ram_pointer = 0x0;
-    u8 nb_bytes = 4;
-    u32 data = 0;
+    u8 nb_bytes = 2;
+    u32 data = 10;
 
     while(1){
     	I2C_Setup(&gpo, I2C_BASEADDR, I2C_READ, nb_bytes, slave_addr, slv_ram_pointer);
 		I2C_Start(&gpo, I2C_BASEADDR);
-		delay(100);
-		//I2C_Read_Data(&gpo, I2C_BASEADDR, &data);
-		delay(500);
+		I2C_Read_Data(&gpo, I2C_BASEADDR, &data);
+		xil_printf("I2C read : 0x%x\r\n", XIOModule_IoReadWord(&gpo, 0x8));
+		delay(950);
     }
 
     return 0;

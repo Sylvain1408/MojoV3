@@ -109,13 +109,13 @@ BEGIN
       wait for clk_period*10;
 
       -- insert stimulus here 
-		ram_dout <= X"00AA6842";
+		ram_dout <= X"00006822";
 		go <= '1';
 		
 		wait for 40 ns;
 		go <= '0';
 		
-		ram_dout <= X"AA00FF14";
+		--ram_dout <= X"AA00FF14";
 		
       wait;
    end process;

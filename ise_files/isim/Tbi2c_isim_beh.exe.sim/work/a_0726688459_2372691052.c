@@ -137,7 +137,7 @@ LAB5:    goto LAB4;
 LAB7:    goto LAB5;
 
 LAB8:    xsi_set_current_line(112, ng0);
-    t2 = (t0 + 7092);
+    t2 = (t0 + 7088);
     t6 = (t0 + 4448);
     t7 = (t6 + 56U);
     t8 = *((char **)t7);
@@ -173,15 +173,6 @@ LAB12:    xsi_set_current_line(116, ng0);
     t8 = *((char **)t7);
     *((unsigned char *)t8) = (unsigned char)2;
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(118, ng0);
-    t2 = (t0 + 7124);
-    t6 = (t0 + 4448);
-    t7 = (t6 + 56U);
-    t8 = *((char **)t7);
-    t9 = (t8 + 56U);
-    t10 = *((char **)t9);
-    memcpy(t10, t2, 32U);
-    xsi_driver_first_trans_fast(t6);
     xsi_set_current_line(120, ng0);
 
 LAB18:    *((char **)t1) = &&LAB19;

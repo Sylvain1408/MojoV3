@@ -124,6 +124,16 @@ begin
 --		end if;
 --	end process debug;
 
+--Debug process to test RAM Reading
+--debug : process(clk, reset_in)
+--	begin
+--		if( clk'event and clk = '1')then
+--		ram_addr <= X"00000004";
+--		ram_byte <= "0000";
+--		led <= ram_read(15 downto 8);
+--		end if;
+--end process debug;
+--
 main : process(clk, go)
 	begin
 	if( clk'event and clk = '1')then				
@@ -139,13 +149,13 @@ main : process(clk, go)
 				tic_go <= '0';
 				ram_update_go <= '0';
 				data_recv <= X"00000000";
-				led <= X"01";
+				--led <= X"01";
 				
 			when ready =>--waiting on go signal to start
 				ram_addr <= X"00000004";
 				ram_byte <= "0000";
 				main_process_state <= set_busy;			
-				led <= X"11";				
+				--led <= X"11";				
 				
 			when set_busy =>
 				setup_word <= ram_read;
@@ -155,24 +165,23 @@ main : process(clk, go)
 				main_process_state <= fetch_setup;
 			
 			when fetch_setup =>--fetch data from ram
+				setup_word <= ram_read;
 				ram_byte <= "0000";
 				if(ram_read(1) = '0')then -- write to slave, get data from RAM
 					ram_addr <= X"00000008";
 				end if;
 				main_process_state <= fetch_data;
-				led <= X"22";
+				--led <= X"22";
 				
 			when fetch_data =>
 				data_word <= ram_read;
 				main_process_state <= decode_data;
 				if(to_integer(unsigned(setup_word(6 downto 4))) > 4)then
 					nb_bytes <= 4;
-					led <= X"23";
+					--led <= X"23";
 				else 
 					if(to_integer(unsigned(setup_word(6 downto 4))) = 0)then
-						--main_process_state <= send_back_setup;
-						--test
-						nb_bytes <= 4;
+						nb_bytes <= 1;
 					end if;
 					nb_bytes <= to_integer(unsigned(setup_word(6 downto 4)));
 				end if;
@@ -181,6 +190,7 @@ main : process(clk, go)
 				rd <= '0';
 				we <= '1';
 				device <= setup_word(14 downto 8);
+				--device <= "1101000";
 				slave_din <= setup_word(23 downto 16);
 				reset_n <= '1';
 				tic_go <= '1';
@@ -190,24 +200,23 @@ main : process(clk, go)
 					we <= not setup_word(1);
 					slave_din <= data_word(31 downto 24);
 				end if;
-				led <= X"44";
+				--led <= X"44";
 				
 			when data_transfer =>--waiting physical to get back data from slave
-				led <= X"51";
+				--led <= X"51";
 				if( prev_queue = '1' and queue = '0')then
 					if(nb_bytes > 1)then
 						nb_bytes <= nb_bytes - 1;
-						led(7 downto 0) <= X"52";
+						--led(7 downto 0) <= X"52";
 					else
 						main_process_state <= send_back_setup;
-						led(7 downto 0) <= X"55";
+						--led(7 downto 0) <= X"55";
 					end if;
 				end if;
-				--led(2 downto 0) <= status;
 				
 				if(data_valid = '1')then	
 					data_recv((8*(nb_bytes+1)-1) downto ((8*(nb_bytes+1)-8))) <= slave_dout;-- +1 because data_valid proc after queue
-					led <= X"53";
+					--led <= X"53";
 				end if;
 				
 				slave_din <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
@@ -215,18 +224,17 @@ main : process(clk, go)
 			when send_back_setup =>
 				if( prev_queue = '1' and queue = '0')then
 					ram_byte <= "1111";
-					ram_addr <= X"00000008";
+					ram_addr <= X"00000004";
 					ram_write <= "00000" & status & setup_word(23 downto 16) & "0" & setup_word(14 downto 8) 
 						& setup_word(7 downto 4) & "1" & ack & setup_word(1 downto 0);
 					main_process_state <= done;
 					reset_n <= '0';
 					ram_update_go <= '0';
-					tic_go <= '0';
-					led <= X"60";
+					--led <= X"60";
 				end if;
 				if(data_valid = '1')then	--catch last one
 					data_recv((8*(nb_bytes)-1) downto ((8*(nb_bytes)-8))) <= slave_dout;
-					led <= X"53";
+					--led <= X"53";
 				end if;
 				
 			when done =>
@@ -234,12 +242,14 @@ main : process(clk, go)
 					ram_addr <= X"00000008";
 					ram_write <= data_recv;
 					main_process_state <= idle;
-					led <= X"66";
+					--led <= X"66";
 			when others =>
 				null;
 		end case;
 		prev_queue <= queue;
 		ack <= ack_error;
+		led(2 downto 0) <= status;
+		led(7 downto 3) <= "00000";
 	end if;
 	
 	end process main;
