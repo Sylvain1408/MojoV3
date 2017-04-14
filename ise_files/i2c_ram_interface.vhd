@@ -95,13 +95,6 @@ signal ack : std_logic;
 signal tic_go : std_logic;
 signal tic_counter : integer range 0 to 170 := 0;
 
---Signals for ram write process
-TYPE ram_process_FSM IS(send_setup, send_data);
-signal ram_process_state : ram_process_FSM := send_setup;
-signal setup_word_to_ram : std_logic_vector(31 downto 0);
-signal data_word_to_ram : std_logic_vector(31 downto 0);
-signal ram_update_go : std_logic;
-
 signal test : std_logic_vector(7 downto 0) := X"00";
 
 begin
@@ -147,7 +140,6 @@ main : process(clk, go)
 				ram_byte <= "0000";
 				reset_n <= '0';
 				tic_go <= '0';
-				ram_update_go <= '0';
 				data_recv <= X"00000000";
 				--led <= X"01";
 				
@@ -228,8 +220,6 @@ main : process(clk, go)
 					ram_write <= "00000" & status & setup_word(23 downto 16) & "0" & setup_word(14 downto 8) 
 						& setup_word(7 downto 4) & "1" & ack & setup_word(1 downto 0);
 					main_process_state <= done;
-					reset_n <= '0';
-					ram_update_go <= '0';
 					--led <= X"60";
 				end if;
 				if(data_valid = '1')then	--catch last one
