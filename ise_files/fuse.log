@@ -17,8 +17,7 @@ Compiling architecture behavioral of entity i2c_ram_interface [i2c_ram_interface
 Compiling architecture behavioral of entity i2c [i2c_default]
 Compiling architecture behavior of entity tbi2c
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 10 VHDL Units
 Built simulation executable C:/Users/Sylvain/workspace/MojoV3/ise_files/Tbi2c_isim_beh.exe
-Fuse Memory Usage: 35596 KB
-Fuse CPU Usage: 545 ms
+Fuse Memory Usage: 35620 KB
+Fuse CPU Usage: 498 ms

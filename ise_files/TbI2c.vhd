@@ -109,7 +109,7 @@ BEGIN
       wait for clk_period*10;
 
       -- insert stimulus here 
-		ram_dout <= X"00006822";
+		ram_dout <= X"00016822";
 		go <= '1';
 		
 		wait for 40 ns;

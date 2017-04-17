@@ -65,6 +65,33 @@
 #define I2C_GET_8B_DATA_2 (word, byte2) (word|0x00FF0000)
 #define I2C_GET_8B_DATA_3 (word, byte3) (word|0xFF000000)*/
 
+//DS1307 macros
+#define DS1307_GET_SECONDS(word) (word & 0x0F)
+#define DS1307_SET_SECONDS(word, seconds) (word ^= (seconds & 0x0F))
+#define DS1307_GET_10_SECONDS(word) (word & 0x70)
+#define DS1307_SET_10_SECONDS(word, seconds) (word ^= (seconds & 0x07) << 4)
+#define DS1307_GET_MINUTES(word) (word & 0x0F)
+#define DS1307_SET_MINUTES(word, minutes) (word ^= (minutes & 0x0F))
+#define DS1307_GET_10_MINUTES(word) (word & 0x70)
+#define DS1307_SET_10_MINUTES(word, minutes) (word ^= (minutes & 0x07) << 4)
+#define DS1307_GET_HOURS(word) (word & 0x0F)
+#define DS1307_SET_HOURS(word, hours) (word ^= (hours & 0x0F))
+#define DS1307_GET_10_HOURS(word) (word & 0x10)
+#define DS1307_GET_AM_PM(word) (word & 0x20)
+#define DS1307_GET_12_24(word) (word & 0x30)
+#define DS1307_GET_DAY(word) (word & 0x3)
+#define DS1307_GET_DATE(word) (word & 0x07)
+#define DS1307_GET_10_DATE(word) (word & 0x30)
+#define DS1307_GET_MONTH(word) (word & 0x0F)
+#define DS1307_GET_10_MONTH(word) (word & 0x10)
+#define DS1307_GET_YEAR(word) (word & 0x0F)
+#define DS1307_GET_10_YEAR(word) (word & 0xF0)
+#define DS1307_GET_RS0(word) (word & 0x01)
+#define DS1307_GET_RS1(word) (word & 0x02)
+#define DS1307_GET_SQWE(word) (word & 0x10)
+#define DS1307_GET_OUT(word) (word & 0x70)
+
+
 XIOModule gpo;
 
 void I2C_Start(XIOModule* module, u32 I2C_C_BASEADDR){
@@ -151,15 +178,44 @@ int main()
     delay(5000);//5s delay to let user time to connect console
 
     u8 slave_addr = 0x68;
-    u8 slv_ram_pointer = 0x0;
-    u8 nb_bytes = 2;
+    u8 slv_ram_pointer = 0;
+    u8 nb_bytes = 1;
     u32 data = 10;
+    /*I2C_Setup(&gpo, I2C_BASEADDR, I2C_WRITE, nb_bytes, slave_addr, slv_ram_pointer);
+    XIOModule_IoWriteWord(&gpo, 0x8, 0x0);
+    I2C_Start(&gpo, I2C_BASEADDR);*/
+
 
     while(1){
-    	I2C_Setup(&gpo, I2C_BASEADDR, I2C_READ, nb_bytes, slave_addr, slv_ram_pointer);
+    	for(slv_ram_pointer = 0; slv_ram_pointer < 20 ; slv_ram_pointer++)
+    	{
+    		    	I2C_Setup(&gpo, I2C_BASEADDR, I2C_READ, nb_bytes, slave_addr, slv_ram_pointer);
+    				I2C_Start(&gpo, I2C_BASEADDR);
+    				delay(100);
+    				//I2C_Read_Data(&gpo, I2C_BASEADDR, &data);
+    				data = XIOModule_IoReadWord(&gpo, 0x8);
+    				xil_printf("I2C read from 0x%d : 0x%x\r\n", slv_ram_pointer, data>>24);
+    	}
+    	delay(2000);
+
+		/*xil_printf("    Seconds : %x\r\n", DS1307_GET_SECONDS(data));
+		xil_printf("    10 Seconds : %x\r\n", DS1307_GET_10_SECONDS(data));
+		xil_printf("    Minutes : %x\r\n", DS1307_GET_MINUTES(data>>8));
+		xil_printf("    10 Minutes : %x\r\n", DS1307_GET_10_MINUTES(data>>8));
+		xil_printf("    Hours : %x\r\n", DS1307_GET_HOURS(data>>16));
+		xil_printf("    10 Hours : %x\r\n", DS1307_GET_10_HOURS(data>>16));
+		xil_printf("    AM/PM : %x\r\n", DS1307_GET_AM_PM(data>>16));
+		xil_printf("    12/24 : %x\r\n", DS1307_GET_12_24(data >> 16));
+		xil_printf("    Day : %x\r\n", DS1307_GET_DAY(data >> 24));*/
+
+		/*slv_ram_pointer = 2;
+		I2C_Setup(&gpo, I2C_BASEADDR, I2C_READ, nb_bytes, slave_addr, slv_ram_pointer);
 		I2C_Start(&gpo, I2C_BASEADDR);
-		I2C_Read_Data(&gpo, I2C_BASEADDR, &data);
-		xil_printf("I2C read : 0x%x\r\n", XIOModule_IoReadWord(&gpo, 0x8));
+		//I2C_Read_Data(&gpo, I2C_BASEADDR, &data);
+		data = XIOModule_IoReadWord(&gpo, 0x8);
+		xil_printf("I2C read : 0x%x\r\n", data);
+		xil_printf("    Date : %x\r\n", DS1307_GET_DATE(data));*/
+
 		delay(950);
     }
 

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: mojo_top.prj
 
@@ -188,8 +188,7 @@ Elaborating entity <i2c> (architecture <Behavioral>) from library <work>.
 Elaborating entity <I2CMASTER> (architecture <rtl>) from library <work>.
 
 Elaborating entity <i2c_ram_interface> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 137: Assignment to ram_update_go ignored, since the identifier is never used
-WARNING:HDLCompiler:92 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 260: tic_go should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Sylvain\workspace\MojoV3\ise_files\i2c_ram_interface.vhd" Line 252: tic_go should be on the sensitivity list of the process
 
 Elaborating entity <Module_register_signals> (architecture <Behavioral>) from library <work>.
 WARNING:HDLCompiler:634 - "C:\Users\Sylvain\workspace\MojoV3\src\mojo_top.vhd" Line 39: Net <channel[3]> does not have a driver.
@@ -492,7 +491,6 @@ WARNING:Xst:647 - Input <stop> is never used. This port will be preserved and le
 WARNING:Xst:647 - Input <reset_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32-bit register for signal <ram_addr>.
     Found 4-bit register for signal <ram_byte>.
-    Found 1-bit register for signal <reset_n>.
     Found 1-bit register for signal <tic_go>.
     Found 32-bit register for signal <data_recv>.
     Found 32-bit register for signal <setup_word>.
@@ -515,25 +513,27 @@ INFO:Xst:1799 - State wait_queue is never reached in FSM <main_process_state>.
     | States             | 10                                             |
     | Transitions        | 17                                             |
     | Inputs             | 4                                              |
-    | Outputs            | 12                                             |
+    | Outputs            | 11                                             |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <n0210> created at line 218.
-    Found 8-bit adder for signal <tic_counter[7]_GND_33_o_add_150_OUT> created at line 263.
-    Found 3-bit subtractor for signal <GND_33_o_GND_33_o_sub_11_OUT<2:0>> created at line 209.
-    Found 6-bit subtractor for signal <GND_33_o_GND_33_o_sub_17_OUT<5:0>> created at line 218.
-    Found 6-bit subtractor for signal <GND_33_o_GND_33_o_sub_67_OUT<5:0>> created at line 222.
-    Found 3-bit comparator greater for signal <PWR_28_o_setup_word[6]_LessThan_4_o> created at line 179
-    Found 3-bit comparator greater for signal <GND_33_o_nb_bytes[2]_LessThan_10_o> created at line 208
-    Found 8-bit comparator greater for signal <tic_counter[7]_PWR_28_o_LessThan_150_o> created at line 261
-    Found 8-bit comparator greater for signal <PWR_28_o_tic_counter[7]_LessThan_152_o> created at line 264
+    Found 4-bit subtractor for signal <GND_33_o_GND_33_o_sub_16_OUT> created at line 210.
+    Found 4-bit subtractor for signal <GND_33_o_GND_33_o_sub_81_OUT> created at line 227.
+    Found 7-bit adder for signal <n0183> created at line 210.
+    Found 7-bit adder for signal <n0191> created at line 227.
+    Found 8-bit adder for signal <tic_counter[7]_GND_33_o_add_153_OUT> created at line 255.
+    Found 3-bit subtractor for signal <GND_33_o_GND_33_o_sub_11_OUT<2:0>> created at line 201.
+    Found 6-bit subtractor for signal <GND_33_o_GND_33_o_sub_63_OUT<5:0>> created at line 215.
+    Found 3-bit comparator greater for signal <PWR_28_o_setup_word[6]_LessThan_4_o> created at line 171
+    Found 3-bit comparator greater for signal <GND_33_o_nb_bytes[2]_LessThan_10_o> created at line 200
+    Found 8-bit comparator greater for signal <tic_counter[7]_PWR_28_o_LessThan_153_o> created at line 253
+    Found 8-bit comparator greater for signal <PWR_28_o_tic_counter[7]_LessThan_155_o> created at line 256
     WARNING:Xst:2404 -  FFs/Latches <led<7:3>> (without init value) have a constant value of 0 in block <i2c_ram_interface>.
     Summary:
-	inferred   5 Adder/Subtractor(s).
-	inferred 200 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred 199 D-type flip-flop(s).
 	inferred   4 Comparator(s).
 	inferred  72 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
@@ -552,17 +552,18 @@ Unit <Module_register_signals> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 16
+# Adders/Subtractors                                   : 18
  16-bit adder                                          : 2
  3-bit adder                                           : 5
  3-bit subtractor                                      : 1
- 4-bit adder                                           : 2
- 6-bit subtractor                                      : 2
- 7-bit adder                                           : 2
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 2
+ 6-bit subtractor                                      : 1
+ 7-bit adder                                           : 4
  8-bit adder                                           : 1
  9-bit adder                                           : 1
-# Registers                                            : 78
- 1-bit register                                        : 37
+# Registers                                            : 77
+ 1-bit register                                        : 36
  10-bit register                                       : 1
  16-bit register                                       : 2
  3-bit register                                        : 8
@@ -669,19 +670,20 @@ WARNING:Xst:2677 - Node <setup_word_31> of sequential type is unconnected in blo
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 8
+# Adders/Subtractors                                   : 10
  16-bit adder                                          : 2
- 3-bit adder                                           : 1
+ 3-bit subtractor                                      : 2
  4-bit adder                                           : 1
- 6-bit subtractor                                      : 2
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 1
  7-bit adder                                           : 2
 # Counters                                             : 8
  3-bit down counter                                    : 1
  3-bit up counter                                      : 5
  8-bit up counter                                      : 1
  9-bit up counter                                      : 1
-# Registers                                            : 421
- Flip-Flops                                            : 421
+# Registers                                            : 420
+ Flip-Flops                                            : 420
 # Comparators                                          : 4
  3-bit comparator greater                              : 2
  8-bit comparator greater                              : 2
@@ -859,12 +861,18 @@ INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_r
 
 Final Macro Processing ...
 
+Processing Unit <mojo_top> :
+	Found 2-bit shift register for signal <Module_I2C/SubModule_i2c_physical/sda_in_qq>.
+Unit <mojo_top> processed.
+
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 435
- Flip-Flops                                            : 435
+# Registers                                            : 432
+ Flip-Flops                                            : 432
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
 
 =========================================================================
 
@@ -887,15 +895,15 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1355
+# BELS                             : 1359
 #      GND                         : 3
-#      INV                         : 30
+#      INV                         : 29
 #      LUT1                        : 48
-#      LUT2                        : 79
-#      LUT3                        : 134
-#      LUT4                        : 257
-#      LUT5                        : 114
-#      LUT6                        : 268
+#      LUT2                        : 78
+#      LUT3                        : 126
+#      LUT4                        : 289
+#      LUT5                        : 132
+#      LUT6                        : 232
 #      LUT6_2                      : 90
 #      MULT_AND                    : 3
 #      MUXCY                       : 45
@@ -905,12 +913,12 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 23
 #      VCC                         : 3
 #      XORCY                       : 108
-# FlipFlops/Latches                : 1000
-#      FD                          : 162
-#      FDC                         : 9
-#      FDCE                        : 50
-#      FDE                         : 408
-#      FDP                         : 5
+# FlipFlops/Latches                : 998
+#      FD                          : 167
+#      FDC                         : 5
+#      FDCE                        : 22
+#      FDE                         : 437
+#      FDP                         : 1
 #      FDPE                        : 1
 #      FDR                         : 115
 #      FDRE                        : 213
@@ -919,8 +927,9 @@ Primitive and Black Box Usage:
 # RAMS                             : 73
 #      RAM32X1D                    : 64
 #      RAMB16BWER                  : 9
-# Shift Registers                  : 53
+# Shift Registers                  : 54
 #      SRL16E                      : 53
+#      SRLC16E                     : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 23
@@ -936,18 +945,18 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1000  out of  11440     8%  
- Number of Slice LUTs:                 1201  out of   5720    20%  
-    Number used as Logic:              1020  out of   5720    17%  
-    Number used as Memory:              181  out of   1440    12%  
+ Number of Slice Registers:             998  out of  11440     8%  
+ Number of Slice LUTs:                 1206  out of   5720    21%  
+    Number used as Logic:              1024  out of   5720    17%  
+    Number used as Memory:              182  out of   1440    12%  
        Number used as RAM:              128
-       Number used as SRL:               53
+       Number used as SRL:               54
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1674
-   Number with an unused Flip Flop:     674  out of   1674    40%  
-   Number with an unused LUT:           473  out of   1674    28%  
-   Number of fully used LUT-FF pairs:   527  out of   1674    31%  
+ Number of LUT Flip Flop pairs used:   1679
+   Number with an unused Flip Flop:     681  out of   1679    40%  
+   Number with an unused LUT:           473  out of   1679    28%  
+   Number of fully used LUT-FF pairs:   525  out of   1679    31%  
    Number of unique control sets:        78
 
 IO Utilization: 
@@ -980,7 +989,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 1126  |
+clk                                | BUFGP                  | 1125  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1003,7 +1012,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.619ns (frequency: 116.019MHz)
-  Total number of paths / destination ports: 140161 / 3390
+  Total number of paths / destination ports: 140206 / 3353
 -------------------------------------------------------------------------
 Delay:               8.619ns (Levels of Logic = 5)
   Source:            mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
@@ -1101,14 +1110,14 @@ clk            |    8.619|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.43 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.37 secs
  
 --> 
 
-Total memory usage is 271660 kilobytes
+Total memory usage is 270828 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   80 (   0 filtered)
+Number of warnings :   79 (   0 filtered)
 Number of infos    :   20 (   0 filtered)
 

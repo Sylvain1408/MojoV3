@@ -138,7 +138,7 @@ main : process(clk, go)
 			when idle =>
 				ram_addr <= X"00000000";
 				ram_byte <= "0000";
-				reset_n <= '0';
+				--reset_n <= '0';
 				tic_go <= '0';
 				data_recv <= X"00000000";
 				--led <= X"01";
@@ -207,7 +207,8 @@ main : process(clk, go)
 				end if;
 				
 				if(data_valid = '1')then	
-					data_recv((8*(nb_bytes+1)-1) downto ((8*(nb_bytes+1)-8))) <= slave_dout;-- +1 because data_valid proc after queue
+					data_recv((8*(3-nb_bytes)+7) downto (8*(3-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
+					--data_recv((8*(nb_bytes+1)-1) downto ((8*(nb_bytes+1)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
 					--led <= X"53";
 				end if;
 				
@@ -223,7 +224,8 @@ main : process(clk, go)
 					--led <= X"60";
 				end if;
 				if(data_valid = '1')then	--catch last one
-					data_recv((8*(nb_bytes)-1) downto ((8*(nb_bytes)-8))) <= slave_dout;
+					data_recv((8*(4-nb_bytes)+7) downto (8*(4-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
+					--data_recv((8*(nb_bytes)-1) downto ((8*(nb_bytes)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
 					--led <= X"53";
 				end if;
 				
