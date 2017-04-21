@@ -22,7 +22,7 @@
 #define DS1307_GET_10_HOURS(word) (word & 0x10)
 #define DS1307_SET_10_HOURS(word, hours) (word ^= (hours & 0x01) << 4)
 #define DS1307_GET_AM_PM(word) (word & 0x20)
-#define DS1307_SET_AM(word, am) (word ^= (am & 0x02) << 5)
+#define DS1307_SET_AM_PM(word, am) (word ^= (am & 0x02) << 5)
 #define DS1307_GET_12_24(word) (word & 0x30)
 #define DS1307_SET_12_24(word, hours) (hours ^= (hours & 0x03) << 6)
 #define DS1307_GET_DAY(word) (word & 0x3)
@@ -52,14 +52,28 @@
 #define DS1307_SET_OUT(word) (word ^= 0x80)
 #define DS1307_RESET_OUT(word) (word &= 0x7F)
 
-void ds1307SetSeconds(int* word, unsigned int seconds);
-int ds1307GetSeconds(int word);
-
-void ds1307SetMinutes(int* word, unsigned int minutes);
-int ds1307GetMinutes(int word);
-
-void ds1307SetHours(int* word, unsigned int hours);
-int ds1307GetHours(int word);
-
+//Seconds
+void ds1307SetSeconds(unsigned int* word, unsigned int seconds);
+unsigned int ds1307GetSeconds(unsigned int word);
+//Minutes
+void ds1307SetMinutes(unsigned int* word, unsigned int minutes);
+unsigned int ds1307GetMinutes(unsigned int word);
+//Hours
+void ds1307SetHours(unsigned int* word, unsigned int hours);
+unsigned int ds1307GetHours(unsigned int word);
+void ds1307SetAMPM(unsigned int* word, unsigned int AmPm);
+unsigned int ds1307GetAMPM(unsigned int word);
+//Days (week 0-7)
+void ds1307SetDay(unsigned int* word, unsigned int days);
+unsigned int ds1307GetDay(unsigned int word);
+//Date (0-31)
+void ds1307SetDate(unsigned int* word, unsigned int date);
+unsigned int ds1307GetDate(unsigned int word);
+//Month
+void ds1307SetMonth(unsigned int* word, unsigned int month);
+unsigned int ds1307GetMonth(unsigned int word);
+//Year
+void ds1307SetYear(unsigned int* word, unsigned int year);
+unsigned int ds1307GetYear(unsigned int word);
 
 #endif /* DS1307_H_ */

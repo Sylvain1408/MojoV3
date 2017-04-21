@@ -35,17 +35,37 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/helloworld.c" title="helloworld.c" tooltip="test/src/helloworld.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/helloworld.c" title="helloworld.c" tooltip="test/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5366" selectionTopPixel="1742"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4547" selectionTopPixel="1181"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Time.h" partName="Time.h" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/Time.h" title="Time.h" tooltip="test/src/Time.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/Time.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="137" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ds1307.c" partName="ds1307.c" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/ds1307.c" title="ds1307.c" tooltip="test/src/ds1307.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/ds1307.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2097" selectionTopPixel="994"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ds1307.h" partName="ds1307.h" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/ds1307.h" title="ds1307.h" tooltip="test/src/ds1307.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/ds1307.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3004" selectionTopPixel="552"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="i2c.h" partName="i2c.h" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/i2c.h" title="i2c.h" tooltip="test/src/i2c.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/i2c.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="225" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="i2c.c" partName="i2c.c" path="C:/Users/CAO-PCB/Documents/MojoV3/microblaze_src/test/src/i2c.c" title="i2c.c" tooltip="test/src/i2c.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/i2c.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1318" selectionTopPixel="25"/>
 </editor>
 </editors>
 <views>
@@ -58,9 +78,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings (5 items)"/>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="241"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -191,157 +210,160 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/test/src/helloworld.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/test/src/Time.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/test/src/ds1307.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/test/src/ds1307.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/test/src/i2c.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/test/src/i2c.c"/>
 </editors>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3487" y="0"/>
+<item historyLabel="ds1307.h" index="2">
+<position info="not_deleted" x="564" y="21"/>
+</item>
+<item historyLabel="ds1307.c" index="1">
+<position info="not_deleted" x="2392" y="4"/>
+</item>
+<item historyLabel="ds1307.h" index="2">
+<position info="not_deleted" x="461" y="0"/>
+</item>
+<item historyLabel="ds1307.c" index="1">
+<position info="not_deleted" x="2338" y="0"/>
+</item>
+<item historyLabel="ds1307.h" index="2">
+<position info="not_deleted" x="3039" y="0"/>
+</item>
+<item historyLabel="ds1307.c" index="1">
+<position info="not_deleted" x="1278" y="0"/>
+</item>
+<item historyLabel="ds1307.h" index="2">
+<position info="not_deleted" x="935" y="0"/>
+</item>
+<item historyLabel="ds1307.c" index="1">
+<position info="not_deleted" x="1489" y="0"/>
+</item>
+<item historyLabel="ds1307.h" index="2">
+<position info="not_deleted" x="3004" y="0"/>
+</item>
+<item historyLabel="ds1307.c" index="1">
+<position info="not_deleted" x="2097" y="0"/>
+</item>
+<item historyLabel="ds1307.h" index="2">
+<position info="not_deleted" x="3004" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2347" y="0"/>
+<position info="not_deleted" x="2500" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="4" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2452" y="0"/>
+<position info="not_deleted" x="1656" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="4" y="0"/>
+</item>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="1323" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="1658" y="0"/>
+</item>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="94" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="1658" y="0"/>
+</item>
+<item historyLabel="ds1307.h" index="2">
+<position info="not_deleted" x="3004" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2592" y="0"/>
+<position info="not_deleted" x="1636" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="1347" y="0"/>
+</item>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="94" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2853" y="0"/>
+<position info="not_deleted" x="1636" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1824" y="0"/>
+<position info="not_deleted" x="1608" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="1347" y="0"/>
+</item>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="94" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="1347" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1797" y="0"/>
+<position info="not_deleted" x="1414" y="22"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="1347" y="0"/>
+</item>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="2" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="155" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1778" y="0"/>
+<position info="not_deleted" x="1506" y="22"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="2" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="2" y="0"/>
+</item>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="2" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1795" y="0"/>
+<position info="not_deleted" x="1506" y="22"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1955" y="0"/>
+<position info="not_deleted" x="3143" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2042" y="0"/>
+<position info="not_deleted" x="4547" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2086" y="0"/>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="155" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2087" y="0"/>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="1658" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2188" y="0"/>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="2" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2216" y="0"/>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="1318" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2232" y="0"/>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="1651" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2248" y="0"/>
+<item historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="1318" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position/>
+<item historyLabel="i2c.h" index="3">
+<position info="not_deleted" x="225" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2720" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2634" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2756" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1883" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2655" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2698" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2678" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2460" y="1"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2807" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2660" y="20"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2800" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2284" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3453" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="5265" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="5125" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3584" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="5329" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="5357" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="5364" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="5349" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3271" y="20"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="4477" y="0"/>
-</item>
-<item historyLabel="Time.h" index="1">
-<position info="not_deleted" x="339" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1568" y="0"/>
-</item>
-<item historyLabel="Time.h" index="1">
-<position info="not_deleted" x="339" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2735" y="0"/>
-</item>
-<item historyLabel="Time.h" index="1">
-<position info="not_deleted" x="137" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2735" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2735" y="0"/>
-</item>
-<item historyLabel="Time.h" index="1">
-<position info="not_deleted" x="137" y="0"/>
-</item>
-<item active="true" historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2735" y="0"/>
+<item active="true" historyLabel="i2c.c" index="4">
+<position info="not_deleted" x="1318" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -360,6 +382,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="i2c.c" tooltip="test/src/i2c.c">
+<persistable path="/test/src/i2c.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="i2c.h" tooltip="test/src/i2c.h">
+<persistable path="/test/src/i2c.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ds1307.h" tooltip="test/src/ds1307.h">
+<persistable path="/test/src/ds1307.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ds1307.c" tooltip="test/src/ds1307.c">
+<persistable path="/test/src/ds1307.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Time.h" tooltip="test/src/Time.h">
 <persistable path="/test/src/Time.h"/>
 </file>

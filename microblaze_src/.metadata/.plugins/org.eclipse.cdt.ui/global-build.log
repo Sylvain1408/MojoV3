@@ -431,3 +431,1214 @@ ELF file	: test.elf
 elfcheck passed.
 'Finished building: test.elf.elfcheck'
 ' '
+12:15:33 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:16:03 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:18:11 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:18:14 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:20:43 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:21:24 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:22:09 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:52:27 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:53:52 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:54:52 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:78:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetMonth':
+../src/ds1307.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDate':
+../src/ds1307.c:66:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDays':
+../src/ds1307.c:60:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetAMPM':
+../src/ds1307.c:54:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+12:55:02 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetMonth':
+../src/ds1307.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDate':
+../src/ds1307.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDays':
+../src/ds1307.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetAMPM':
+../src/ds1307.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+12:55:30 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetAMPM':
+../src/ds1307.c:54:32: error: expected statement before ')' token
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetMonth':
+../src/ds1307.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDate':
+../src/ds1307.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDays':
+../src/ds1307.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/ds1307.o] Erreur 1
+12:55:32 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetMonth':
+../src/ds1307.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDate':
+../src/ds1307.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDays':
+../src/ds1307.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+12:56:28 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetMonth':
+../src/ds1307.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDate':
+../src/ds1307.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+12:56:48 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetMonth':
+../src/ds1307.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetDate':
+../src/ds1307.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+12:57:29 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetMonth':
+../src/ds1307.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+12:58:31 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+12:59:20 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/ds1307.c: In function 'ds1307GetMonth':
+../src/ds1307.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+12:59:54 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307GetYear':
+../src/ds1307.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+13:00:15 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+13:00:47 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+13:02:41 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetYear':
+../src/ds1307.c:83:3: error: invalid operands to binary ^ (have 'unsigned int *' and 'unsigned int')
+make: *** [src/ds1307.o] Erreur 1
+13:03:06 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetYear':
+../src/ds1307.c:83:3: error: invalid operands to binary ^ (have 'unsigned int *' and 'unsigned int')
+../src/ds1307.c:85:3: error: invalid operands to binary ^ (have 'unsigned int *' and 'unsigned int')
+make: *** [src/ds1307.o] Erreur 1
+13:03:31 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetYear':
+../src/ds1307.c:83:3: error: invalid operands to binary ^ (have 'unsigned int *' and 'unsigned int')
+make: *** [src/ds1307.o] Erreur 1
+13:04:00 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetYear':
+../src/ds1307.c:83:3: error: invalid operands to binary ^ (have 'unsigned int *' and 'unsigned int')
+make: *** [src/ds1307.o] Erreur 1
+13:04:29 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+13:05:05 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+13:05:11 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+15:27:09 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetAMPM':
+../src/ds1307.c:51:1: error: expected ';' before '}' token
+make: *** [src/ds1307.o] Erreur 1
+15:27:11 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:27:29 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+15:27:34 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:28:15 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetDay':
+../src/ds1307.c:59:1: error: expected ';' before '}' token
+make: *** [src/ds1307.o] Erreur 1
+15:28:19 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetDay':
+../src/ds1307.c:59:1: error: expected ';' before '}' token
+make: *** [src/ds1307.o] Erreur 1
+15:28:25 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetDay':
+../src/ds1307.c:59:1: error: expected ';' before '}' token
+make: *** [src/ds1307.o] Erreur 1
+15:28:32 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:29:35 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+../src/ds1307.c: In function 'ds1307SetDate':
+../src/ds1307.c:66:5: error: 'hours' undeclared (first use in this function)
+../src/ds1307.c:66:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/ds1307.o] Erreur 1
+15:29:49 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:41:44 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/ds1307.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ds1307.d" -MT"src/ds1307.d" -o "src/ds1307.o" "../src/ds1307.c"
+'Finished building: ../src/ds1307.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9834	    412	   2306	  12552	   3108	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:47:05 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+15:47:19 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:133:3: warning: implicit declaration of function 'I2C_Setup' [-Wimplicit-function-declaration]
+../src/helloworld.c:134:3: warning: implicit declaration of function 'I2C_Start' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/helloworld.c:133: undefined reference to `I2C_Setup'
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/helloworld.c:134: undefined reference to `I2C_Start'
+collect2: ld returned 1 exit status
+make: *** [test.elf] Erreur 1
+15:47:28 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+'Finished building: ../src/i2c.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/helloworld.c:133: undefined reference to `I2C_Setup'
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/helloworld.c:134: undefined reference to `I2C_Start'
+collect2: ld returned 1 exit status
+make: *** [test.elf] Erreur 1
+15:47:30 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+../src/i2c.c:9:16: error: unknown type name 'XIOModule'
+../src/i2c.c:9:35: error: unknown type name 'u32'
+../src/i2c.c:20:16: error: unknown type name 'XIOModule'
+../src/i2c.c:20:35: error: unknown type name 'u32'
+../src/i2c.c:20:55: error: unknown type name 'u8'
+../src/i2c.c:20:62: error: unknown type name 'u8'
+../src/i2c.c:20:75: error: unknown type name 'u8'
+../src/i2c.c:20:94: error: unknown type name 'u8'
+../src/i2c.c:37:20: error: unknown type name 'XIOModule'
+../src/i2c.c:37:39: error: unknown type name 'u32'
+../src/i2c.c:37:59: error: unknown type name 'u32'
+make: *** [src/i2c.o] Erreur 1
+15:47:49 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+../src/i2c.c:9:16: error: unknown type name 'XIOModule'
+../src/i2c.c:9:35: error: unknown type name 'u32'
+../src/i2c.c:20:16: error: unknown type name 'XIOModule'
+../src/i2c.c:20:35: error: unknown type name 'u32'
+../src/i2c.c:20:55: error: unknown type name 'u8'
+../src/i2c.c:20:62: error: unknown type name 'u8'
+../src/i2c.c:20:75: error: unknown type name 'u8'
+../src/i2c.c:20:94: error: unknown type name 'u8'
+../src/i2c.c:37:20: error: unknown type name 'XIOModule'
+../src/i2c.c:37:39: error: unknown type name 'u32'
+../src/i2c.c:37:59: error: unknown type name 'u32'
+make: *** [src/i2c.o] Erreur 1
+15:47:51 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+../src/i2c.c:9:16: error: unknown type name 'XIOModule'
+../src/i2c.c:9:35: error: unknown type name 'u32'
+../src/i2c.c:20:16: error: unknown type name 'XIOModule'
+../src/i2c.c:20:35: error: unknown type name 'u32'
+../src/i2c.c:20:55: error: unknown type name 'u8'
+../src/i2c.c:20:62: error: unknown type name 'u8'
+../src/i2c.c:20:75: error: unknown type name 'u8'
+../src/i2c.c:20:94: error: unknown type name 'u8'
+../src/i2c.c:37:20: error: unknown type name 'XIOModule'
+../src/i2c.c:37:39: error: unknown type name 'u32'
+../src/i2c.c:37:59: error: unknown type name 'u32'
+make: *** [src/i2c.o] Erreur 1
+15:47:54 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+../src/i2c.c:9:16: error: unknown type name 'XIOModule'
+../src/i2c.c:9:35: error: unknown type name 'u32'
+../src/i2c.c:20:16: error: unknown type name 'XIOModule'
+../src/i2c.c:20:35: error: unknown type name 'u32'
+../src/i2c.c:20:55: error: unknown type name 'u8'
+../src/i2c.c:20:62: error: unknown type name 'u8'
+../src/i2c.c:20:75: error: unknown type name 'u8'
+../src/i2c.c:20:94: error: unknown type name 'u8'
+../src/i2c.c:37:20: error: unknown type name 'XIOModule'
+../src/i2c.c:37:39: error: unknown type name 'u32'
+../src/i2c.c:37:59: error: unknown type name 'u32'
+make: *** [src/i2c.o] Erreur 1
+15:48:05 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+In file included from ../src/i2c.c:7:0:
+../src/i2c.h:11:16: error: unknown type name 'XIOModule'
+../src/i2c.h:11:35: error: unknown type name 'u32'
+../src/i2c.h:12:16: error: unknown type name 'XIOModule'
+../src/i2c.h:12:35: error: unknown type name 'u32'
+../src/i2c.h:12:55: error: unknown type name 'u8'
+../src/i2c.h:12:62: error: unknown type name 'u8'
+../src/i2c.h:12:75: error: unknown type name 'u8'
+../src/i2c.h:12:94: error: unknown type name 'u8'
+../src/i2c.h:13:20: error: unknown type name 'XIOModule'
+../src/i2c.h:13:39: error: unknown type name 'u32'
+../src/i2c.h:13:59: error: unknown type name 'u32'
+../src/i2c.c:9:16: error: unknown type name 'XIOModule'
+../src/i2c.c:9:35: error: unknown type name 'u32'
+../src/i2c.c:20:16: error: unknown type name 'XIOModule'
+../src/i2c.c:20:35: error: unknown type name 'u32'
+../src/i2c.c:20:55: error: unknown type name 'u8'
+../src/i2c.c:20:62: error: unknown type name 'u8'
+../src/i2c.c:20:75: error: unknown type name 'u8'
+../src/i2c.c:20:94: error: unknown type name 'u8'
+../src/i2c.c:37:20: error: unknown type name 'XIOModule'
+../src/i2c.c:37:39: error: unknown type name 'u32'
+../src/i2c.c:37:59: error: unknown type name 'u32'
+make: *** [src/i2c.o] Erreur 1
+15:48:33 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:110:3: warning: implicit declaration of function 'I2C_Setup' [-Wimplicit-function-declaration]
+../src/helloworld.c:110:33: error: 'I2C_READ' undeclared (first use in this function)
+../src/helloworld.c:110:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:111:3: warning: implicit declaration of function 'I2C_Start' [-Wimplicit-function-declaration]
+make: *** [src/helloworld.o] Erreur 1
+15:48:37 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:110:3: warning: implicit declaration of function 'I2C_Setup' [-Wimplicit-function-declaration]
+../src/helloworld.c:110:33: error: 'I2C_READ' undeclared (first use in this function)
+../src/helloworld.c:110:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:111:3: warning: implicit declaration of function 'I2C_Start' [-Wimplicit-function-declaration]
+make: *** [src/helloworld.o] Erreur 1
+15:48:54 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+In file included from ../src/i2c.c:7:0:
+../src/i2c.h:34:16: error: unknown type name 'XIOModule'
+../src/i2c.h:34:35: error: unknown type name 'u32'
+../src/i2c.h:35:16: error: unknown type name 'XIOModule'
+../src/i2c.h:35:35: error: unknown type name 'u32'
+../src/i2c.h:35:55: error: unknown type name 'u8'
+../src/i2c.h:35:62: error: unknown type name 'u8'
+../src/i2c.h:35:75: error: unknown type name 'u8'
+../src/i2c.h:35:94: error: unknown type name 'u8'
+../src/i2c.h:36:20: error: unknown type name 'XIOModule'
+../src/i2c.h:36:39: error: unknown type name 'u32'
+../src/i2c.h:36:59: error: unknown type name 'u32'
+../src/i2c.c:9:16: error: unknown type name 'XIOModule'
+../src/i2c.c:9:35: error: unknown type name 'u32'
+../src/i2c.c:20:16: error: unknown type name 'XIOModule'
+../src/i2c.c:20:35: error: unknown type name 'u32'
+../src/i2c.c:20:55: error: unknown type name 'u8'
+../src/i2c.c:20:62: error: unknown type name 'u8'
+../src/i2c.c:20:75: error: unknown type name 'u8'
+../src/i2c.c:20:94: error: unknown type name 'u8'
+../src/i2c.c:37:20: error: unknown type name 'XIOModule'
+../src/i2c.c:37:39: error: unknown type name 'u32'
+../src/i2c.c:37:59: error: unknown type name 'u32'
+make: *** [src/i2c.o] Erreur 1
+15:49:23 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+In file included from ../src/i2c.c:7:0:
+../src/i2c.h:34:16: error: unknown type name 'XIOModule'
+../src/i2c.h:34:35: error: unknown type name 'u32'
+../src/i2c.h:35:16: error: unknown type name 'XIOModule'
+../src/i2c.h:35:35: error: unknown type name 'u32'
+../src/i2c.h:35:55: error: unknown type name 'u8'
+../src/i2c.h:35:62: error: unknown type name 'u8'
+../src/i2c.h:35:75: error: unknown type name 'u8'
+../src/i2c.h:35:94: error: unknown type name 'u8'
+../src/i2c.h:36:20: error: unknown type name 'XIOModule'
+../src/i2c.h:36:39: error: unknown type name 'u32'
+../src/i2c.h:36:59: error: unknown type name 'u32'
+../src/i2c.c:10:16: error: unknown type name 'XIOModule'
+../src/i2c.c:21:16: error: unknown type name 'XIOModule'
+../src/i2c.c:38:20: error: unknown type name 'XIOModule'
+make: *** [src/i2c.o] Erreur 1
+15:49:29 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+In file included from ../src/i2c.c:7:0:
+../src/i2c.h:34:16: error: unknown type name 'XIOModule'
+../src/i2c.h:34:35: error: unknown type name 'u32'
+../src/i2c.h:35:16: error: unknown type name 'XIOModule'
+../src/i2c.h:35:35: error: unknown type name 'u32'
+../src/i2c.h:35:55: error: unknown type name 'u8'
+../src/i2c.h:35:62: error: unknown type name 'u8'
+../src/i2c.h:35:75: error: unknown type name 'u8'
+../src/i2c.h:35:94: error: unknown type name 'u8'
+../src/i2c.h:36:20: error: unknown type name 'XIOModule'
+../src/i2c.h:36:39: error: unknown type name 'u32'
+../src/i2c.h:36:59: error: unknown type name 'u32'
+../src/i2c.c:9:16: error: unknown type name 'XIOModule'
+../src/i2c.c:9:35: error: unknown type name 'u32'
+../src/i2c.c:20:16: error: unknown type name 'XIOModule'
+../src/i2c.c:20:35: error: unknown type name 'u32'
+../src/i2c.c:20:55: error: unknown type name 'u8'
+../src/i2c.c:20:62: error: unknown type name 'u8'
+../src/i2c.c:20:75: error: unknown type name 'u8'
+../src/i2c.c:20:94: error: unknown type name 'u8'
+../src/i2c.c:37:20: error: unknown type name 'XIOModule'
+../src/i2c.c:37:39: error: unknown type name 'u32'
+../src/i2c.c:37:59: error: unknown type name 'u32'
+make: *** [src/i2c.o] Erreur 1
+15:49:34 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+In file included from ../src/i2c.c:7:0:
+../src/i2c.h:36:16: error: unknown type name 'XIOModule'
+../src/i2c.h:37:16: error: unknown type name 'XIOModule'
+../src/i2c.h:38:20: error: unknown type name 'XIOModule'
+../src/i2c.c:9:16: error: unknown type name 'XIOModule'
+../src/i2c.c:20:16: error: unknown type name 'XIOModule'
+../src/i2c.c:37:20: error: unknown type name 'XIOModule'
+make: *** [src/i2c.o] Erreur 1
+15:49:45 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+../src/i2c.c: In function 'I2C_Start':
+../src/i2c.c:15:2: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+'Finished building: ../src/i2c.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9830	    412	   2300	  12542	   30fe	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:52:40 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+15:55:18 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9934	    412	   2300	  12646	   3166	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:56:12 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:100:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/helloworld.c:100:2: note: use option -std=c99 or -std=gnu99 to compile your code
+make: *** [src/helloworld.o] Erreur 1
+15:56:27 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9954	    412	   2306	  12672	   3180	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:57:47 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:104:3: error: expected ')' before 'delay'
+../src/helloworld.c:105:2: error: expected ';' before '}' token
+make: *** [src/helloworld.o] Erreur 1
+15:57:56 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:103:14: warning: missing terminating " character [enabled by default]
+../src/helloworld.c:103:3: error: missing terminating " character
+../src/helloworld.c:104:14: error: expected ')' before ';' token
+../src/helloworld.c:105:2: error: invalid use of void expression
+../src/helloworld.c:105:2: error: expected ';' before '}' token
+make: *** [src/helloworld.o] Erreur 1
+15:58:08 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10018	    412	   2306	  12736	   31c0	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+15:59:29 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10002	    412	   2306	  12720	   31b0	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+16:00:31 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Rien à faire pour « all ».
+16:04:20 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+../src/i2c.c:41:6: error: conflicting types for 'I2C_Write_Data'
+../src/i2c.h:40:6: note: previous declaration of 'I2C_Write_Data' was here
+make: *** [src/i2c.o] Erreur 1
+16:04:42 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+'Finished building: ../src/i2c.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `ct'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `timerTick'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `delay':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: multiple definition of `delay'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: first defined here
+collect2: ld returned 1 exit status
+make: *** [test.elf] Erreur 1
+16:04:45 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+'Finished building: ../src/i2c.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `ct'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `timerTick'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `delay':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: multiple definition of `delay'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: first defined here
+collect2: ld returned 1 exit status
+make: *** [test.elf] Erreur 1
+16:05:21 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `ct'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `timerTick'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `delay':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: multiple definition of `delay'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: first defined here
+collect2: ld returned 1 exit status
+make: *** [test.elf] Erreur 1
+16:07:21 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `ct'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `timerTick'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `delay':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: multiple definition of `delay'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: first defined here
+collect2: ld returned 1 exit status
+make: *** [test.elf] Erreur 1
+16:07:25 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+'Finished building: ../src/i2c.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `ct'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `I2C_Write_Data':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: multiple definition of `timerTick'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:13: first defined here
+./src/i2c.o: In function `delay':
+C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: multiple definition of `delay'
+./src/helloworld.o:C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug/../src/Time.h:17: first defined here
+collect2: ld returned 1 exit status
+make: *** [test.elf] Erreur 1
+17:31:17 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/i2c.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+../src/i2c.c: In function 'I2C_Write_Data':
+../src/i2c.c:43:1: error: expected identifier or '(' before '}' token
+../src/i2c.c:43:1: error: expected declaration or statement at end of input
+make: *** [src/i2c.o] Erreur 1

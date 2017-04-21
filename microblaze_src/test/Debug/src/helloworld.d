@@ -17,7 +17,7 @@ src/helloworld.d: ../src/helloworld.c \
  ../../test_bsp/microblaze_mcs/include/xiomodule_l.h \
  ../../test_bsp/microblaze_mcs/include/xiomodule_io.h \
  ../../test_bsp/microblaze_mcs/include/xio.h ../src/Time.h \
- ../src/ds1307.h
+ ../src/ds1307.h ../src/i2c.h
 
 ../../test_bsp/microblaze_mcs/include/xparameters.h:
 
@@ -58,3 +58,5 @@ src/helloworld.d: ../src/helloworld.c \
 ../src/Time.h:
 
 ../src/ds1307.h:
+
+../src/i2c.h:

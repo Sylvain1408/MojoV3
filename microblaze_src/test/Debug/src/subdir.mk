@@ -6,6 +6,7 @@
 C_SRCS += \
 ../src/ds1307.c \
 ../src/helloworld.c \
+../src/i2c.c \
 ../src/platform.c 
 
 LD_SRCS += \
@@ -14,11 +15,13 @@ LD_SRCS += \
 OBJS += \
 ./src/ds1307.o \
 ./src/helloworld.o \
+./src/i2c.o \
 ./src/platform.o 
 
 C_DEPS += \
 ./src/ds1307.d \
 ./src/helloworld.d \
+./src/i2c.d \
 ./src/platform.d 
 
 
