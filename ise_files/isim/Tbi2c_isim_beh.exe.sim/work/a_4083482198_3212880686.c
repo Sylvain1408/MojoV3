@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Sylvain/workspace/MojoV3/ise_files/i2c.vhd";
+static const char *ng0 = "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/i2c.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_3957255360_503743352(char *, unsigned char );

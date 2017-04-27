@@ -1,12 +1,33 @@
-17:31:17 **** Auto Build of configuration Debug for project test ****
+16:11:01 **** Auto Build of configuration Debug for project test ****
 make all 
-'Building file: ../src/i2c.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
-../src/i2c.c: In function 'I2C_Write_Data':
-../src/i2c.c:43:1: error: expected identifier or '(' before '}' token
-../src/i2c.c:43:1: error: expected declaration or statement at end of input
-make: *** [src/i2c.o] Erreur 1
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9762	    412	   2306	  12480	   30c0	test.elf
+'Finished building: test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-17:31:17 Build Finished (took 426ms)
+Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+
+ELF file	: test.elf
+elfcheck passed.
+'Finished building: test.elf.elfcheck'
+' '
+
+16:11:03 Build Finished (took 2s.314ms)
 
