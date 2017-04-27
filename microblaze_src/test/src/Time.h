@@ -7,7 +7,7 @@
 
 #ifndef TIME_H_
 #define TIME_H_
-
+/*
 volatile u32 ct = 0;
 
 void timerTick(void* ref) {
@@ -18,6 +18,6 @@ void delay(u32 ms) {
   ct = 0; // set the counter to 0
   while (ct < ms) // wait for ms number of milliseconds
     ;
-}
+}*/
 
 #endif /* TIME_H_ */

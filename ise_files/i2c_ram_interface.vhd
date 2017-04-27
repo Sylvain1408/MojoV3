@@ -80,7 +80,7 @@ end i2c_ram_interface;
 architecture Behavioral of i2c_ram_interface is
 
 --Signals for main process
-TYPE main_process_FSM IS(idle, set_busy, ready, fetch_setup, fetch_data, decode_data, wait_queue, data_transfer, send_back_setup, done); --needed states for I2C control
+TYPE main_process_FSM IS(idle, set_busy, ready, fetch_setup, tempo, fetch_data, decode_data, wait_queue, data_transfer, send_back_setup, done); --needed states for I2C control
 SIGNAL prev_queue : std_logic;
 SIGNAL main_process_state : main_process_FSM := idle;               --state machine
 signal setup_word : std_logic_vector(31 downto 0);
@@ -141,36 +141,39 @@ main : process(clk, go)
 				--reset_n <= '0';
 				tic_go <= '0';
 				data_recv <= X"00000000";
+				data_word <= X"00000000";
+				setup_word <= X"00000000";
+				slave_din <= X"00";
+				device <= "0000000";
+				reset_n <= '0';
 				--led <= X"01";
 				
 			when ready =>--waiting on go signal to start
 				ram_addr <= X"00000004";
 				ram_byte <= "0000";
-				main_process_state <= set_busy;			
-				--led <= X"11";				
+				main_process_state <= set_busy;	
+				led <= X"11";				
 				
-			when set_busy =>
-				setup_word <= ram_read;
-				ram_addr <= X"00000004";
-				ram_byte <= "1111";
-				ram_write <= ram_read(31 downto 4) & '1' & ram_read(2 downto 0);
+			when set_busy =>--not yet implemented
+				--setup_word <= ram_read;
 				main_process_state <= fetch_setup;
 			
 			when fetch_setup =>--fetch data from ram
 				setup_word <= ram_read;
-				ram_byte <= "0000";
-				if(ram_read(1) = '0')then -- write to slave, get data from RAM
+				if(setup_word(1) = '0')then -- write to slave, get data from RAM
 					ram_addr <= X"00000008";
+					ram_byte <= "0000";
 				end if;
-				main_process_state <= fetch_data;
-				--led <= X"22";
+				main_process_state <= tempo;
 				
+			when tempo =>
+				main_process_state <= fetch_data;
 			when fetch_data =>
 				data_word <= ram_read;
 				main_process_state <= decode_data;
+				reset_n <= '1';
 				if(to_integer(unsigned(setup_word(6 downto 4))) > 4)then
 					nb_bytes <= 4;
-					--led <= X"23";
 				else 
 					if(to_integer(unsigned(setup_word(6 downto 4))) = 0)then
 						nb_bytes <= 1;
@@ -182,7 +185,6 @@ main : process(clk, go)
 				rd <= '0';
 				we <= '1';
 				device <= setup_word(14 downto 8);
-				--device <= "1101000";
 				slave_din <= setup_word(23 downto 16);
 				reset_n <= '1';
 				tic_go <= '1';
@@ -190,29 +192,25 @@ main : process(clk, go)
 					main_process_state <= data_transfer;
 					rd <= setup_word(1);
 					we <= not setup_word(1);
-					slave_din <= data_word(31 downto 24);
+					slave_din <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
+					led <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
 				end if;
-				--led <= X"44";
 				
 			when data_transfer =>--waiting physical to get back data from slave
-				--led <= X"51";
 				if( prev_queue = '1' and queue = '0')then
 					if(nb_bytes > 1)then
 						nb_bytes <= nb_bytes - 1;
-						--led(7 downto 0) <= X"52";
 					else
 						main_process_state <= send_back_setup;
-						--led(7 downto 0) <= X"55";
 					end if;
+					rd <= setup_word(1);
+					we <= not setup_word(1);
 				end if;
-				
+				slave_din <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
 				if(data_valid = '1')then	
 					data_recv((8*(3-nb_bytes)+7) downto (8*(3-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
 					--data_recv((8*(nb_bytes+1)-1) downto ((8*(nb_bytes+1)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
-					--led <= X"53";
 				end if;
-				
-				slave_din <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
 				
 			when send_back_setup =>
 				if( prev_queue = '1' and queue = '0')then
@@ -221,12 +219,10 @@ main : process(clk, go)
 					ram_write <= "00000" & status & setup_word(23 downto 16) & "0" & setup_word(14 downto 8) 
 						& setup_word(7 downto 4) & "1" & ack & setup_word(1 downto 0);
 					main_process_state <= done;
-					--led <= X"60";
 				end if;
 				if(data_valid = '1')then	--catch last one
 					data_recv((8*(4-nb_bytes)+7) downto (8*(4-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
 					--data_recv((8*(nb_bytes)-1) downto ((8*(nb_bytes)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
-					--led <= X"53";
 				end if;
 				
 			when done =>
@@ -240,8 +236,8 @@ main : process(clk, go)
 		end case;
 		prev_queue <= queue;
 		ack <= ack_error;
-		led(2 downto 0) <= status;
-		led(7 downto 3) <= "00000";
+		--led(2 downto 0) <= status;
+		--led(7 downto 3) <= "00000";
 	end if;
 	
 	end process main;

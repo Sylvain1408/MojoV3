@@ -1,23 +1,27 @@
-Running: C:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Sylvain/workspace/MojoV3/ise_files/Tbi2c_isim_beh.exe -prj C:/Users/Sylvain/workspace/MojoV3/ise_files/Tbi2c_beh.prj work.Tbi2c 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbRam_isim_beh.exe -prj C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbRam_beh.prj work.TbRam 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/Sylvain/workspace/MojoV3/ise_files/i2c_ram_interface.vhd" into library work
-Parsing VHDL file "C:/Users/Sylvain/workspace/MojoV3/ise_files/../i2C/i2cmaster.vhd" into library work
-Parsing VHDL file "C:/Users/Sylvain/workspace/MojoV3/ise_files/i2c.vhd" into library work
-Parsing VHDL file "C:/Users/Sylvain/workspace/MojoV3/ise_files/Tbi2c.vhd" into library work
+Parsing VHDL file "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/ipcore_dir/ram.vhd" into library work
+Parsing VHDL file "C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbRam.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package numeric_std
-Compiling architecture rtl of entity I2CMASTER [i2cmaster_default]
-Compiling architecture behavioral of entity i2c_ram_interface [i2c_ram_interface_default]
-Compiling architecture behavioral of entity i2c [i2c_default]
-Compiling architecture behavior of entity tbi2c
+Compiling package textio
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package std_logic_textio
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
+Compiling architecture ram_a of entity ram [ram_default]
+Compiling architecture behavior of entity tbram
 Time Resolution for simulation is 1ps.
-Compiled 10 VHDL Units
-Built simulation executable C:/Users/Sylvain/workspace/MojoV3/ise_files/Tbi2c_isim_beh.exe
-Fuse Memory Usage: 35620 KB
-Fuse CPU Usage: 498 ms
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 17 VHDL Units
+Built simulation executable C:/Users/CAO-PCB/Documents/MojoV3/ise_files/TbRam_isim_beh.exe
+Fuse Memory Usage: 36188 KB
+Fuse CPU Usage: 718 ms
