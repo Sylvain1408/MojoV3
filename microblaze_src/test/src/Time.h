@@ -2,7 +2,7 @@
  * Time.h
  *
  *  Created on: 28 mars 2017
- *      Author: CAO-PCB
+ *      Author: Sylvain ROULAND
  */
 
 #ifndef TIME_H_

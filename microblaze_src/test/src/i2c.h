@@ -20,13 +20,13 @@
 #define I2C_OFFSET_RAM_POINTER 16
 #define I2C_READ 1
 #define I2C_WRITE 0
-#define I2C_SET_GO(word) (word |= (0x1 << I2C_OFFSET_GO))
-#define I2C_RESET_GO(word) (word ^= (0x1 << I2C_OFFSET_GO))
-#define I2C_SET_READ(word) (word |= (0x1 << I2C_OFFSET_RW))
-#define I2C_SET_WRITE(word) (word |= (0x0 << I2C_OFFSET_RW))
-#define I2C_SET_NB_BYTES(word, nb_bytes) (word |= (nb_bytes << I2C_OFFSET_NB_BYTES))
-#define I2C_SET_SLAVE_ADDR(word, slave_addr) (word |= (slave_addr << I2C_OFFSET_SLAVE_ADDR))
-#define I2C_SET_RAM_POINTER(word, pointer) (word |= (pointer << I2C_OFFSET_RAM_POINTER))
+#define I2C_SET_GO(word) ( (word) |= (0x1 << I2C_OFFSET_GO) )
+#define I2C_RESET_GO(word) ( (word) ^= (0x1 << I2C_OFFSET_GO) )
+#define I2C_SET_READ(word) ( (word) |= (0x1 << I2C_OFFSET_RW) )
+#define I2C_SET_WRITE(word) ( (word) |= (0x0 << I2C_OFFSET_RW) )
+#define I2C_SET_NB_BYTES(word, nb_bytes) ( (word) |= (nb_bytes << I2C_OFFSET_NB_BYTES) )
+#define I2C_SET_SLAVE_ADDR(word, slave_addr) ( (word) |= (slave_addr << I2C_OFFSET_SLAVE_ADDR) )
+#define I2C_SET_RAM_POINTER(word, pointer) ( (word) |= (pointer << I2C_OFFSET_RAM_POINTER) )
 
 //I2C Data macros considering 32 bits
 #define I2C_SET_32B_DATA(word, byte0, byte1, byte2, byte3) (word |= (byte0 + (byte1 << 8) + (byte2 << 16) + (byte3 << 24)))
