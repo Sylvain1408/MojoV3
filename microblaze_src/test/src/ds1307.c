@@ -119,3 +119,33 @@ unsigned int ds1307GetYear(unsigned int word)
 	return DS1307_GET_YEAR(word) + DS1307_GET_10_YEAR(word);
 }
 
+void ds1307SetTime(XIOModule* module, unsigned int I2C_BASEADDR, unsigned int seconds, unsigned int minutes, unsigned int hours, unsigned int AmPm,
+		unsigned int day, unsigned int date, unsigned int month, unsigned int year)
+{
+	unsigned int word = 0;
+
+	ds1307SetSeconds(&word, seconds);
+	I2C_Write_Data(module, I2C_BASEADDR, word);
+
+	ds1307SetMinutes(&word, minutes);
+	I2C_Write_Data(module, I2C_BASEADDR, word);
+
+	ds1307SetHours(&word, hours);
+	I2C_Write_Data(module, I2C_BASEADDR, word);
+
+	ds1307SetDay(&word, day);
+	I2C_Write_Data(module, I2C_BASEADDR, word);
+
+	ds1307SetAMPM(&word, AmPm);
+	I2C_Write_Data(module, I2C_BASEADDR, word);
+
+	ds1307SetDate(&word, date);
+	I2C_Write_Data(module, I2C_BASEADDR, word);
+
+	ds1307SetMonth(&word, month);
+	I2C_Write_Data(module, I2C_BASEADDR, word);
+
+	ds1307SetYear(&word, year);
+	I2C_Write_Data(module, I2C_BASEADDR, word);
+}
+

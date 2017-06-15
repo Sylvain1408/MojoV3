@@ -8,6 +8,9 @@
 #ifndef DS1307_H_
 #define DS1307_H_
 
+#include "xiomodule.h"
+#include "i2c.h"
+
 //DS1307 macros
 #define DS1307_GET_SECONDS(word) ( (word) & 0x0F)
 #define DS1307_SET_SECONDS(word, seconds) ( (word) ^= (seconds & 0x0F))
@@ -76,7 +79,9 @@ unsigned int ds1307GetMonth(unsigned int word);
 void ds1307SetYear(unsigned int* word, unsigned int year);
 unsigned int ds1307GetYear(unsigned int word);
 
-/*void (unsigned int seconds, unsigned int minutes, unsigned int hours, unsigned int AmPm,
-		unsigned int days, unsigned int date, unsigned int month, unsigned int year);
-*/
+//Using i2c.h write
+//Supposing that i2c is well setup via I2C_setup()
+void ds1307SetTime(XIOModule* module, unsigned int I2C_BASEADDR, unsigned int seconds, unsigned int minutes, unsigned int hours, unsigned int AmPm,
+		unsigned int day, unsigned int date, unsigned int month, unsigned int year);
+
 #endif /* DS1307_H_ */
