@@ -16,7 +16,7 @@
  *
  */
 
-/*
+/***
  * helloworld.c: simple test application
  *
  * This application configures UART 16550 to baud rate 9600.
