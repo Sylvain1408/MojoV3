@@ -1,29 +1,28 @@
 Command line:
    Tbi2c_isim_beh.exe
      -simmode  gui
-     -simrunnum  0
-     -socket  50467
+     -simrunnum  1
+     -socket  65112
 
-Thu Apr 27 13:28:02 2017
+Sat May 05 11:49:35 2018
 
 
- Elaboration Time: 0.0625 sec
+ Elaboration Time: 0.125 sec
 
- Current Memory Usage: 841.671 Meg
+ Current Memory Usage: 917.393 Meg
 
  Total Signals          : 99
- Total Nets             : 316
- Total Signal Drivers   : 42
+ Total Nets             : 315
+ Total Signal Drivers   : 43
  Total Blocks           : 6
  Total Primitive Blocks : 4
  Total Processes        : 11
  Total Traceable Variables  : 14
- Total Scalar Nets and Variables : 800
-Total Line Count : 291
+ Total Scalar Nets and Variables : 799
 
- Total Simulation Time: 0.3125 sec
+ Total Simulation Time: 0.484375 sec
 
- Current Memory Usage: 841.671 Meg
+ Current Memory Usage: 444.748 Meg
 
-Thu Apr 27 13:28:08 2017
+Sat May 05 16:11:50 2018
 

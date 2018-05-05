@@ -68,6 +68,7 @@ entity i2c_ram_interface is
 		stop						: IN std_logic;
 		go				 			: IN std_logic;
 		reset_n					: OUT std_logic;
+		reset_sync				: OUT std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
 		reset_in					: IN std_logic;
@@ -138,21 +139,21 @@ main : process(clk, go)
 			when idle =>
 				ram_addr <= X"00000000";
 				ram_byte <= "0000";
-				--reset_n <= '0';
-				tic_go <= '0';
 				data_recv <= X"00000000";
 				data_word <= X"00000000";
 				setup_word <= X"00000000";
 				slave_din <= X"00";
 				device <= "0000000";
-				reset_n <= '0';
-				--led <= X"01";
+				rd <= '0';
+				we <= '0';
+				reset_n <= '1';
+				led(7 downto 3) <= "00000";
 				
 			when ready =>--waiting on go signal to start
 				ram_addr <= X"00000004";
 				ram_byte <= "0000";
-				main_process_state <= set_busy;	
-				led <= X"11";				
+				main_process_state <= set_busy;
+				--led <= X"02";				
 				
 			when set_busy =>--not yet implemented
 				--setup_word <= ram_read;
@@ -166,16 +167,15 @@ main : process(clk, go)
 				end if;
 				main_process_state <= tempo;
 				
-			when tempo =>
+			when tempo =>--1 clock cycle to get data
 				main_process_state <= fetch_data;
+				
 			when fetch_data =>
 				data_word <= ram_read;
 				main_process_state <= decode_data;
-				reset_n <= '1';
 				if(to_integer(unsigned(setup_word(6 downto 4))) > 4)then
 					nb_bytes <= 4;
-				else 
-					if(to_integer(unsigned(setup_word(6 downto 4))) = 0)then
+				else if(to_integer(unsigned(setup_word(6 downto 4))) = 0)then
 						nb_bytes <= 1;
 					end if;
 					nb_bytes <= to_integer(unsigned(setup_word(6 downto 4)));
@@ -184,20 +184,19 @@ main : process(clk, go)
 			when decode_data =>--slave ram pointer first
 				rd <= '0';
 				we <= '1';
+				tic_go <= '1';
 				device <= setup_word(14 downto 8);
 				slave_din <= setup_word(23 downto 16);
-				reset_n <= '1';
-				tic_go <= '1';
-				if( prev_queue = '1' and queue = '0')then
+				if( prev_queue = '1' and queue = '0' )then
 					main_process_state <= data_transfer;
 					rd <= setup_word(1);
 					we <= not setup_word(1);
 					slave_din <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
-					led <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
+					--led <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
 				end if;
 				
 			when data_transfer =>--waiting physical to get back data from slave
-				if( prev_queue = '1' and queue = '0')then
+				if( prev_queue = '1' and queue = '0' )then
 					if(nb_bytes > 1)then
 						nb_bytes <= nb_bytes - 1;
 					else
@@ -207,17 +206,22 @@ main : process(clk, go)
 					we <= not setup_word(1);
 				end if;
 				slave_din <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
+				led(7 downto 3) <= "11111";
 				if(data_valid = '1')then	
 					data_recv((8*(3-nb_bytes)+7) downto (8*(3-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
 					--data_recv((8*(nb_bytes+1)-1) downto ((8*(nb_bytes+1)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
 				end if;
 				
 			when send_back_setup =>
-				if( prev_queue = '1' and queue = '0')then
+				if( prev_queue = '1' and queue = '0' )then
 					ram_byte <= "1111";
 					ram_addr <= X"00000004";
 					ram_write <= "00000" & status & setup_word(23 downto 16) & "0" & setup_word(14 downto 8) 
 						& setup_word(7 downto 4) & "1" & ack & setup_word(1 downto 0);
+					
+					rd <= '0';
+					we <= '0';
+					led(7 downto 3) <= "11111";
 					main_process_state <= done;
 				end if;
 				if(data_valid = '1')then	--catch last one
@@ -229,14 +233,19 @@ main : process(clk, go)
 					ram_byte <= "1111";
 					ram_addr <= X"00000008";
 					ram_write <= data_recv;
-					main_process_state <= idle;
-					--led <= X"66";
+					if(stop = '1')then
+						tic_go <= '0';
+						main_process_state <= idle;
+					end if;
+					led(7 downto 3) <= "11111";
+					--led <= X"FF";
 			when others =>
 				null;
 		end case;
+		
 		prev_queue <= queue;
 		ack <= ack_error;
-		--led(2 downto 0) <= status;
+		led(2 downto 0) <= status;
 		--led(7 downto 3) <= "00000";
 	end if;
 	
@@ -255,7 +264,7 @@ clock_gen : process(clk)
 			end if;
 		end if;
 			
-	end process clock_gen;
+end process clock_gen;
 	
 --ram_write_process : process(clk)
 --	begin

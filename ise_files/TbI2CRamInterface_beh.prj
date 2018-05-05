@@ -1,0 +1,2 @@
+vhdl work "i2c_ram_interface.vhd"
+vhdl work "TbI2CRamInterface.vhd"

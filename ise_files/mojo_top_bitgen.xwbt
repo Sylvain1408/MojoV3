@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\CAO-PCB\Documents\MojoV3\ise_files\mojo_top.ncd
-OUTFILE=C:\Users\CAO-PCB\Documents\MojoV3\ise_files\mojo_top.bit
+INFILE=C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\mojo_top.ncd
+OUTFILE=C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\mojo_top.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=C:\Users\CAO-PCB\Documents\MojoV3\ise_files
+WORKINGDIR=C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files
 LICENSE=WebPack
-USER_INFO=211039234_0_0_759
+USER_INFO=__0_0_0

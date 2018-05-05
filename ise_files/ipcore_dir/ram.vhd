@@ -22,7 +22,7 @@
 --    devices, or systems.  Use in such applications are expressly            --
 --    prohibited.                                                             --
 --                                                                            --
---    (c) Copyright 1995-2016 Xilinx, Inc.                                    --
+--    (c) Copyright 1995-2018 Xilinx, Inc.                                    --
 --    All rights reserved.                                                    --
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -111,8 +111,8 @@ END COMPONENT;
       c_mem_type => 2,
       c_mux_pipeline_stages => 0,
       c_prim_type => 1,
-      c_read_depth_a => 512,
-      c_read_depth_b => 512,
+      c_read_depth_a => 32,
+      c_read_depth_b => 32,
       c_read_width_a => 32,
       c_read_width_b => 32,
       c_rst_priority_a => "CE",
@@ -129,8 +129,8 @@ END COMPONENT;
       c_use_softecc => 0,
       c_wea_width => 4,
       c_web_width => 4,
-      c_write_depth_a => 512,
-      c_write_depth_b => 512,
+      c_write_depth_a => 32,
+      c_write_depth_b => 32,
       c_write_mode_a => "WRITE_FIRST",
       c_write_mode_b => "WRITE_FIRST",
       c_write_width_a => 32,

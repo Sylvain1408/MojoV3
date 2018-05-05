@@ -1,4 +1,4 @@
--bd "C:\Users\CAO-PCB\Documents\MojoV3\microblaze_src\test\Debug\test.elf" tag microblaze_mcs
+-bd "C:\Users\Sylvain-Laptop\Desktop\MojoV3\microblaze_src\test\Debug\test.elf" tag microblaze_mcs
 -w
 -g Binary:yes
 -g Compress

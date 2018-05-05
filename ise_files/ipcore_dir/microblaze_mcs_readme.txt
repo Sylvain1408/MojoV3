@@ -1,5 +1,5 @@
 The following files were generated for 'microblaze_mcs' in directory
-C:\Users\Sylvain\Desktop\Mojo-Base-VHDL\ise_files\ipcore_dir\
+C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\
 
 Generate XCO file:
    CORE Generator input file containing the parameters used to generate a core.

@@ -37,7 +37,7 @@ entity i2c is
 		ram_dout : IN std_logic_vector(31 downto 0);
 		ram_addr : OUT std_logic_vector(31 downto 0);
 		ram_byte : OUT std_logic_vector(3 downto 0);
-		reset_in					: IN std_logic;
+		reset_in	: IN std_logic;
 		scl : INOUT std_logic;
 		sda : INOUT std_logic;
 		
@@ -110,6 +110,7 @@ signal SCL_OUT : std_logic;
 		stop						: IN std_logic;
 		go				 			: IN std_logic;
 		reset_n					: OUT std_logic;
+		reset_sync				: OUT std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
 		reset_in					: IN std_logic;
@@ -125,7 +126,7 @@ begin
 	PORT MAP(
 		MCLK => clk,
 		nRST => reset_n,
-		SRST => '0',
+		SRST => reset_sync,
 		TIC => tic_sig,
 		DIN => slave_din,
 		DOUT => slave_dout,
@@ -148,6 +149,7 @@ begin
 	PORT MAP(
 		clk => clk,
 		reset_n => reset_n,
+		reset_sync => reset_sync,
 		--RAM side
 		ram_write => ram_din,
 		ram_read => ram_dout,

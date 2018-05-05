@@ -7,7 +7,7 @@ Port A Read Width		:	32
 Port B Read Width		:	32
 Port A Write Width		:	32
 Port B Write Width		:	32
-Memory Depth			:	512
+Memory Depth			:	32
 --------------------------------------------------------------
 
 Block RAM resource(s) (9K BRAMs)		: 0
