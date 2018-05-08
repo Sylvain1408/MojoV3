@@ -67,8 +67,6 @@ entity i2c_ram_interface is
 		data_valid				: IN std_logic;
 		stop						: IN std_logic;
 		go				 			: IN std_logic;
-		reset_n					: OUT std_logic;
-		reset_sync				: OUT std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
 		reset_in					: IN std_logic;
@@ -134,6 +132,9 @@ main : process(clk, go)
 		if(go = '1' and main_process_state = idle)then
 			main_process_state <= ready;
 		end if;
+		if(reset_in = '1')then
+			main_process_state <= idle;
+		end if;
 		
 		case main_process_state is
 			when idle =>
@@ -146,7 +147,6 @@ main : process(clk, go)
 				device <= "0000000";
 				rd <= '0';
 				we <= '0';
-				reset_n <= '1';
 				led(7 downto 3) <= "00000";
 				
 			when ready =>--waiting on go signal to start
@@ -208,8 +208,8 @@ main : process(clk, go)
 				slave_din <= data_word( (8*(nb_bytes)-1) downto ((8*(nb_bytes)-8)));
 				led(7 downto 3) <= "11111";
 				if(data_valid = '1')then	
-					data_recv((8*(3-nb_bytes)+7) downto (8*(3-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
-					--data_recv((8*(nb_bytes+1)-1) downto ((8*(nb_bytes+1)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
+					--data_recv((8*(3-nb_bytes)+7) downto (8*(3-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
+					data_recv((8*(nb_bytes+1)-1) downto ((8*(nb_bytes+1)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
 				end if;
 				
 			when send_back_setup =>
@@ -225,8 +225,8 @@ main : process(clk, go)
 					main_process_state <= done;
 				end if;
 				if(data_valid = '1')then	--catch last one
-					data_recv((8*(4-nb_bytes)+7) downto (8*(4-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
-					--data_recv((8*(nb_bytes)-1) downto ((8*(nb_bytes)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
+					--data_recv((8*(4-nb_bytes)+7) downto (8*(4-nb_bytes))) <= slave_dout;--word @ 0x0 =| 7 dowto 0
+					data_recv((8*(nb_bytes)-1) downto ((8*(nb_bytes)-8))) <= slave_dout;--word @ 0x0 =| 31 dowto 24
 				end if;
 				
 			when done =>
@@ -252,7 +252,7 @@ main : process(clk, go)
 	end process main;
 	
 --300kHz clock generator from 50MHz (to finally drive I2C at 100KHz)
-clock_gen : process(clk)
+clock_gen : process(clk, tic_go)
 	begin
 		if( clk'event and clk = '1' and tic_go = '1')then	
 			if(tic_counter < 167)then

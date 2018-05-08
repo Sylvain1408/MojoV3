@@ -47,8 +47,6 @@ end i2c;
 
 architecture Behavioral of i2c is
 
-signal reset_n : std_logic;
-signal reset_sync : std_logic;
 signal addr : std_logic_vector(6 downto 0);
 signal data_wr : std_logic_vector(7 downto 0);
 signal data_rd : std_logic_vector(7 downto 0);
@@ -109,8 +107,6 @@ signal SCL_OUT : std_logic;
 		data_valid				: IN std_logic;
 		stop						: IN std_logic;
 		go				 			: IN std_logic;
-		reset_n					: OUT std_logic;
-		reset_sync				: OUT std_logic;
 		status					: IN std_logic_vector(2 downto 0);
 		ack_error 				: IN std_logic;
 		reset_in					: IN std_logic;
@@ -125,8 +121,8 @@ begin
 	SubModule_i2c_physical: i2cmaster 
 	PORT MAP(
 		MCLK => clk,
-		nRST => reset_n,
-		SRST => reset_sync,
+		nRST => not reset_in,
+		SRST => '0',
 		TIC => tic_sig,
 		DIN => slave_din,
 		DOUT => slave_dout,
@@ -148,8 +144,7 @@ begin
 	SubModule_i2c_ram_interface: i2c_ram_interface 
 	PORT MAP(
 		clk => clk,
-		reset_n => reset_n,
-		reset_sync => reset_sync,
+		reset_in => reset_in,
 		--RAM side
 		ram_write => ram_din,
 		ram_read => ram_dout,
@@ -168,7 +163,6 @@ begin
 		stop	=> stop,
 		status => status,
 		ack_error => ack_error,
-		reset_in => reset_in,
 		device => device,
 		
 		led => led

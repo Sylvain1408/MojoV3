@@ -36,7 +36,6 @@ entity ram_interface is
 		mcs_addr	: IN std_logic_vector(31 downto 0);
 		mcs_read	: OUT std_logic_vector(31 downto 0);
 		mcs_write : IN std_logic_vector(31 downto 0);
-		mcs_byte_enable : IN std_logic_vector(3 downto 0);
 		mcs_ready : OUT std_logic; 
 		mcs_rd_strobe : IN std_logic;
 		mcs_wr_strobe : IN std_logic;
@@ -55,9 +54,6 @@ end ram_interface;
 architecture Behavioral of ram_interface is
 
 signal rw : std_logic;
-
-signal addr : std_logic_vector(31 downto 0);
-signal word : std_logic_vector(31 downto 0);
 
 signal led_signal : std_logic_vector(7 downto 0) := "11111111";
 type machine is (waiting, buffering, writing);
@@ -81,7 +77,6 @@ buff_interface : process(clk, mcs_addr_strobe, mcs_rd_strobe, mcs_wr_strobe)
 					if(mcs_wr_strobe = '1')then
 						ram_byte_enable <= "1111";
 						rw <= '1';
-						word <= mcs_write;
 						ram_write <= mcs_write;
 						state <= writing;
 					else
@@ -114,7 +109,6 @@ buff_interface : process(clk, mcs_addr_strobe, mcs_rd_strobe, mcs_wr_strobe)
 			when others =>
 				null;
 			end case;
-			led <= addr(7 downto 0);
 			
 		end if;
 end process buff_interface;

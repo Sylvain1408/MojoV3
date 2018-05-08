@@ -1,6 +1,6 @@
 
 
-<EDKSYSTEM EDKVERSION="14.5" EDWVERSION="1.2" TIMESTAMP="Fri May 04 19:53:54 2018">
+<EDKSYSTEM EDKVERSION="14.5" EDWVERSION="1.2" TIMESTAMP="Tue May 08 18:31:02 2018">
 
   <SYSTEMINFO ARCH="spartan6" DEVICE="xc6slx9" PACKAGE="tqg144" PART="xc6slx9tqg144-2" SOURCE="" SPEEDGRADE="-2"/>
 
@@ -238,13 +238,13 @@
         <CONNECTION INSTANCE="iomodule_0" PORT="GPI4_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    <!--
+    
     <PORT DIR="I" MHS_INDEX="45" NAME="INTC_Interrupt_0" SIGNAME="INTC_Interrupt_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
+    
     <!--
     <PORT DIR="I" MHS_INDEX="46" NAME="INTC_Interrupt_1" SIGNAME="INTC_Interrupt_1">
       <CONNECTIONS>
@@ -808,14 +808,14 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LEFT="0" LSB="1" MHS_INDEX="4" MPD_INDEX="11" MSB="0" NAME="WAKEUP" RIGHT="1" SIGNAME="INTC_IRQ &amp; Dbg_Wakeup" VECFORMULA="[0:1]">
-          <!--
+          
           <SIGNALS>
-          -->
+          
             <SIGNAL NAME="INTC_IRQ"/>
             <SIGNAL NAME="Dbg_Wakeup"/>
-          <!--
+          
           </SIGNALS>
-          -->
+          
           <CONNECTIONS>
             <CONNECTION INSTANCE="intc_irq &amp; dbg_wakeup"/>
           </CONNECTIONS>
@@ -5382,13 +5382,13 @@
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="44" MPD_INDEX="77" NAME="C_GPI4_INTERRUPT" TYPE="integer" VALUE="0">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="46" MPD_INDEX="78" NAME="C_INTC_USE_EXT_INTR" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="46" MPD_INDEX="78" NAME="C_INTC_USE_EXT_INTR" TYPE="integer" VALUE="1">
           <DESCRIPTION>Use External Interrupts</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="47" MPD_INDEX="79" NAME="C_INTC_INTR_SIZE" TYPE="integer" VALUE="1">
           <DESCRIPTION>Number of External Inputs</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="80" NAME="C_INTC_LEVEL_EDGE" TYPE="std_logic_vector" VALUE="0x0000"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="80" NAME="C_INTC_LEVEL_EDGE" TYPE="std_logic_vector" VALUE="0x0001"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="81" NAME="C_INTC_POSITIVE" TYPE="std_logic_vector" VALUE="0xFFFF"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="48" MPD_INDEX="82" NAME="C_INTC_HAS_FAST" TYPE="integer" VALUE="1">
           <DESCRIPTION>Use Low-latency Interrupt Handling</DESCRIPTION>
@@ -5623,10 +5623,10 @@
             <CONNECTION INSTANCE="External Ports" PORT="GPI4_Interrupt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="0" LSB="0" MHS_INDEX="45" MPD_INDEX="45" MSB="0" NAME="INTC_Interrupt" RIGHT="0" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="__NOC__" VECFORMULA="[(C_INTC_INTR_SIZE-1):0]">
-          <!--
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="0" LSB="0" MHS_INDEX="45" MPD_INDEX="45" MSB="0" NAME="INTC_Interrupt" RIGHT="0" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="INTC_INTERRUPT_0" VECFORMULA="[(C_INTC_INTR_SIZE-1):0]">
+          
           <SIGNALS>
-          -->
+          
             <!--
             <SIGNAL NAME="INTC_Interrupt_15"/>
             -->
@@ -5673,15 +5673,15 @@
             <SIGNAL NAME="INTC_Interrupt_1"/>
             -->
             <SIGNAL NAME="INTC_Interrupt_0"/>
-          <!--
+          
           </SIGNALS>
-          -->
+          
           <DESCRIPTION>Interrupt Inputs</DESCRIPTION>
-          <!--
+          
           <CONNECTIONS>
-            <CONNECTION INSTANCE="__NOC__"/>
+            <CONNECTION INSTANCE="INTC_INTERRUPT_0"/>
           </CONNECTIONS>
-          -->
+          
         </PORT>
         <PORT BUS="INTERRUPT" DEF_SIGNAME="Interrupt" DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="46" MPD_INDEX="46" NAME="INTC_IRQ" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="INTC_IRQ">
           <DESCRIPTION>Interrupt Request Output</DESCRIPTION>

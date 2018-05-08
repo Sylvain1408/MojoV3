@@ -16,6 +16,7 @@
 #include "xiomodule.h"
 
 
+extern void XNullHandler (void *);
 
 /*
 * The configuration table for devices
@@ -95,6 +96,42 @@ XIOModule_Config XIOModule_ConfigTable[] =
 			{
 				XNullHandler,
 				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *)XNULL
+			},
+			{
+				XNullHandler,
+				(void *) XNULL
 			}
 		}
 

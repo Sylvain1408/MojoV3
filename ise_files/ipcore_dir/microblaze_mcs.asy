@@ -34,6 +34,10 @@ LINE Normal 768 912 736 912
 PIN 768 912 RIGHT 36
 PINATTR PinName intc_irq
 PINATTR Polarity OUT
+LINE Wide 0 432 32 432
+PIN 0 432 LEFT 36
+PINATTR PinName intc_interrupt[0:0]
+PINATTR Polarity IN
 LINE Normal 768 944 736 944
 PIN 768 944 RIGHT 36
 PINATTR PinName io_addr_strobe

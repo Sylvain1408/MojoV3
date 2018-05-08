@@ -35,9 +35,9 @@
 #define I2C_GET_8B_DATA_2 (word, byte2) (word|0x00FF0000)
 #define I2C_GET_8B_DATA_3 (word, byte3) (word|0xFF000000)*/
 
-void I2C_Start(XIOModule* module, u32 I2C_C_BASEADDR);
-void I2C_Setup(XIOModule* module, u32 I2C_C_BASEADDR, u8 rw, u8 nb_bytes, u8 i2c_slave_addr, u8 ram_pointer);
-void I2C_Read_Data(XIOModule* module, u32 I2C_C_BASEADDR, u32* word);
-void I2C_Write_Data(XIOModule* module, u32 I2C_C_BASEADDR, u32 word);
+void I2cStart(XIOModule* module, u32 I2C_C_BASEADDR);
+void I2cSetup(XIOModule* module, u32 I2C_C_BASEADDR, u8 rw, u8 nb_bytes, u8 i2c_slave_addr, u8 ram_pointer);
+void I2cReadWord(XIOModule* module, u32 I2C_C_BASEADDR, u32* word);
+void I2cWriteWord(XIOModule* module, u32 I2C_C_BASEADDR, u32 word);
 
 #endif /* I2C_H_ */

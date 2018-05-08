@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: mojo_top.prj
 
@@ -145,6 +145,7 @@ Parsing architecture <Behavioral> of entity <module_register_signals>.
 Parsing VHDL file "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\i2c.vhd" into library work
 Parsing entity <i2c>.
 Parsing architecture <Behavioral> of entity <i2c>.
+WARNING:HDLCompiler:946 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\i2c.vhd" Line 124: Actual for formal port nrst is neither a static name nor a globally static expression
 Parsing VHDL file "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" into library work
 Parsing entity <mojo_top>.
 Parsing architecture <RTL> of entity <mojo_top>.
@@ -179,19 +180,15 @@ Elaborating entity <serial_tx> (architecture <RTL>) with generics from library <
 INFO:HDLCompiler:679 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\serial_tx.vhd" Line 96. Case statement is complete. others clause is never selected
 
 Elaborating entity <ram_interface> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ram_interface.vhd" Line 114. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ram_interface.vhd" Line 69: Assignment to word ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ram_interface.vhd" Line 59: Net <addr[7]> does not have a driver.
+INFO:HDLCompiler:679 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ram_interface.vhd" Line 109. Case statement is complete. others clause is never selected
 
 Elaborating entity <i2c> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <I2CMASTER> (architecture <rtl>) from library <work>.
 
 Elaborating entity <i2c_ram_interface> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd" Line 257: tic_go should be on the sensitivity list of the process
 
 Elaborating entity <Module_register_signals> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" Line 39: Net <channel[3]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -199,14 +196,16 @@ WARNING:HDLCompiler:634 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.v
 
 Synthesizing Unit <mojo_top>.
     Related source file is "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd".
-INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 197: Output port <sample> of the instance <avr_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 197: Output port <sample_channel> of the instance <avr_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 197: Output port <new_sample> of the instance <avr_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 225: Output port <GPO1> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 225: Output port <FIT1_Toggle> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 281: Output port <led> of the instance <Module_ram_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 319: Output port <led> of the instance <Module_enabler> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <channel> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 199: Output port <sample> of the instance <avr_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 199: Output port <sample_channel> of the instance <avr_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 199: Output port <new_sample> of the instance <avr_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 227: Output port <IO_Byte_Enable> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 227: Output port <GPO1> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 227: Output port <FIT1_Interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 227: Output port <FIT1_Toggle> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 227: Output port <INTC_IRQ> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 286: Output port <led> of the instance <Module_ram_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\mojo_top.vhd" line 323: Output port <led> of the instance <Module_enabler> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <mojo_top> synthesized.
@@ -231,12 +230,13 @@ Unit <avr_interface> synthesized.
 
 Synthesizing Unit <cclk_detector>.
     Related source file is "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\cclk_detector.vhd".
-    Found 1-bit register for signal <ready_q>.
     Found 9-bit register for signal <ctr_q>.
+    Found 1-bit register for signal <ready_q>.
     Found 9-bit adder for signal <ctr_q[8]_GND_6_o_add_1_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  10 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
 Unit <cclk_detector> synthesized.
 
 Synthesizing Unit <spi_slave>.
@@ -262,11 +262,11 @@ Synthesizing Unit <serial_rx_1>.
         CLK_PER_BIT = 100
         CTR_SIZE = 7
     Found 3-bit register for signal <bit_ctr_q>.
-    Found 1-bit register for signal <new_data_q>.
     Found 2-bit register for signal <state_q>.
+    Found 7-bit register for signal <ctr_q>.
+    Found 1-bit register for signal <new_data_q>.
     Found 1-bit register for signal <rx_q>.
     Found 8-bit register for signal <data_q>.
-    Found 7-bit register for signal <ctr_q>.
     Found finite state machine <FSM_0> for signal <state_q>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -274,6 +274,9 @@ Synthesizing Unit <serial_rx_1>.
     | Inputs             | 4                                              |
     | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
@@ -283,7 +286,7 @@ Synthesizing Unit <serial_rx_1>.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
-	inferred   6 Multiplexer(s).
+	inferred   7 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <serial_rx_1> synthesized.
 
@@ -291,12 +294,12 @@ Synthesizing Unit <serial_tx_1>.
     Related source file is "C:\Users\Sylvain-Laptop\Desktop\MojoV3\src\serial_tx.vhd".
         CLK_PER_BIT = 100
         CTR_SIZE = 7
+    Found 1-bit register for signal <tx_q>.
+    Found 2-bit register for signal <state_q>.
     Found 1-bit register for signal <block_q>.
     Found 8-bit register for signal <data_q>.
     Found 3-bit register for signal <bit_ctr_q>.
     Found 7-bit register for signal <ctr_q>.
-    Found 2-bit register for signal <state_q>.
-    Found 1-bit register for signal <tx_q>.
     Found finite state machine <FSM_1> for signal <state_q>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -304,6 +307,9 @@ Synthesizing Unit <serial_tx_1>.
     | Inputs             | 4                                              |
     | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
@@ -379,8 +385,8 @@ Synthesizing Unit <serial_rx_2>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit adder for signal <ctr_q[15]_GND_24_o_add_6_OUT> created at line 1241.
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_24_o_add_8_OUT> created at line 1241.
+    Found 16-bit adder for signal <ctr_q[15]_GND_27_o_add_6_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_27_o_add_8_OUT> created at line 1241.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  29 D-type flip-flop(s).
@@ -412,8 +418,8 @@ Synthesizing Unit <serial_tx_2>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_25_o_add_12_OUT> created at line 1241.
-    Found 16-bit adder for signal <ctr_q[15]_GND_25_o_add_19_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_28_o_add_12_OUT> created at line 1241.
+    Found 16-bit adder for signal <ctr_q[15]_GND_28_o_add_19_OUT> created at line 1241.
     Found 16-bit 4-to-1 multiplexer for signal <ctr_d> created at line 53.
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -425,9 +431,8 @@ Unit <serial_tx_2> synthesized.
 Synthesizing Unit <ram_interface>.
     Related source file is "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ram_interface.vhd".
 WARNING:Xst:647 - Input <mcs_addr<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <mcs_byte_enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <mcs_rd_strobe> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <addr<7:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <led> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 4-bit register for signal <ram_byte_enable>.
     Found 1-bit register for signal <rw>.
     Found 32-bit register for signal <ram_write>.
@@ -446,7 +451,6 @@ WARNING:Xst:653 - Signal <addr<7:0>> is used but never assigned. This sourceless
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    WARNING:Xst:2404 -  FFs/Latches <led<7:0>> (without init value) have a constant value of 0 in block <ram_interface>.
     Summary:
 	inferred 102 D-type flip-flop(s).
 	inferred   1 Finite State Machine(s).
@@ -454,8 +458,8 @@ Unit <ram_interface> synthesized.
 
 Synthesizing Unit <i2c>.
     Related source file is "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\i2c.vhd".
-    Found 1-bit tristate buffer for signal <scl> created at line 177
-    Found 1-bit tristate buffer for signal <sda> created at line 179
+    Found 1-bit tristate buffer for signal <scl> created at line 171
+    Found 1-bit tristate buffer for signal <sda> created at line 173
     Summary:
 	inferred   2 Tristate(s).
 Unit <i2c> synthesized.
@@ -482,13 +486,11 @@ WARNING:Xst:647 - Input <SCL_IN> is never used. This port will be preserved and 
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  42 D-type flip-flop(s).
-	inferred  72 Multiplexer(s).
+	inferred  71 Multiplexer(s).
 Unit <I2CMASTER> synthesized.
 
 Synthesizing Unit <i2c_ram_interface>.
     Related source file is "C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\i2c_ram_interface.vhd".
-WARNING:Xst:647 - Input <reset_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <reset_sync> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 32-bit register for signal <ram_addr>.
     Found 4-bit register for signal <ram_byte>.
     Found 32-bit register for signal <data_recv>.
@@ -511,27 +513,25 @@ INFO:Xst:1799 - State wait_queue is never reached in FSM <main_process_state>.
     Found finite state machine <FSM_7> for signal <main_process_state>.
     -----------------------------------------------------------------------
     | States             | 11                                             |
-    | Transitions        | 19                                             |
-    | Inputs             | 5                                              |
+    | Transitions        | 28                                             |
+    | Inputs             | 6                                              |
     | Outputs            | 11                                             |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit subtractor for signal <GND_32_o_GND_32_o_sub_45_OUT> created at line 211.
-    Found 4-bit subtractor for signal <GND_32_o_GND_32_o_sub_96_OUT> created at line 228.
-    Found 7-bit adder for signal <n0201> created at line 211.
-    Found 7-bit adder for signal <n0208> created at line 228.
-    Found 8-bit adder for signal <tic_counter[7]_GND_32_o_add_174_OUT> created at line 260.
-    Found 3-bit subtractor for signal <GND_32_o_GND_32_o_sub_26_OUT<2:0>> created at line 201.
-    Found 6-bit subtractor for signal <GND_32_o_GND_32_o_sub_31_OUT<5:0>> created at line 208.
-    Found 3-bit comparator greater for signal <PWR_28_o_setup_word[6]_LessThan_5_o> created at line 176
-    Found 3-bit comparator greater for signal <GND_32_o_nb_bytes[2]_LessThan_25_o> created at line 200
-    Found 8-bit comparator greater for signal <tic_counter[7]_PWR_28_o_LessThan_174_o> created at line 258
-    Found 8-bit comparator greater for signal <PWR_28_o_tic_counter[7]_LessThan_176_o> created at line 261
+    Found 4-bit adder for signal <n0227> created at line 212.
+    Found 8-bit adder for signal <tic_counter[7]_GND_36_o_add_170_OUT> created at line 260.
+    Found 3-bit subtractor for signal <GND_36_o_GND_36_o_sub_27_OUT<2:0>> created at line 201.
+    Found 6-bit subtractor for signal <GND_36_o_GND_36_o_sub_32_OUT<5:0>> created at line 208.
+    Found 6-bit subtractor for signal <GND_36_o_GND_36_o_sub_47_OUT<5:0>> created at line 212.
+    Found 3-bit comparator greater for signal <PWR_28_o_setup_word[6]_LessThan_6_o> created at line 176
+    Found 3-bit comparator greater for signal <GND_36_o_nb_bytes[2]_LessThan_26_o> created at line 200
+    Found 8-bit comparator greater for signal <tic_counter[7]_PWR_28_o_LessThan_170_o> created at line 258
+    Found 8-bit comparator greater for signal <PWR_28_o_tic_counter[7]_LessThan_172_o> created at line 261
     Summary:
-	inferred   7 Adder/Subtractor(s).
+	inferred   5 Adder/Subtractor(s).
 	inferred 204 D-type flip-flop(s).
 	inferred   4 Comparator(s).
 	inferred 128 Multiplexer(s).
@@ -551,14 +551,13 @@ Unit <Module_register_signals> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 18
+# Adders/Subtractors                                   : 16
  16-bit adder                                          : 2
  3-bit adder                                           : 5
  3-bit subtractor                                      : 1
- 4-bit adder                                           : 1
- 4-bit subtractor                                      : 2
- 6-bit subtractor                                      : 1
- 7-bit adder                                           : 4
+ 4-bit adder                                           : 2
+ 6-bit subtractor                                      : 2
+ 7-bit adder                                           : 2
  8-bit adder                                           : 1
  9-bit adder                                           : 1
 # Registers                                            : 77
@@ -575,18 +574,19 @@ Macro Statistics
 # Comparators                                          : 4
  3-bit comparator greater                              : 2
  8-bit comparator greater                              : 2
-# Multiplexers                                         : 234
- 1-bit 2-to-1 multiplexer                              : 167
+# Multiplexers                                         : 236
+ 1-bit 2-to-1 multiplexer                              : 169
  10-bit 2-to-1 multiplexer                             : 1
  16-bit 2-to-1 multiplexer                             : 6
  16-bit 4-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 11
  32-bit 2-to-1 multiplexer                             : 5
  4-bit 2-to-1 multiplexer                              : 3
- 5-bit 2-to-1 multiplexer                              : 21
+ 5-bit 2-to-1 multiplexer                              : 20
  7-bit 2-to-1 multiplexer                              : 7
  7-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 11
+ 9-bit 2-to-1 multiplexer                              : 1
 # Tristates                                            : 8
  1-bit tristate buffer                                 : 8
 # FSMs                                                 : 8
@@ -669,12 +669,11 @@ WARNING:Xst:2677 - Node <setup_word_31> of sequential type is unconnected in blo
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 8
  16-bit adder                                          : 2
- 3-bit subtractor                                      : 2
+ 3-bit adder                                           : 1
  4-bit adder                                           : 1
- 6-bit adder                                           : 2
- 6-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 2
  7-bit adder                                           : 2
 # Counters                                             : 8
  3-bit down counter                                    : 1
@@ -686,15 +685,15 @@ Macro Statistics
 # Comparators                                          : 4
  3-bit comparator greater                              : 2
  8-bit comparator greater                              : 2
-# Multiplexers                                         : 240
- 1-bit 2-to-1 multiplexer                              : 181
+# Multiplexers                                         : 241
+ 1-bit 2-to-1 multiplexer                              : 183
  10-bit 2-to-1 multiplexer                             : 1
  16-bit 2-to-1 multiplexer                             : 6
  16-bit 4-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 5
  32-bit 2-to-1 multiplexer                             : 5
  4-bit 2-to-1 multiplexer                              : 3
- 5-bit 2-to-1 multiplexer                              : 21
+ 5-bit 2-to-1 multiplexer                              : 20
  7-bit 2-to-1 multiplexer                              : 7
  7-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 9
@@ -850,28 +849,22 @@ Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 22.
 INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
-INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 30 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
 INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
-INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 30 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
 
 Final Macro Processing ...
-
-Processing Unit <mojo_top> :
-	Found 2-bit shift register for signal <Module_I2C/SubModule_i2c_physical/sda_in_qq>.
-Unit <mojo_top> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 435
- Flip-Flops                                            : 435
-# Shift Registers                                      : 1
- 2-bit shift register                                  : 1
+# Registers                                            : 437
+ Flip-Flops                                            : 437
 
 =========================================================================
 
@@ -894,45 +887,44 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1426
+# BELS                             : 1436
 #      GND                         : 3
-#      INV                         : 30
-#      LUT1                        : 48
-#      LUT2                        : 148
-#      LUT3                        : 154
-#      LUT4                        : 291
-#      LUT5                        : 90
-#      LUT6                        : 243
+#      INV                         : 28
+#      LUT1                        : 40
+#      LUT2                        : 161
+#      LUT3                        : 142
+#      LUT4                        : 290
+#      LUT5                        : 85
+#      LUT6                        : 264
 #      LUT6_2                      : 90
 #      MULT_AND                    : 3
 #      MUXCY                       : 45
 #      MUXCY_L                     : 84
 #      MUXF5                       : 66
 #      MUXF6                       : 1
-#      MUXF7                       : 18
+#      MUXF7                       : 22
 #      VCC                         : 3
 #      XORCY                       : 109
-# FlipFlops/Latches                : 1006
-#      FD                          : 168
-#      FDC                         : 5
-#      FDCE                        : 22
-#      FDE                         : 443
-#      FDP                         : 1
+# FlipFlops/Latches                : 1041
+#      FD                          : 144
+#      FDC                         : 16
+#      FDCE                        : 69
+#      FDE                         : 439
+#      FDP                         : 6
 #      FDPE                        : 1
-#      FDR                         : 115
-#      FDRE                        : 213
+#      FDR                         : 118
+#      FDRE                        : 210
 #      FDS                         : 13
 #      FDSE                        : 25
 # RAMS                             : 81
 #      RAM32X1D                    : 64
 #      RAMB16BWER                  : 17
-# Shift Registers                  : 55
+# Shift Registers                  : 54
 #      SRL16E                      : 54
-#      SRLC16E                     : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 23
-#      IBUF                        : 7
+# IO Buffers                       : 24
+#      IBUF                        : 8
 #      IOBUF                       : 1
 #      OBUF                        : 8
 #      OBUFT                       : 7
@@ -944,23 +936,23 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1006  out of  11440     8%  
- Number of Slice LUTs:                 1277  out of   5720    22%  
-    Number used as Logic:              1094  out of   5720    19%  
-    Number used as Memory:              183  out of   1440    12%  
+ Number of Slice Registers:            1041  out of  11440     9%  
+ Number of Slice LUTs:                 1282  out of   5720    22%  
+    Number used as Logic:              1100  out of   5720    19%  
+    Number used as Memory:              182  out of   1440    12%  
        Number used as RAM:              128
-       Number used as SRL:               55
+       Number used as SRL:               54
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1692
-   Number with an unused Flip Flop:     686  out of   1692    40%  
-   Number with an unused LUT:           415  out of   1692    24%  
-   Number of fully used LUT-FF pairs:   591  out of   1692    34%  
-   Number of unique control sets:        79
+ Number of LUT Flip Flop pairs used:   1732
+   Number with an unused Flip Flop:     691  out of   1732    39%  
+   Number with an unused LUT:           450  out of   1732    25%  
+   Number of fully used LUT-FF pairs:   591  out of   1732    34%  
+   Number of unique control sets:        84
 
 IO Utilization: 
- Number of IOs:                          24
- Number of bonded IOBs:                  24  out of    102    23%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    102    24%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               17  out of     32    53%  
@@ -988,7 +980,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 1142  |
+clk                                | BUFGP                  | 1176  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1000,7 +992,7 @@ Timing Summary:
 Speed Grade: -2
 
    Minimum period: 8.653ns (Maximum Frequency: 115.571MHz)
-   Minimum input arrival time before clock: 4.794ns
+   Minimum input arrival time before clock: 5.801ns
    Maximum output required time after clock: 5.610ns
    Maximum combinational path delay: 6.005ns
 
@@ -1011,7 +1003,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.653ns (frequency: 115.571MHz)
-  Total number of paths / destination ports: 174519 / 3642
+  Total number of paths / destination ports: 174960 / 3717
 -------------------------------------------------------------------------
 Delay:               8.653ns (Levels of Logic = 5)
   Source:            mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
@@ -1036,23 +1028,23 @@ Delay:               8.653ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 79 / 79
+  Total number of paths / destination ports: 232 / 186
 -------------------------------------------------------------------------
-Offset:              4.794ns (Levels of Logic = 2)
+Offset:              5.801ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
-  Destination:       Inst_Module_UART_interface/serial_rx/bit_ctr_q_2 (FF)
+  Destination:       avr_interface/cclk_detector/ctr_q_8 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst_n to Inst_Module_UART_interface/serial_rx/bit_ctr_q_2
+  Data Path: rst_n to avr_interface/cclk_detector/ctr_q_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            22   1.328   1.333  rst_n_IBUF (Inst_Module_UART_interface/serial_rx/rst_inv)
-     INV:I->O             26   0.255   1.419  rst1_INV_0 (rst)
-     FDC:CLR                   0.459          Inst_Module_UART_interface/serial_rx/new_data_q
+     IBUF:I->O            39   1.328   1.636  rst_n_IBUF (Inst_Module_UART_interface/serial_rx/rst_inv)
+     INV:I->O             89   0.255   2.123  rst1_INV_0 (Module_I2C/SubModule_i2c_physical/nRST_inv)
+     FDP:PRE                   0.459          Module_I2C/SubModule_i2c_physical/sda_in_q
     ----------------------------------------
-    Total                      4.794ns (2.042ns logic, 2.752ns route)
-                                       (42.6% logic, 57.4% route)
+    Total                      5.801ns (2.042ns logic, 3.759ns route)
+                                       (35.2% logic, 64.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1067,7 +1059,7 @@ Offset:              5.610ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               8   0.525   0.943  avr_interface/cclk_detector/ready_q (avr_interface/cclk_detector/ready_q)
+     FDC:C->Q              8   0.525   0.943  avr_interface/cclk_detector/ready_q (avr_interface/cclk_detector/ready_q)
      INV:I->O              9   0.255   0.975  avr_interface/n_rdy1_INV_0 (avr_interface/n_rdy)
      OBUFT:T->O                2.912          spi_channel_3_OBUFT (spi_channel<3>)
     ----------------------------------------
@@ -1110,13 +1102,13 @@ clk            |    8.653|         |         |         |
 
 
 Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 14.55 secs
+Total CPU time to Xst completion: 13.17 secs
  
 --> 
 
-Total memory usage is 287416 kilobytes
+Total memory usage is 287032 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   77 (   0 filtered)
-Number of infos    :   20 (   0 filtered)
+Number of warnings :   69 (   0 filtered)
+Number of infos    :   23 (   0 filtered)
 

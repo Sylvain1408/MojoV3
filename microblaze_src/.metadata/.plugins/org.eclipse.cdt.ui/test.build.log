@@ -1,33 +1,38 @@
-16:11:01 **** Auto Build of configuration Debug for project test ****
+10:12:24 **** Auto Build of configuration Debug for project test ****
 make all 
-'Building file: ../src/helloworld.c'
+'Building file: ../src/Mojo.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_mcs/include -I"C:\Xilinx_ISE\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src" -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_mcs/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Mojo.d" -MT"src/Mojo.d" -o "src/Mojo.o" "../src/Mojo.c"
+In file included from ../../test_bsp/microblaze_mcs/include/xiomodule.h:243:0,
+                 from ../src/Mojo.c:42:
+../../test_bsp/microblaze_mcs/include/xiomodule_l.h:119:0: warning: "XUL_STATUS_REG_OFFSET" redefined [enabled by default]
+C:\Xilinx_ISE\14.7\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v2_01_a\src/xuartlite_l.h:104:0: note: this is the location of the previous definition
+'Finished building: ../src/Mojo.c'
 ' '
 'Building target: test.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/ds1307.o ./src/helloworld.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/Mojo.o ./src/ds1307.o ./src/i2c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9762	    412	   2306	  12480	   30c0	test.elf
+  14398	    484	   2340	  17222	   4346	test.elf
 'Finished building: test.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
-elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+elfcheck test.elf -hw ../../Mojo_32K/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
 elfcheck
 Xilinx EDK 14.7 Build EDK_P.20131013
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Command Line: elfcheck -hw ../../Mojo_HW/system.xml -pe microblaze_mcs test.elf 
+Command Line: elfcheck -hw ../../Mojo_32K/system.xml -pe microblaze_mcs test.elf
+ 
 
 ELF file	: test.elf
 elfcheck passed.
 'Finished building: test.elf.elfcheck'
 ' '
 
-16:11:03 Build Finished (took 2s.314ms)
+10:12:27 Build Finished (took 2s.463ms)
 

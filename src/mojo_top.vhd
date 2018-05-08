@@ -24,7 +24,8 @@ entity mojo_top is
 		avr_rx		: out std_logic;		-- serial data for AVR/USB to receive (FPGA transmit)
 		avr_rx_busy : in  std_logic;			-- AVR/USB buffer full (don't send data when true)
 		i2c_scl		: inout std_logic;
-		i2c_sda		: inout std_logic
+		i2c_sda		: inout std_logic;
+		int_1	: in std_logic_vector(0 downto 0)
 	);
 	
 	
@@ -60,7 +61,6 @@ signal write_strobe : std_logic;
 signal address_out : std_logic_vector(31 downto 0);
 signal write_data : std_logic_vector(31 downto 0);
 signal read_data : std_logic_vector(31 downto 0);
-signal byte_enable : std_logic_vector(3 downto 0);
 signal ready : std_logic;
 signal FIT1_Toggle : std_logic;
 signal GPO1 : std_logic_vector(7 downto 0);
@@ -76,15 +76,18 @@ COMPONENT microblaze_mcs
     IO_Addr_Strobe : OUT STD_LOGIC;
     IO_Read_Strobe : OUT STD_LOGIC;
     IO_Write_Strobe : OUT STD_LOGIC;
-    IO_Address : OUT STD_LOGIC_VECTOR(31 downto 0);
-    IO_Byte_Enable : OUT STD_LOGIC_VECTOR(3 downto 0);
-    IO_Write_Data : OUT STD_LOGIC_VECTOR(31 downto 0);
-    IO_Read_Data : IN STD_LOGIC_VECTOR(31 downto 0);
+    IO_Address : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    IO_Byte_Enable : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    IO_Write_Data : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    IO_Read_Data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     IO_Ready : IN STD_LOGIC;
-	 UART_Rx : IN STD_LOGIC;
+    UART_Rx : IN STD_LOGIC;
     UART_Tx : OUT STD_LOGIC;
+    FIT1_Interrupt : OUT STD_LOGIC;
     FIT1_Toggle : OUT STD_LOGIC;
-    GPO1 : OUT STD_LOGIC_VECTOR(7 downto 0)
+    GPO1 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    INTC_Interrupt : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    INTC_IRQ : OUT STD_LOGIC
   );
 END COMPONENT;
 
@@ -134,7 +137,6 @@ END COMPONENT;
 		clk : IN std_logic;
 		mcs_addr : IN std_logic_vector(31 downto 0);
 		mcs_write : IN std_logic_vector(31 downto 0);
-		mcs_byte_enable : IN std_logic_vector(3 downto 0);
 		mcs_rd_strobe : IN std_logic;
 		mcs_wr_strobe : IN std_logic;
 		mcs_addr_strobe : IN std_logic;
@@ -159,7 +161,7 @@ COMPONENT i2c
 		ram_dout : IN std_logic_vector(31 downto 0);
 		ram_addr : OUT std_logic_vector(31 downto 0);
 		ram_byte : OUT std_logic_vector(3 downto 0);
-		reset_in					: IN std_logic;
+		reset_in	: IN std_logic;
 		scl : INOUT std_logic;
 		sda : INOUT std_logic;
 		
@@ -197,7 +199,7 @@ begin
 	avr_interface : entity work.avr_interface
 		port map (
 			clk			=> clk,				-- 50Mhz clock
-			rst			=> '0',				-- reset signal
+			rst			=> rst,			-- reset signal
 			-- AVR MCU pin connections (that will be managed)
 			cclk		=> cclk,
 			spi_miso	=> spi_miso,
@@ -209,7 +211,7 @@ begin
 			tx_block	=> avr_rx_busy,
 			rx			=> avr_tx,
 			-- analog sample interface
-			channel		=> channel,			-- set this to channel to sample (0, 1, 4, 5, 6, 7, 8, or 9)
+			channel		=> X"0",			-- set this to channel to sample (0, 1, 4, 5, 6, 7, 8, or 9)
 			new_sample	=> new_sample,		-- indicates when new sample available
 			sample_channel => sample_channel,	-- channel number of sample (only when new_sample = '1')
 			sample		=> sample,			-- 10 bit sample value (only when new_sample = '1')
@@ -230,14 +232,17 @@ begin
 			 IO_Read_Strobe => read_strobe,
 			 IO_Write_Strobe => write_strobe,
 			 IO_Address => address_out,
-			 IO_Byte_Enable => byte_enable,
+			 IO_Byte_Enable => open,
 			 IO_Write_Data => write_data,
 			 IO_Read_Data => read_data,
 			 IO_Ready => ready,
 			 UART_Rx => mcs_rx,
 			 UART_Tx => mcs_tx,
 			 FIT1_Toggle => open,
-			 GPO1 => open
+			 GPO1 => open,
+			 FIT1_Interrupt => open,
+			 INTC_Interrupt => int_1,
+			 INTC_IRQ => open
 	);
 
 	dual_bram_0 : ram
@@ -284,7 +289,6 @@ begin
 		mcs_addr => address_out,
 		mcs_read => read_data,
 		mcs_write => write_data,
-		mcs_byte_enable => byte_enable,
 		mcs_ready => ready,
 		mcs_rd_strobe => read_strobe,
 		mcs_wr_strobe => write_strobe,
@@ -309,7 +313,7 @@ begin
 			ram_din => data_in_b,
 			ram_dout => data_out_b,
 			ram_byte => byte_enable_b,
-			reset_in => rst_n,
+			reset_in => rst,
 			scl => i2c_scl,
 			sda => i2c_sda,
 			

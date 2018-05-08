@@ -6,7 +6,7 @@
  */
 #include "ds1307.h"
 
-void ds1307SetSeconds(unsigned int* word, unsigned int seconds)
+void ds1307SetSeconds(u8* word, unsigned int seconds)
 {
 	if(seconds < 10)
 		DS1307_SET_SECONDS(*word, seconds);
@@ -16,12 +16,12 @@ void ds1307SetSeconds(unsigned int* word, unsigned int seconds)
 	}
 }
 
-unsigned int ds1307GetSeconds(unsigned int word)
+unsigned int ds1307GetSeconds(u8 word)
 {
-	return DS1307_GET_SECONDS(word) + DS1307_GET_10_SECONDS(word);
+	return DS1307_GET_SECONDS(word) + 10*DS1307_GET_10_SECONDS(word);
 }
 
-void ds1307SetMinutes(unsigned int* word, unsigned int minutes)
+void ds1307SetMinutes(u8* word, unsigned int minutes)
 {
 	if(minutes < 10)
 			DS1307_SET_MINUTES(*word, minutes);
@@ -31,12 +31,12 @@ void ds1307SetMinutes(unsigned int* word, unsigned int minutes)
 		}
 }
 
-unsigned int ds1307GetMinutes(unsigned int word)
+unsigned int ds1307GetMinutes(u8 word)
 {
-	return DS1307_GET_MINUTES(word) + DS1307_GET_10_MINUTES(word);
+	return DS1307_GET_MINUTES(word) + 10*DS1307_GET_10_MINUTES(word);
 }
 
-void ds1307SetHours(unsigned int* word, unsigned int hours)
+void ds1307SetHours(u8* word, unsigned int hours)
 {
 	if(hours < 10)
 			DS1307_SET_HOURS(*word, hours);
@@ -47,32 +47,30 @@ void ds1307SetHours(unsigned int* word, unsigned int hours)
 		}
 }
 
-unsigned int ds1307GetHours(unsigned int word)
+unsigned int ds1307GetHours(u8 word)
 {
-	return DS1307_GET_HOURS(word) + DS1307_GET_10_HOURS(word);
+	return DS1307_GET_HOURS(word) + 10*DS1307_GET_10_HOURS(word);
 }
 
-void ds1307SetAMPM(unsigned int* word, unsigned int am)
-{
-	DS1307_SET_AM_PM(*word, am);
+void ds1307Set24Mode(u8* word){
+	DS1307_SET_24_MODE(*word);
 }
 
-unsigned int ds1307GetAMPM(unsigned int word)
-{
-	return DS1307_GET_AM_PM(word);
+void ds1307Set12Mode(u8* word){
+	DS1307_SET_12_MODE(*word);
 }
 
-void ds1307SetDay(unsigned int* word, unsigned int day)
+void ds1307SetDay(u8* word, unsigned int day)
 {
 	DS1307_SET_DAY(*word, day);
 }
 
-unsigned int ds1307GetDay(unsigned int word)
+unsigned int ds1307GetDay(u8 word)
 {
 	return DS1307_GET_DAY(word);
 }
 
-void ds1307SetDate(unsigned int* word, unsigned int date)
+void ds1307SetDate(u8* word, unsigned int date)
 {
 	if(date < 10)
 		DS1307_SET_HOURS(*word, date);
@@ -83,12 +81,12 @@ void ds1307SetDate(unsigned int* word, unsigned int date)
 	}
 }
 
-unsigned int ds1307GetDate(unsigned int word)
+unsigned int ds1307GetDate(u8 word)
 {
-	return DS1307_GET_DATE(word) + DS1307_GET_10_DATE(word);
+	return DS1307_GET_DATE(word) + 10*DS1307_GET_10_DATE(word);
 }
 
-void ds1307SetMonth(unsigned int* word, unsigned int month)
+void ds1307SetMonth(u8* word, unsigned int month)
 {
 	if(month < 10)
 		DS1307_SET_MONTH(*word, month);
@@ -99,12 +97,12 @@ void ds1307SetMonth(unsigned int* word, unsigned int month)
 	}
 }
 
-unsigned int ds1307GetMonth(unsigned int word)
+unsigned int ds1307GetMonth(u8 word)
 {
-	return DS1307_GET_MONTH(word) + DS1307_GET_10_MONTH(word);
+	return DS1307_GET_MONTH(word) + 10*DS1307_GET_10_MONTH(word);
 }
 
-void ds1307SetYear(unsigned int* word, unsigned int year)
+void ds1307SetYear(u8* word, unsigned int year)
 {
 	if(year < 10)
 		DS1307_SET_YEAR(*word, year);
@@ -114,38 +112,8 @@ void ds1307SetYear(unsigned int* word, unsigned int year)
 	}
 }
 
-unsigned int ds1307GetYear(unsigned int word)
+unsigned int ds1307GetYear(u8 word)
 {
-	return DS1307_GET_YEAR(word) + DS1307_GET_10_YEAR(word);
-}
-
-void ds1307SetTime(XIOModule* module, unsigned int I2C_BASEADDR, unsigned int seconds, unsigned int minutes, unsigned int hours, unsigned int AmPm,
-		unsigned int day, unsigned int date, unsigned int month, unsigned int year)
-{
-	unsigned int word = 0;
-
-	ds1307SetSeconds(&word, seconds);
-	I2C_Write_Data(module, I2C_BASEADDR, word);
-
-	ds1307SetMinutes(&word, minutes);
-	I2C_Write_Data(module, I2C_BASEADDR, word);
-
-	ds1307SetHours(&word, hours);
-	I2C_Write_Data(module, I2C_BASEADDR, word);
-
-	ds1307SetDay(&word, day);
-	I2C_Write_Data(module, I2C_BASEADDR, word);
-
-	ds1307SetAMPM(&word, AmPm);
-	I2C_Write_Data(module, I2C_BASEADDR, word);
-
-	ds1307SetDate(&word, date);
-	I2C_Write_Data(module, I2C_BASEADDR, word);
-
-	ds1307SetMonth(&word, month);
-	I2C_Write_Data(module, I2C_BASEADDR, word);
-
-	ds1307SetYear(&word, year);
-	I2C_Write_Data(module, I2C_BASEADDR, word);
+	return DS1307_GET_YEAR(word) + 10*DS1307_GET_10_YEAR(word);
 }
 

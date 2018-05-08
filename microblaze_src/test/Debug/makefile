@@ -38,7 +38,7 @@ all: test.elf secondary-outputs
 test.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MicroBlaze gcc linker'
-	mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_mcs/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -50,7 +50,7 @@ test.elf.size: test.elf
 
 test.elf.elfcheck: test.elf
 	@echo 'Invoking: Xilinx ELF Check'
-	elfcheck test.elf -hw ../../Mojo_HW/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
+	elfcheck test.elf -hw ../../Mojo_32K/system.xml -pe microblaze_mcs  |tee "test.elf.elfcheck"
 	@echo 'Finished building: $@'
 	@echo ' '
 

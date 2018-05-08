@@ -3,15 +3,15 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sat May 05 16:52:52 2018">
+<application name="pn" timeStamp="Tue May 08 19:48:29 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="D5F012D4F94A44C7BABAB085E4FFBB04" type="project"/>
-<property name="ProjectIteration" value="367" type="project"/>
+<property name="ProjectIteration" value="376" type="project"/>
 <property name="ProjectFile" value="C:/Users/Sylvain-Laptop/Desktop/MojoV3/ise_files/Mojo-Base-VHDL.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-05-10T21:09:57" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
-<property name="PROP_Enable_Message_Filtering" value="true" type="design"/>
+<property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
 <property name="PROP_FitterReportFormat" value="HTML" type="process"/>
 <property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
 <property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
@@ -28,7 +28,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_bitgen_otherCmdLineOptions_spartan6" value="-bd "C:\Users\Sylvain-Laptop\Desktop\MojoV3\microblaze_src\test\Debug\test.elf" tag microblaze_mcs" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-05-10T21:09:57" type="design"/>
 <property name="PROP_intWbtProjectID" value="D5F012D4F94A44C7BABAB085E4FFBB04" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="367" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="376" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_ngdbuild_otherCmdLineOptions" value="-bm "ipcore_dir/microblaze_mcs.bmm"" type="process"/>

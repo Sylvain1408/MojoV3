@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat May 05 16:52:49 2018
+// Written by: Map P.20131013 on Tue May 08 19:52:34 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -25,6 +25,7 @@ COMP "led<4>" LOCATE = SITE "P127" LEVEL 1;
 COMP "led<5>" LOCATE = SITE "P126" LEVEL 1;
 COMP "led<6>" LOCATE = SITE "P124" LEVEL 1;
 COMP "led<7>" LOCATE = SITE "P123" LEVEL 1;
+COMP "int_1<0>" LOCATE = SITE "P121" LEVEL 1;
 COMP "avr_rx" LOCATE = SITE "P59" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
@@ -209,6 +210,7 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "avr_interface/cclk_detector/ctr_q_2" BEL
         "avr_interface/cclk_detector/ctr_q_1" BEL
         "avr_interface/cclk_detector/ctr_q_0" BEL
+        "avr_interface/cclk_detector/ready_q" BEL
         "avr_interface/serial_tx/bit_ctr_q_2" BEL
         "avr_interface/serial_tx/bit_ctr_q_1" BEL
         "avr_interface/serial_tx/bit_ctr_q_0" BEL
@@ -228,9 +230,9 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "avr_interface/serial_tx/data_q_3" BEL
         "avr_interface/serial_tx/data_q_2" BEL
         "avr_interface/serial_tx/data_q_1" BEL
-        "avr_interface/serial_tx/data_q_0" BEL "avr_interface/serial_tx/tx_q"
-        BEL "avr_interface/serial_tx/block_q" BEL
-        "avr_interface/spi_slave/bit_ct_q_2" BEL
+        "avr_interface/serial_tx/data_q_0" BEL
+        "avr_interface/serial_tx/block_q" BEL "avr_interface/serial_tx/tx_q"
+        BEL "avr_interface/spi_slave/bit_ct_q_2" BEL
         "avr_interface/spi_slave/bit_ct_q_1" BEL
         "avr_interface/spi_slave/bit_ct_q_0" BEL
         "avr_interface/spi_slave/miso_q" BEL
@@ -257,6 +259,7 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "avr_interface/serial_rx/ctr_q_2" BEL
         "avr_interface/serial_rx/ctr_q_1" BEL
         "avr_interface/serial_rx/ctr_q_0" BEL
+        "avr_interface/serial_rx/new_data_q" BEL
         "avr_interface/serial_rx/data_q_7" BEL
         "avr_interface/serial_rx/data_q_6" BEL
         "avr_interface/serial_rx/data_q_5" BEL
@@ -590,15 +593,6 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_I2C/SubModule_i2c_ram_interface/setup_word_0" BEL
         "Module_I2C/SubModule_i2c_ram_interface/ack" BEL
         "Module_I2C/SubModule_i2c_ram_interface/prev_queue" BEL
-        "Module_I2C/SubModule_i2c_physical/next_state_3" BEL
-        "Module_I2C/SubModule_i2c_physical/next_state_0" BEL
-        "avr_interface/cclk_detector/ready_q" BEL
-        "avr_interface/serial_rx/new_data_q" BEL
-        "Module_ram_interface/mcs_ready" BEL
-        "Module_ram_interface/ram_byte_enable_0" BEL "Module_ram_interface/rw"
-        BEL "Module_I2C/SubModule_i2c_ram_interface/tic_go" BEL
-        "Inst_Module_UART_interface/rx_new_data" BEL
-        "Module_I2C/SubModule_i2c_ram_interface/tic" BEL
         "Module_I2C/SubModule_i2c_physical/DOUT_7" BEL
         "Module_I2C/SubModule_i2c_physical/DOUT_6" BEL
         "Module_I2C/SubModule_i2c_physical/DOUT_5" BEL
@@ -627,15 +621,22 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "Module_I2C/SubModule_i2c_physical/counter_2" BEL
         "Module_I2C/SubModule_i2c_physical/counter_1" BEL
         "Module_I2C/SubModule_i2c_physical/counter_0" BEL
+        "Module_I2C/SubModule_i2c_physical/sda_in_qq" BEL
+        "Module_I2C/SubModule_i2c_physical/next_state_3" BEL
+        "Module_I2C/SubModule_i2c_physical/next_state_0" BEL
+        "Module_I2C/SubModule_i2c_physical/sda_in_q" BEL
         "Module_I2C/SubModule_i2c_physical/SDA_OUT" BEL
         "Module_I2C/SubModule_i2c_physical/SCL_OUT" BEL
         "Module_I2C/SubModule_i2c_physical/DATA_VALID" BEL
         "Module_I2C/SubModule_i2c_physical/NACK" BEL
         "Module_I2C/SubModule_i2c_physical/STOP" BEL
         "Module_I2C/SubModule_i2c_physical/QUEUED" BEL
-        "Module_I2C/SubModule_i2c_physical/nackdet" BEL "clk_BUFGP/BUFG" BEL
-        "Module_I2C/SubModule_i2c_physical/Mshreg_sda_in_qq" BEL
-        "Module_I2C/SubModule_i2c_physical/sda_in_qq" BEL
+        "Module_I2C/SubModule_i2c_physical/nackdet" BEL
+        "Module_ram_interface/mcs_ready" BEL
+        "Module_ram_interface/ram_byte_enable_0" BEL "Module_ram_interface/rw"
+        BEL "Module_I2C/SubModule_i2c_ram_interface/tic_go" BEL
+        "Inst_Module_UART_interface/rx_new_data" BEL
+        "Module_I2C/SubModule_i2c_ram_interface/tic" BEL "clk_BUFGP/BUFG" BEL
         "mcs_0/U0/ilmb_cntlr/Sl_Rdy" BEL "mcs_0/U0/ilmb_cntlr/lmb_as" BEL
         "mcs_0/U0/ilmb/POR_FF_I" BEL "mcs_0/U0/filter_reset.reset_vec_0" BEL
         "mcs_0/U0/filter_reset.reset_vec_1" BEL
@@ -682,6 +683,7 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "mcs_0/U0/iomodule_0/IO_Write_Data_2" BEL
         "mcs_0/U0/iomodule_0/IO_Write_Data_1" BEL
         "mcs_0/U0/iomodule_0/IO_Write_Data_0" BEL
+        "mcs_0/U0/iomodule_0/write_data_16" BEL
         "mcs_0/U0/iomodule_0/write_data_14" BEL
         "mcs_0/U0/iomodule_0/write_data_13" BEL
         "mcs_0/U0/iomodule_0/write_data_12" BEL
@@ -745,13 +747,13 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "mcs_0/U0/iomodule_0/io_bus_read_data_2" BEL
         "mcs_0/U0/iomodule_0/io_bus_read_data_1" BEL
         "mcs_0/U0/iomodule_0/io_bus_read_data_0" BEL
-        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.fast_state_FSM_FFd1"
-        BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.fast_state_FSM_FFd2"
         BEL
-        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i"
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.fast_state_FSM_FFd1"
         BEL
-        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.do_fast_ack"
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i"
         BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.intr_addr_i_12"
         BEL
@@ -778,7 +780,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.intr_addr_i_1"
         BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.intr_addr_i_0"
+        BEL "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/INTC_CISR_16"
+        BEL "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/INTC_CISR_7"
+        BEL "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/civr_4" BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/civr_0" BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.do_fast_ack"
         BEL "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/INTC_IRQ" BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/All_INTR_Bits[16].Using_Intr.Ext_Intr.Edge.Reg_INTR.s1"
+        BEL "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cier_7" BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cimr_16" BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cimr_7" BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0_12"
         BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0_11"
@@ -804,7 +815,7 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0_1"
         BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_0_0"
-        BEL
+        BEL "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cier_16" BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_12"
         BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_11"
@@ -830,6 +841,59 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_1"
         BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_0"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_12"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_11"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_10"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_9"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_8"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_7"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_6"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_5"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_4"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_3"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_2"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_1"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_16_0"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_12"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_11"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_10"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_9"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_8"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_7"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_6"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_5"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_4"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_3"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_2"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_1"
+        BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_23_0"
+        BEL "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/interrupt_16"
         BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/DIV16_SRL16E/Use_unisim.XIL_SRL16E_I1"
         BEL
@@ -1396,6 +1460,7 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         BEL "mcs_0/U0/dlmb/POR_FF_I" BEL "mcs_0/U0/dlmb_cntlr/lmb_as" BEL
         "mcs_0/U0/dlmb_cntlr/Sl_Rdy" BEL
         "mcs_0/U0/iomodule_0/lmb_io_select_keep" BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cisr_16" BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cisr_7" BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/tx_buffer_empty_i"
         BEL
@@ -1434,12 +1499,11 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress"
         BEL
         "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/reservation"
-        BEL "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cimr_7" BEL
-        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cier_7" BEL
-        "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/ex_Valid" BEL
-        "mcs_0/U0/iomodule_0/io_ready_Q" BEL
+        BEL "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/ex_Valid"
+        BEL "mcs_0/U0/iomodule_0/io_ready_Q" BEL
         "mcs_0/U0/iomodule_0/IO_Addr_Strobe" BEL
-        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/INTC_CISR_7" BEL
+        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/intr_present_16"
+        BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/data_is_sent"
         BEL
         "mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/tx_Start"
@@ -1458,7 +1522,6 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_8" BEL
         BEL "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/inHibit_EX"
         BEL "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/sleep_i"
         BEL "mcs_0/U0/iomodule_0/Using_IO_Bus.io_read_keep" BEL
-        "mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/civr_0" BEL
         "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_intr_2nd_cycle"
         BEL
         "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/mtsmsr_write_i"

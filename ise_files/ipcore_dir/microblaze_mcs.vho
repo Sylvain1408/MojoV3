@@ -72,6 +72,7 @@ COMPONENT microblaze_mcs
     FIT1_Interrupt : OUT STD_LOGIC;
     FIT1_Toggle : OUT STD_LOGIC;
     GPO1 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    INTC_Interrupt : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     INTC_IRQ : OUT STD_LOGIC
   );
 END COMPONENT;
@@ -98,6 +99,7 @@ your_instance_name : microblaze_mcs
     FIT1_Interrupt => FIT1_Interrupt,
     FIT1_Toggle => FIT1_Toggle,
     GPO1 => GPO1,
+    INTC_Interrupt => INTC_Interrupt,
     INTC_IRQ => INTC_IRQ
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------

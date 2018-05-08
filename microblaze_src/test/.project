@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>test</name>
-	<comment>test_bsp - microblaze_mcs</comment>
+	<comment></comment>
 	<projects>
-		<project>test_bsp</project>
+		<project>Mojo_32K</project>
+		<project>standalone_bsp_0</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -4,6 +4,9 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.mb.exe.debug.464947282;xilinx.gnu.mb.exe.debug.464947282.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="c:\xilinx_ise\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/include"/>
+<includePath path="c:\xilinx_ise\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/include-fixed"/>
+<includePath path="c:\xilinx_ise\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/include"/>
 <includePath path="c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/include-fixed"/>
 <includePath path="c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include"/>
@@ -398,6 +401,9 @@
 </instance>
 <instance id="xilinx.gnu.mb.exe.debug.464947282;xilinx.gnu.mb.exe.debug.464947282.;xilinx.gnu.mb.c.toolchain.compiler.debug.1554714136;xilinx.gnu.compiler.input.339672428">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="c:\xilinx_ise\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/include"/>
+<includePath path="c:\xilinx_ise\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/include-fixed"/>
+<includePath path="c:\xilinx_ise\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/include"/>
 <includePath path="c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/include-fixed"/>
 <includePath path="c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include"/>

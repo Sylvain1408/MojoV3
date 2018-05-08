@@ -1,0 +1,38 @@
+19:57:24.369 INFO  - Copied contents of C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs_sdk.xml into \Mojo_HW\system.xml. 
+19:57:24.442 INFO  - Copied contents of C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs.bmm into \Mojo_HW\system_bd.bmm. 
+19:57:24.585 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+19:57:27.185 INFO  - Updating hardware inferred compiler options for test. 
+19:57:27.212 INFO  - Clearing existing target manager status. 
+19:57:30.601 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+20:00:13.120 WARN  - Change BSP handler invoked, but no selected application in workspace. 
+20:01:45.252 INFO  - Project 'Mojo_32K' created. You can now create BSPs and application projects targeting this hardware platform. 
+20:04:20.014 INFO  - The new hardware specification file contains the same information as the current specification file. No changes were done to the workspace. 
+20:06:22.796 INFO  - The new hardware specification file contains the same information as the current specification file. No changes were done to the workspace. 
+20:16:19.461 INFO  - Project Mojo_HW's source hardware specification located at C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+20:16:21.083 INFO  - Copied contents of C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs_sdk.xml into \Mojo_HW\system.xml. 
+20:16:21.087 INFO  - Copied contents of C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs.bmm into \Mojo_HW\system_bd.bmm. 
+20:16:21.312 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+20:16:22.472 INFO  - Clearing existing target manager status. 
+20:16:25.906 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+20:17:55.288 INFO  - Successfully generated C:\Users\Sylvain-Laptop\Desktop\MojoV3\microblaze_src\test\src\lscript.ld. 
+20:17:55.295 INFO  - Applying linker script to all configurations of project test. 
+20:17:55.301 INFO  - Setting rebuild state to true for all configurations of project test. 
+00:17:47.966 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:55:52.855 INFO  - Project Mojo_32K's source hardware specification located at C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+09:55:53.913 INFO  - Copied contents of C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs_sdk.xml into \Mojo_32K\system.xml. 
+09:55:53.931 INFO  - Copied contents of C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs.bmm into \Mojo_32K\system_bd.bmm. 
+09:55:54.083 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:55:57.888 INFO  - Updating hardware inferred compiler options for test. 
+09:55:57.897 INFO  - Clearing existing target manager status. 
+09:56:01.262 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+09:56:03.594 INFO  - Project Mojo_HW's source hardware specification located at C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+09:56:21.375 INFO  - Copied contents of C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs_sdk.xml into \Mojo_HW\system.xml. 
+09:56:21.381 INFO  - Copied contents of C:\Users\Sylvain-Laptop\Desktop\MojoV3\ise_files\ipcore_dir\microblaze_mcs.bmm into \Mojo_HW\system_bd.bmm. 
+09:56:21.601 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:56:28.147 INFO  - Clearing existing target manager status. 
+09:56:28.158 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+09:56:33.285 INFO  - The new hardware specification file contains the same information as the current specification file. No changes were done to the workspace. 
+15:48:19.707 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
